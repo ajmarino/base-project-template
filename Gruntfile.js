@@ -56,6 +56,7 @@ module.exports = function (grunt) {
 	// an external task like grunt-contrib-uglify
 	// for two different things, and not at the 
 	// same time
+	grunt.registerTask("default", ['css', 'js']);
 	grunt.registerTask("js", "Compile just the js source files", ['clean:js', 'concat', 'uglify:dev', 'jshint', 'cache-bust:js']);
 	grunt.registerTask("css", "Compile just the sass source files", ['clean:css', 'sass', 'autoprefixer', 'csso', 'cache-bust:css']);
 };
