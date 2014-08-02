@@ -10,3 +10,24 @@
 * [![Bourbon 4.0.2](http://b.repl.ca/v1/Bourbon-4.0.2-blue.png)](https://github.com/thoughtbot/bourbon)
 * [![Bitters 0.10.0](http://b.repl.ca/v1/Bitters-0.10.0-blue.png)](https://github.com/thoughtbot/bitters)
 
+
+### Bower Components
+* html5-boilerplate
+* jquery
+* bourbon
+* normalize.css
+
+
+### NPM Components
+* grunt
+* grunt-contrib-clean
+* grunt-contrib-concat
+* grunt-contrib-jshin
+* grunt-contrib-sass
+* grunt-contrib-uglify
+* grunt-contrib-watch
+* grunt-autoprefixer
+* grunt-csso
+
+* grunt-sassdoc (optional)
+* grunt-kss (optional)
