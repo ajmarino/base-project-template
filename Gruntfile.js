@@ -49,6 +49,8 @@ module.exports = function (grunt) {
 
 	// Load all our tasks from dir ./grunt
 	grunt.loadTasks('grunt');
+	grunt.loadTasks('grunt/options');
+	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Create Tasks that link to the tasks in ./grunt
@@ -57,6 +59,5 @@ module.exports = function (grunt) {
 	// for two different things, and not at the 
 	// same time
 	grunt.registerTask("default", ['css', 'js']);
-	grunt.registerTask("js", "Compile just the js source files", ['clean:js', 'concat', 'uglify:dev', 'jshint', 'cache-bust:js']);
-	grunt.registerTask("css", "Compile just the sass source files", ['clean:css', 'sass', 'autoprefixer', 'csso', 'cache-bust:css']);
+	
 };
