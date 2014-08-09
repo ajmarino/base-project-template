@@ -12,13 +12,21 @@ module.exports = function (grunt) {
 	 * Combines all js files into a single file
 	 */
 	concat = {
-		options : {
-			seperator : ";",
-			banner    : "<%= banner %>\n"
-		},
-		js : {
+		dev : {
+			options : {
+				seperator : ";",
+				banner    : "<%= banner %>\n"
+			},
 			src  : ["src/js/*.js"],
-			dest : "public/js/app.js"	
+			dest : "public/js/app.js"
+		},
+		plugins : {
+			options : {
+				seperator : ";"
+			},
+			files : {
+				"public/js/plugins.js" : ["path/to/file"],
+			}
 		}
 	}
 

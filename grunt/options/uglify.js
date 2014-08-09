@@ -25,14 +25,13 @@ module.exports = function (grunt) {
 				"public/js/app.min.js" : ["src/js/*.js"]
 			}
 		},
-		libraries : {
+		plugins : {
 			options : {
 				compressed : true,
 				sourceMap  : true
 			},
 			files : {
-				"public/js/vendor/jquery.min.js"    : "bower_components/jquery/dist/jquery.js",
-				"public/js/vendor/bootstrap.min.js" : "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+				"public/js/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
 			}
 		}
 	}

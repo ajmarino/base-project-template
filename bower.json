@@ -20,7 +20,6 @@
     "normalize.css": "~3.0.1",
     "jquery": "~2.1.1",
     "bourbon": "~4.0.2",
-    "bitters": "~0.10.0",
-    "bootstrap-sass-official": "~3.2.0+1"
+    "bitters": "~0.10.0"
   }
 }
