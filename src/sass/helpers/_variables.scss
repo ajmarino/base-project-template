@@ -9,12 +9,12 @@ $headings : (
 	"h5" : 20px,
 	"h6" : 18px
 );
-$typecsset-h1-size: 48px;
-$typecsset-h2-size: 36px;
-$typecsset-h3-size: 30px;
-$typecsset-h4-size: 24px;
-$typecsset-h5-size: 20px;
-$typecsset-h6-size: 18px;
+$typecsset-h1-size: $headings("h1");
+$typecsset-h2-size: $headings("h2");
+$typecsset-h3-size: $headings("h3");
+$typecsset-h4-size: $headings("h4");
+$typecsset-h5-size: $headings("h5");
+$typecsset-h6-size: $headings("h6");
 
 // Would you like to show a baseline grid? This is handy during development.
 $typecsset-show-baseline:       true;

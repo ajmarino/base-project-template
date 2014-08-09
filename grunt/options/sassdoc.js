@@ -17,9 +17,8 @@ module.exports = function (grunt) {
 	sassdoc = {
 		default : {
 			src  : "src/sass/helpers",
-			dest : "docs",
+			dest : "docs/sass",
 			options : {
-				display : ["public"],
 				package : "./package.json",
 				basePath : "https://github.com/ajmarino/base-project-template"
 			}			
