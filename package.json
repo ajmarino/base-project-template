@@ -1,6 +1,6 @@
 {
   "name": "base-project-template",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "A base PHP framework for simple sites",
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "grunt-contrib-uglify": "~0.5.1",
     "grunt-autoprefixer": "~0.8.2",
     "grunt-csso": "~0.6.3",
-    "grunt-sassdoc": "~0.4.3"
+    "grunt-sassdoc": "~0.4.3",
+    "grunt-markdown": "~0.6.1"
   }
 }
