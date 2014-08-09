@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 				banner : "<%= banner %>"
 			},
 			files : {
-				"public/css/main.css" : "src/sass/main.scss"
+				"<%= assetDir %>/css/main.css" : "src/sass/main.scss"
 			}
 		}
 	}

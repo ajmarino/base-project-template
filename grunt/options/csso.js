@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 				banner : '<%= banner %>'
 			},
 			files : {
-				'public/css/main.min.css' : ['public/css/main.css']
+				'<%= assetDir %>/css/main.min.css' : ['<%= assetDir %>/css/main.css']
 			}
 		}
 	}

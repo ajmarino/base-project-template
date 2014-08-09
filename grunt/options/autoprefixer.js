@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			options : {
 				browsers : ['last 2 versions', 'ie 9']
 			},
-			src : "public/css/main.css"
+			src : "<%= assetDir %>/css/main.css"
 		}
 	}
 

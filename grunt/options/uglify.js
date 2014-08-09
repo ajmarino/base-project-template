@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 				sourceMap     : true
 			},
 			files : {
-				"public/js/app.min.js" : ["src/js/*.js"]
+				"<%= assetDir %>/js/app.min.js" : ["src/js/*.js"]
 			}
 		},
 		plugins : {
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 				sourceMap  : true
 			},
 			files : {
-				"public/js/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
+				"<%= assetDir %>/js/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
 			}
 		}
 	}

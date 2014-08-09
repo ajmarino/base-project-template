@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 
 	// Initialize config.
 	grunt.initConfig({
+		assetDir : "public",
 		pkg: require('./package.json'),
 
 		/**

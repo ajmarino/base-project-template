@@ -18,14 +18,14 @@ module.exports = function (grunt) {
 				banner    : "<%= banner %>\n"
 			},
 			src  : ["src/js/*.js"],
-			dest : "public/js/app.js"
+			dest : "<%= assetDir %>/js/app.js"
 		},
 		plugins : {
 			options : {
 				seperator : ";"
 			},
 			files : {
-				"public/js/plugins.js" : ["path/to/file"],
+				"<%= assetDir %>/js/plugins.js" : ["path/to/file"],
 			}
 		}
 	}
