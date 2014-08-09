@@ -11,6 +11,8 @@ module.exports = function (grunt) {
 	/**
 	 * Compiles sass files
 	 * only need to compile 1 file as that should include everything else
+	 *
+	 *  styles: nested, compact, compressed, expanded.
 	 */
 	sass = {
 		dist : {

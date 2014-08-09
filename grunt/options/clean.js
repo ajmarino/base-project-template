@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 	/**
 	 * Deletes old versions of files to help with cache busting, at least i think so
 	 */
-	clean.css = ['public/css/']
-	clean.js  = ['public/js/*.js', 'public/js/*.map', '!public/js/vendor']
+	clean.css = ['public/css/main.css', 'public/css/main.min.css'];
+	clean.js  = ['public/js/*.js', 'public/js/*.map', '!public/js/vendor'];
 
 
 	// Puts the original or modified object back into the config
