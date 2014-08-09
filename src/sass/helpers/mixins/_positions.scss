@@ -1,0 +1,38 @@
+/**
+ * Absolute position mixin using private _position function
+ *
+ * @param {List} $args - list of offsets and values
+ *
+ * @example scss
+ *  @include absolute(top 5px left 50%);
+ */
+@mixin absolute($args) {
+  @include _position(absolute, $args);
+}
+
+
+/**
+ * Relative position mixin using private _position function
+ *
+ * @param {List} $args - list of offsets and values
+ *
+ * @example scss
+ *  @include relative(top 50% right 0 left 0);
+ */
+@mixin relative($args) {
+  @include _position(relative, $args);
+}
+
+
+
+/**
+ * Fixed position mixin using private _position function
+ *
+ * @param {List} $args - list of offsets and values
+ *
+ * @example scss
+ *  @include fixed(top 0 right 0 bottom 0 left 0)
+ */
+@mixin fixed($args) {
+  @include _position(fixed, $args);
+}
