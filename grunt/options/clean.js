@@ -10,9 +10,9 @@ module.exports = function (grunt) {
 	/**
 	 * Deletes old versions of files to help with cache busting, at least i think so
 	 */
-	clean.css = ['<%= assetDir %>/css/main.css', '<%= assetDir %>/css/main.min.css'];
-	clean.js  = ['<%= assetDir %>/js/*.js', '<%= assetDir %>/js/*.map', '!<%= assetDir %>/js/vendor'];
-
+	clean.css  = ['<%= assetDir %>/css/main.css', '<%= assetDir %>/css/main.min.css'];
+	clean.js   = ['<%= assetDir %>/js/*.js', '<%= assetDir %>/js/*.map', '!<%= assetDir %>/js/vendor'];
+	clean.docs = ['docs'];
 
 	// Puts the original or modified object back into the config
 	grunt.config('clean', clean);
