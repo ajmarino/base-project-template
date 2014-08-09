@@ -1,6 +1,10 @@
 /**
- * Private method used to add positioning, see @mixin
+ * Private method used to add positioning, see absolute, relative or fixed
  *
+ *
+ * @access private
+ * 
+ * 
  * @param {String} $position - position
  * @param {List}   $args     - list of offsets and values
  */
