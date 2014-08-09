@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 	 */
 	clean.css  = ['<%= assetDir %>/css/main.css', '<%= assetDir %>/css/main.min.css'];
 	clean.js   = ['<%= assetDir %>/js/*.js', '<%= assetDir %>/js/*.map', '!<%= assetDir %>/js/vendor'];
-	clean.docs = ['docs'];
+	clean.docs = ['docs/sass', 'docs/main/**/*.*'];
 
 	// Puts the original or modified object back into the config
 	grunt.config('clean', clean);
