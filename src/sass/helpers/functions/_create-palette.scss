@@ -1,0 +1,25 @@
+/**
+ * Creates a palette of 7 colors from a single color passed in, 3 lighter, 3 darker
+ *
+ * @access private
+ * 
+ * 
+ * @param {Color} $base-color - Base color of palette
+ *
+ *
+ * @returns {List} Palette of colors with 3 lighter and 3 darker than the $base-color
+ *
+ *
+ * @example scss
+ * $green-palette: create-palette(lightgreen);
+ * // Returns: #f4f1f3 #d5d5d5 #c2cec0 lightgreen #79b079 #4f864f #497c49
+ */
+@function create-palette($base-color) {
+  $palette: ();
+ 
+  @each $diff in $palette-diff {
+    $palette: append($palette, apply-diff($base-color, $diff));
+  }
+ 
+  @return $palette;
+}

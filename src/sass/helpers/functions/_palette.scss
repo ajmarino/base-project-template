@@ -1,0 +1,33 @@
+/**
+ * Creates a palette of 7 colors, 3 lighter 3 darker, from a base color, with names for easier access
+ * 
+ * @param  {String} $base-color - color to create palette from
+ *
+ * 
+ * @return {Map} Palette of colors with shade names
+ *
+ *
+ * @example scss
+ * $green-palette: palette(lightgreen);
+ * /**
+ * $green-palette: (
+ * 	  lightest: #f4f1f3, 
+ * 	  lighter: #d5d5d5,
+ * 	  light: #c2cec0, 
+ * 	  base: lightgreen, 
+ * 	  dark: #79b079, 
+ * 	  darker: #4f864f, 
+ * 	  darkest: #497c49
+ * ); 
+ */
+@function palette($base-color) {
+  $colors: create-palette($base-color);
+  $keys: 'lightest' 'lighter' 'light' 'base' 'dark' 'darker' 'darkest';
+  $palette: ();
+ 
+  @for $i from 1 through min(length($colors), length($keys)) {
+    $palette: map-merge($palette, (nth($keys, $i): nth($colors, $i)));
+  }
+ 
+  @return $palette;
+}
