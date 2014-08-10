@@ -1,6 +1,6 @@
 {
   "name": "base-project-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A base PHP framework for simple sites",
   "repository": {
     "type": "git",

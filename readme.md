@@ -16,6 +16,7 @@ Docs compiled using SassDocs and Daux.io
 * jquery
 * bourbon
 * normalize.css
+* zurb/foundation
 
 
 ### NPM Components
@@ -30,3 +31,11 @@ Docs compiled using SassDocs and Daux.io
 * grunt-csso
 
 * grunt-sassdoc
+
+
+
+#### Versions
+* 0.4.0 - ability to generate docs from command line
+* 0.5.0 - adds grunt-exec to compile markdown docs as well
+* 0.6.0 - main docs template updated, based on foundation framework
+* 0.7.0 - styles added for main docs
