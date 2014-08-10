@@ -15,13 +15,21 @@ module.exports = function (grunt) {
 	 *  styles: nested, compact, compressed, expanded.
 	 */
 	sass = {
-		dist : {
+		dev : {
 			options : {
 				style  : "compact",
 				banner : "<%= banner %>"
 			},
 			files : {
 				"<%= assetDir %>/css/main.css" : "src/sass/main.scss"
+			}
+		},
+		docs : {
+			options : {
+				style  : "compact",
+			},
+			files : {
+				"src/docs/css/main-docs.css" : "src/docs/sass/docs.scss"
 			}
 		}
 	}

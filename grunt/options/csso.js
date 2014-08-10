@@ -14,13 +14,21 @@ module.exports = function (grunt) {
 	 * Grunt-Csso - https://npmjs.org/package/grunt-csso
 	 */
 	csso = {
-		minify : {
+		dev : {
 			options : {
 				report : 'min',
 				banner : '<%= banner %>'
 			},
 			files : {
 				'<%= assetDir %>/css/main.min.css' : ['<%= assetDir %>/css/main.css']
+			}
+		},
+		docs : {
+			options : {
+				report : 'min'
+			},
+			files : {
+				'src/docs/css/daux-black.min.css' : ['src/docs/css/main-docs.css']
 			}
 		}
 	}

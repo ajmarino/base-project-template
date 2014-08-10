@@ -9,12 +9,12 @@ $headings : (
 	"h5" : 20px,
 	"h6" : 18px
 );
-$typecsset-h1-size: $headings("h1");
-$typecsset-h2-size: $headings("h2");
-$typecsset-h3-size: $headings("h3");
-$typecsset-h4-size: $headings("h4");
-$typecsset-h5-size: $headings("h5");
-$typecsset-h6-size: $headings("h6");
+$typecsset-h1-size: map-get($headings, "h1");
+$typecsset-h2-size: map-get($headings, "h2");
+$typecsset-h3-size: map-get($headings, "h3");
+$typecsset-h4-size: map-get($headings, "h4");
+$typecsset-h5-size: map-get($headings, "h5");
+$typecsset-h6-size: map-get($headings, "h6");
 
 // Would you like to show a baseline grid? This is handy during development.
 $typecsset-show-baseline:       true;

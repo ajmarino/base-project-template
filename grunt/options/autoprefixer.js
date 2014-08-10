@@ -9,11 +9,17 @@ module.exports = function (grunt) {
 
 	// Custom options
 	autoprefixer = {
-		main : {
+		dev : {
 			options : {
 				browsers : ['last 2 versions', 'ie 9']
 			},
 			src : "<%= assetDir %>/css/main.css"
+		},
+		docs : {
+			options : {
+				browsers : ['last 2 versions', 'ie 9']
+			},
+			src : "src/docs/css/main-docs.css"
 		}
 	}
 
