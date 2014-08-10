@@ -1,0 +1,18 @@
+{
+	"title"         : "Base Project Template",
+	"tagline"       : "Personal project starting files",
+	"docs_path"     : "docs",
+	"image"         : "img/app.png",
+	"theme"         : "black",
+	"template"      :"default",
+	"toggle_code"   : true,
+	"breadcrumbs"   : false,
+	"date_modified" : true,
+	"repo"          : "ajmarino/base-project-template",
+	"links"         : {
+		"Download": "https://github.com/ajmarino/base-project-template/archive/master.zip",
+		"GitHub Repo": "https://github.com/ajmarino/base-project-template",
+		"Help/Support/Bugs": "https://github.com/ajmarino/base-project-template/issues",
+		"Made by Todaymade": "http://todaymade.com"
+	}
+}
