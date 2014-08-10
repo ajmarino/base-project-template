@@ -3,7 +3,7 @@
 	"tagline"       : "Personal project starting files",
 	"docs_path"     : "docs",
 	"image"         : "img/app.png",
-	"theme"         : "black",
+	"theme"         : "navy",
 	"template"      :"default",
 	"toggle_code"   : true,
 	"breadcrumbs"   : false,

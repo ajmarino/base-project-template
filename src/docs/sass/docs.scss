@@ -1,9 +1,2 @@
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
+@import "../../../bower_components/foundation/scss/foundation";
 
-body {
-	background: #efefef;
-}

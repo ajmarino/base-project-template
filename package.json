@@ -1,7 +1,8 @@
 {
   "name": "base-project-template",
+  "title": "BaseProject",
   "version": "0.4.0",
-  "description": "A base PHP framework for simple sites",
+  "description": "A base framework for starting sites",
   "repository": {
     "type": "git",
     "url": "https://ajmarino@github.com/ajmarino/base-project-template.git"

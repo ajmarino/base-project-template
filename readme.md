@@ -1,4 +1,4 @@
-# Base PHP Project Template
+# Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![License](http://b.repl.ca/v1/license-MIT-aacc22.png)]()
 
 Grunt organization based on Chris Coyier's Grunt Boilerplate: https://github.com/chriscoyier/My-Grunt-Boilerplate

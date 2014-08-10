@@ -5,7 +5,7 @@
   "authors": [
     "AJ Marino <aj@ajmarino.com>"
   ],
-  "description": "A base PHP framework for simple sites",
+  "description": "A base framework for starting sites",
   "license": "MIT",
   "private": true,
   "ignore": [
