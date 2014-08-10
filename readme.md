@@ -11,6 +11,8 @@ Docs compiled using SassDocs and Daux.io
 [![Bitters 0.10.0](http://b.repl.ca/v1/Bitters-0.10.0-blue.png)](https://github.com/thoughtbot/bitters)
 [![Typecsset 0.3.0](http://b.repl.ca/v1/Typecsset-0.3.0-blue.png)](https://github.com/csswizardry/typecsset)
 
+
+
 ### Bower Components
 * html5-boilerplate
 * jquery
@@ -19,17 +21,18 @@ Docs compiled using SassDocs and Daux.io
 * zurb/foundation
 
 
+
 ### NPM Components
 * grunt
 * grunt-contrib-clean
+* grunt-contrib-commands
 * grunt-contrib-concat
-* grunt-contrib-jshin
+* grunt-contrib-jshint
 * grunt-contrib-sass
 * grunt-contrib-uglify
 * grunt-contrib-watch
 * grunt-autoprefixer
 * grunt-csso
-
 * grunt-sassdoc
 
 
