@@ -5,6 +5,9 @@ Grunt organization based on Chris Coyier's Grunt Boilerplate: https://github.com
 
 Docs compiled using SassDocs and Daux.io
 
+Use `bash compile_docs.sh` from main project directory to compile docs to /docs
+
+
 ### Bower Components
 [![jQuery 2.1.1](http://b.repl.ca/v1/jQuery-2.1.1-blue.png)](https://github.com/jquery/jquery)
 [![HTML5 Boilerplate 4.3.0](http://b.repl.ca/v1/HTML5_Boilerplate-4.3.0-blue.png)](https://github.com/h5bp/html5-boilerplate)
@@ -17,7 +20,6 @@ Docs compiled using SassDocs and Daux.io
 ### NPM Components
 * grunt
 * grunt-contrib-clean
-* grunt-contrib-commands
 * grunt-contrib-concat
 * grunt-contrib-jshint
 * grunt-contrib-sass
@@ -30,7 +32,5 @@ Docs compiled using SassDocs and Daux.io
 
 
 #### Planned Updates
-* ability to generate docs from command line
-* adds grunt-exec to compile markdown docs as well
 * main docs template updated, based on foundation framework
 * styles added for main docs

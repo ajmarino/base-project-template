@@ -1,5 +1,10 @@
 module.exports = function(grunt) {  
 	
-	grunt.registerTask("docs", "Compile docs from src/sass and src/docs", ['clean:docs', 'sassdoc', 'sass:docs', 'autoprefixer:docs', 'csso:docs']);
+	grunt.registerTask("docs", "Compile docs from src/sass and src/docs", [
+		'sass:docs',
+		'autoprefixer:docs',
+		'csso:docs',
+		'sassdoc'
+	]);
 
 };
