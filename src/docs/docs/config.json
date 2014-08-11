@@ -10,9 +10,9 @@
 	"date_modified" : true,
 	"repo"          : "ajmarino/base-project-template",
 	"links"         : {
+		"Sass Documentation" : "/sass",
 		"Download": "https://github.com/ajmarino/base-project-template/archive/master.zip",
 		"GitHub Repo": "https://github.com/ajmarino/base-project-template",
-		"Help/Support/Bugs": "https://github.com/ajmarino/base-project-template/issues",
-		"Made by Todaymade": "http://todaymade.com"
+		"Help/Support/Bugs": "https://github.com/ajmarino/base-project-template/issues"
 	}
 }
