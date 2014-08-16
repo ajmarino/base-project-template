@@ -101,7 +101,7 @@
     function get_navigation($url) {
         global $tree, $multilanguage, $output_language, $output_path;
         $dir = isset($output_path) ? $output_path : '';
-        $return = "<ul class=\"nav nav-list\">";
+        $return = "<ul class=\"nav nav--main\">";
         $return .= $multilanguage ? build_navigation($tree[$output_language], (($dir !== '') ? $dir . '/' : '') . $output_language, $url) : build_navigation($tree, $dir, $url);
         $return .= "</ul>";
         return $return;
@@ -120,18 +120,18 @@
         foreach ($tree as $key => $node)
             if (is_array($node)) {
                 $return .= "<li";
-                if (!(strpos($url, $key) === FALSE)) $return .= " class=\"open\"";
+                if (!(strpos($url, $key) === FALSE)) $return .= " class=\"nav--open\"";
                 $return .= ">";
                 $link = "#";
-                $nav_class = "aj-nav ";
+                $nav_class = "nav__link nav__link--subnav ";
                 if(in_array("index.md", $node)) {
                     $link = $t . clean_url($key, $mode);
                     $nav_class = "";
                 }
-                $return .= "<a href=\"" . $link . "\" class=\"" . $nav_class . "folder\">";
+                $return .= "<a href=\"" . $link . "\" class=\"" . $nav_class . "nav__link nav__link--folder\">";
                 $return .= clean_url($key, "Title");
                 $return .= "</a>";
-                $return .= "<ul class=\"nav nav-list\">";
+                $return .= "<ul class=\"nav nav--subnav\">";
                 $dir = ($current_dir === '') ? $key : $current_dir . '/' . $key;
                 $return .= build_navigation($node, $dir, $url);
                 $return .= "</ul>";
@@ -139,7 +139,7 @@
             }
             else if($node !== "index.md") {
                 $return .= "<li";
-                if ($url === $current_dir . '/' . $node) $return .= " class=\"active\"";
+                if ($url === $current_dir . '/' . $node) $return .= " class=\"nav__link--active\"";
                 $return .= ">";
                 $link = $t . clean_url($node, $mode);
                 $return .= "<a href=\"" . $link . "\">" . clean_url($node, "Title");
@@ -159,7 +159,7 @@
             $page['path'] = '';
             $page['markdown'] = '';
             $page['title'] = 'Oh No';
-            $page['content'] = "<h3>Oh No. That page doesn't exist</h3>";
+            $page['content'] = "<h3 class=\"h h--3\">Oh No. That page doesn't exist</h3>";
             $options['file_editor'] = false;
         } else {
             $page['path'] = $file_relative_path;
@@ -189,7 +189,7 @@
         $url = str_replace("_", " ", $url);
         switch ($separator) {
             case 'Chevrons':
-                $url = str_replace("/", " <i class=\"glyphicon glyphicon-chevron-right\"></i> ", $url);
+                $url = str_replace("/", " <i class=\"fa fa-chevron-right\"></i> ", $url);
                 return $url;
             case 'Colons':
                 $url = str_replace("/", ": ", $url); 
@@ -244,7 +244,7 @@
         global $mode, $options, $relative_base;
         $t = clean_url($url, $mode);
         if ($t === 'index') {
-            if ($mode === 'Static') return $relative_base . 'index.html';
+            if ($mode === 'Static') return $relative_base . '';
             else return $relative_base;
         }
         if ($mode === 'Live' && !$options['clean_urls']) $t = 'index.php?' . $t;

@@ -1,0 +1,33 @@
+a {
+    color: $light;
+}
+
+.btn {
+    &.btn-sidebar {
+        padding: 7px 10px;
+        background-color: $sidebar-hover;
+        border: none;
+
+        .icon-bar {
+            display: block;
+            width: 18px;
+            height: 2px;
+            margin-top: 2px;
+            margin-bottom: 3px;
+            background-color: $dark;
+            
+        }
+
+        &:hover {
+            background-color: $dark;
+
+            .icon-bar {
+                background-color: $light;
+            }
+        }
+    }
+}
+
+code {
+    color: $light;
+}

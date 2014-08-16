@@ -62,6 +62,7 @@
         //Copy assets
         $unnecessaryImgs = array('./img/favicon.png', './img/favicon-blue.png', './img/favicon-green.png', './img/favicon-navy.png', './img/favicon-red.png');
         $unnecessaryJs = array();
+        $unnecessaryFonts = array();
         if ($options['colors']) {
             $unnecessaryLess = array('./less/daux-blue.less', './less/daux-green.less', './less/daux-navy.less', './less/daux-red.less');
             copy_recursive('./less', $path.'/', $unnecessaryLess);
@@ -70,12 +71,14 @@
             $unnecessaryJs = array('./js/less.min.js');
             @mkdir($path.'/css');
             @copy('./css/daux-'.$options['theme'].'.min.css', $path.'/css/daux-'.$options['theme'].'.min.css');
+            @copy('./css/font-awesome.min.css', $path.'/css/font-awesome.min.css');
             @copy('./css/main-docs.css', $path.'/css/main-docs.css');
             @copy('./css/site.css', $path.'/css/site.css');
             $unnecessaryImgs = array_diff($unnecessaryImgs, array('./img/favicon-'.$options['theme'].'.png'));
         }
         copy_recursive('./img', $path.'/', $unnecessaryImgs);
         copy_recursive('./js', $path.'/', $unnecessaryJs);
+        copy_recursive('./fonts', $path.'/', $unnecessaryFonts);
     }
 
 

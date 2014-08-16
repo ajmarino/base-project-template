@@ -1,2 +1,9 @@
-@import "../../../bower_components/foundation/scss/foundation";
+// @import "../../../bower_components/foundation/scss/foundation";
 
+@import "../../sass/helpers/helpers";
+
+@import "base/variables";
+@import "base/structure";
+
+@import "components/misc";
+@import "components/navbar";

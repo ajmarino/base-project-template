@@ -32,7 +32,7 @@ Use `bash compile_docs.sh` from main project directory to compile docs to /docs
 
 
 #### Planned Updates
-* 0.7.0 - styles added for main docs, copied from daux.io less and converted to sass, with updated colors
+* 0.7.1 - styles added for main docs, copied from daux.io less and converted to sass, with updated colors
 * 0.8.0 - updates template and js
 	* change code blocks to only be inline or hidden, to make a 2 column view
 * 1.0.0 - customized template and color scheme, with ability to compile docs using grunt, instead of the shell script
