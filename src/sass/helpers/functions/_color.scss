@@ -1,0 +1,27 @@
+/**
+ * Function for returning a color value from a sass map, see $colors var
+ * 
+ * @param  {obj} $color - item to get z index of
+ *
+ * 
+ * @return {string} - color value from sass map
+ * 
+ *
+ * @example scss
+ * // Usage
+ * .el {
+ *     color: c('main-bg');
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #fff;
+ * }
+ */
+@function c($color) {
+  @if not map-has-key($colors, $color) {
+    @warn "No color found for `#{$color}` in $colors map. Property omitted.";
+  }
+ 
+  @return map-get($colors, $color);
+}
