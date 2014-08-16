@@ -1,21 +1,36 @@
 
 /**
- * Mixin for inserting a breakpoint
+ * Mixin for inserting a breakpoint, see $breakpoints var
  *
  * @param {String} $name - name of breakpoint
  *
+ *
+ * @throws Warning: if named breakpoint is not found
+ *
+ * 
  * @example scss
- * $breakpoints: (
- *    'tiny':   ( max-width:  767px ),
- *    'small':  ( min-width:  768px ),
- *    'medium': ( min-width:  992px ),
- *    'large':  ( min-width: 1200px ),
- *    'custom': ( min-height:  40em )
- * );
+ * // Usage
+ * .selector {
+ *     font-size: 1rem;
+ *     
+ *     @include breakpoint(tablet) {
+ *         font-size: 1.4rem;
+ *     }
+ * }
+ *
+ * // Output
+ *  .selector {
+ *      font-size: 1rem;
+ *  }
+ *  @media only screen and (min-width: 48em) {
+ *      .selector {
+ *           font-size: 1.4rem;
+ *      }
+ *  }
  */
 @mixin breakpoint($name) {
-      @if map-has-key($breakpoints, $name) {
-        @media #{inspect(map-get($breakpoints, $name))} {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
       @content;
     }
   }

@@ -20,6 +20,7 @@ $typecsset-h6-size: map-get($headings, "h6");
 $typecsset-show-baseline:       true;
 
 
+
 /**
  * Breakpoints for responsive design, any name/ pair can go here
  */
@@ -42,6 +43,7 @@ $colors : (
 
 /**
  * Assigns stacking order to items from 1 place, assigned with meaningful names
+ * and in 1 place for easier site-wide organization
  */
 $z-layers: (
 	"var-name" : 5

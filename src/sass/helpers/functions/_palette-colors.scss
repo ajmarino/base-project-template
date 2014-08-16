@@ -5,8 +5,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: lightest($green-palette);
+ *     color: lightest($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #f4f1f3;
  * }
  *
  * 
@@ -31,8 +37,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: lighter($green-palette);
+ *     color: lighter($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #d5d5d5;
  * }
  *
  * 
@@ -58,8 +70,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: light($green-palette);
+ *     color: light($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #c2c3c0;
  * }
  *
  * 
@@ -85,8 +103,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: base($green-palette);
+ *     color: base($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: lightgreen;
  * }
  *
  * 
@@ -111,8 +135,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: dark($green-palette);
+ *     color: dark($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #79b079
  * }
  *
  * 
@@ -138,8 +168,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: darker($green-palette);
+ *     color: darker($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #4f864f;
  * }
  *
  * 
@@ -164,8 +200,14 @@
  *
  *
  * @example scss
+ * // Usage
  * .el {
- *    color: darkest($green-palette);
+ *     color: darkest($green-palette);
+ * }
+ *
+ * // Output
+ * .el {
+ *     color: #497c49;
  * }
  *
  * 

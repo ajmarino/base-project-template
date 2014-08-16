@@ -5,15 +5,35 @@
  * @param {String} $direction       - direction for the arrow to face
  * @param {List}   $position        - List of offsets and values
  * @param {String} $color (inherit) - color for arrow
- * @param {Int}    $number (1em)    - size of arrow
+ * @param {Int}    $size (1em)    - size of arrow
  *
  * 
  * @example scss
- *   .bubble {
- *     @include triangle(after, left, top 50% right -10px, $primary-color, 12px);
- *   }
+ * // Usage
+ * .el {
+ *     @include triangle(after, left, top 50% right -10px, #333, 12px);
+ * }
+ *
+ * // Output
+ * .el {
+ *     &:after {
+ *       position: absolute;
+ *       top: 50%;
+ *       right: -10px;
+ *       width: 0;
+ *       height: 0;
+ *       content: '';
+ *       z-index: 2;
+ *       border-right: 12px solid #333;
+ *       border-top: 12px solid transparent;
+ *       border-bottom: 12px solid transparent;
+ *     }
+ * }
  *
  *
+ * @throws Warning if $element is not 'before' or 'after'
+ * @throws Watning if $direction is not 'top right bottom left'
+ * 
  * @returns {Object} property and values to create the triangle
  */
 @mixin triangle($element, $direction, $position, $color: currentColor, $size: 1em) {
@@ -29,35 +49,37 @@
     }
 
     @else {
-      @include absolute($position); // Position
-      @include size(0); // Size
-      content: '';
-      z-index: 2;
-      
-      $perpendicular-borders: $size solid transparent;
-      
-      @if $direction == top {
-        border-bottom: $size * 1.5 solid $color;
-      }
-      @else if $direction == bottom {
-        border-top: $size * 1.5 solid $color;
-      }
-      @else if $direction == left {
-        border-right: $size * 1.5 solid $color;
-      }
-      @else if $direction == right {
-        border-left: $size * 1.5 solid $color;
-      }
-      
-     
-      @if $direction == top or $direction == bottom {
-        border-left:   $perpendicular-borders;
-        border-right:  $perpendicular-borders;
-      }
+      &:#{$element} {
+        @include absolute($position); // Position
+        @include size(0); // Size
+        content: '';
+        z-index: 2;
+        
+        $perpendicular-borders: $size solid transparent;
+        
+        @if $direction == top {
+          border-bottom: $size * 1.5 solid $color;
+        }
+        @else if $direction == bottom {
+          border-top: $size * 1.5 solid $color;
+        }
+        @else if $direction == left {
+          border-right: $size * 1.5 solid $color;
+        }
+        @else if $direction == right {
+          border-left: $size * 1.5 solid $color;
+        }
+        
+       
+        @if $direction == top or $direction == bottom {
+          border-left:   $perpendicular-borders;
+          border-right:  $perpendicular-borders;
+        }
 
-      @else if $direction == right or $direction == left {
-        border-bottom: $perpendicular-borders;
-        border-top:    $perpendicular-borders;
+        @else if $direction == right or $direction == left {
+          border-bottom: $perpendicular-borders;
+          border-top:    $perpendicular-borders;
+        }
       }
     }
   }

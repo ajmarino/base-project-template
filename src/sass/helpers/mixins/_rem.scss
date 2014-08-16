@@ -6,8 +6,19 @@
  *
  * 
  * @example scss
- *   @include rem(font-size, 1.6rem);
- *   @include rem(padding, 1rem .5rem)
+ * //  Usage
+ * .el {
+ *     @include rem(font-size, 1.6rem);
+ *     @include rem(padding, 1rem .5rem)
+ * }
+ *
+ * // Output
+ * .el {
+ *     font-size: 16px;
+ *     font-size: 1.6rem;
+ *     padding: 10px 5px;
+ *     padding: 1rem .5rem;
+ * }
  *
  * 
  * @returns {Object} property passed in with rem and px fallback 

@@ -7,8 +7,28 @@
  *
  * 
  * @example scss
- *	 @include scrollbar(5px, #333, #ccc);
+ * // Usage
+ *   @include scrollbar(5px, #333, #ccc);
  * 
+ *
+ * // Output
+ * ::-webkit-scrollbar: {
+ *     width: 5px;
+ *     height: 5px;
+ * }
+ *
+ * ::-webkit-scrollbar-thumb {
+ *     background: #333;
+ * }
+ *
+ * ::-webkit-scrollbar-track {
+ *     background: #ccc;
+ * }
+ *
+ * body {
+ *   scrollbar-face-color: #333;
+ *   scrollbar-track-color: #ccc;
+ * }
  * 
  * @returns {Object} styles for scrollbars in Webkit and IE
  */

@@ -1,0 +1,21 @@
+/**
+ * Function for returning a z-index value from a sass map, see $z-layers var
+ * 
+ * @param  {obj} $layer - item to get z index of
+ *
+ * 
+ * @return {int}        - z-index # from sass map
+ * 
+ *
+ * @example scss
+ * .selector {
+ *   z-index: z('modal');
+ * }
+ */
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+ 
+  @return map-get($z-layers, $layer);
+}
