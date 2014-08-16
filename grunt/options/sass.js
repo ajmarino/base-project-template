@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 				banner : "<%= banner %>"
 			},
 			files : {
-				"<%= assetDir %>/css/main.css" : "src/sass/main.scss"
+				"<%= assetDir %>/css/main.css" : "src/sass/main.scss",
 			}
 		},
 		docs : {
@@ -29,6 +29,7 @@ module.exports = function (grunt) {
 				style  : "compact",
 			},
 			files : {
+				"src/docs/css/site.css" : "src/sass/main.scss",
 				"src/docs/css/main-docs.css" : "src/docs/sass/docs.scss"
 			}
 		}

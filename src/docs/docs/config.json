@@ -1,6 +1,7 @@
 {
 	"title"         : "Base Project Template",
 	"tagline"       : "Personal project starting files",
+	"author"        : "AJ Marino",
 	"docs_path"     : "docs",
 	"image"         : "img/app.png",
 	"theme"         : "navy",

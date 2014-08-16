@@ -70,6 +70,8 @@
             $unnecessaryJs = array('./js/less.min.js');
             @mkdir($path.'/css');
             @copy('./css/daux-'.$options['theme'].'.min.css', $path.'/css/daux-'.$options['theme'].'.min.css');
+            @copy('./css/main-docs.css', $path.'/css/main-docs.css');
+            @copy('./css/site.css', $path.'/css/site.css');
             $unnecessaryImgs = array_diff($unnecessaryImgs, array('./img/favicon-'.$options['theme'].'.png'));
         }
         copy_recursive('./img', $path.'/', $unnecessaryImgs);
