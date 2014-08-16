@@ -7,7 +7,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: lightest($green-palette);
+ *     color: get-lightest($green-palette);
  * }
  *
  * // Output
@@ -39,7 +39,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: lighter($green-palette);
+ *     color: get-lighter($green-palette);
  * }
  *
  * // Output
@@ -72,7 +72,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: light($green-palette);
+ *     color: get-light($green-palette);
  * }
  *
  * // Output
@@ -105,7 +105,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: base($green-palette);
+ *     color: get-base($green-palette);
  * }
  *
  * // Output
@@ -137,7 +137,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: dark($green-palette);
+ *     color: get-dark($green-palette);
  * }
  *
  * // Output
@@ -170,7 +170,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: darker($green-palette);
+ *     color: get-darker($green-palette);
  * }
  *
  * // Output
@@ -202,7 +202,7 @@
  * @example scss
  * // Usage
  * .el {
- *     color: darkest($green-palette);
+ *     color: get-darkest($green-palette);
  * }
  *
  * // Output

@@ -18,7 +18,7 @@
  *     height: #fff;
  * }
  */
-@function c($item) {
+@function h($item) {
   @if not map-has-key($heights, $item) {
     @warn "No height found for `#{$item}` in $heights map. Property omitted.";
   }
