@@ -4,7 +4,7 @@
 	"author"        : "AJ Marino",
 	"docs_path"     : "docs",
 	"image"         : "img/app.png",
-	"theme"         : "navy",
+	"theme"         : "black",
 	"template"      :"default",
 	"toggle_code"   : true,
 	"breadcrumbs"   : false,
