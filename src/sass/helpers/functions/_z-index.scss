@@ -8,8 +8,14 @@
  * 
  *
  * @example scss
- * .selector {
- *   z-index: z('modal');
+ * // Usage
+ * .el {
+ *     z-index: z('modal');
+ * }
+ *
+ * // Output
+ * .el {
+ *     z-index: 10;
  * }
  */
 @function z($layer) {

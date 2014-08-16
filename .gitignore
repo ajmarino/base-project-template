@@ -4,5 +4,7 @@
 .DS_Store
 Thumbs.db
 
+/docs
+/src/docs/css/site.css
 /src/docs/css/main-docs.css
 /src/docs/css/daux-black.min.css
