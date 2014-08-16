@@ -1,7 +1,7 @@
 /**
  * Retrieves the 'lighest' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -12,7 +12,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function lightest($palette) {
+@function get-lightest($palette) {
   @if not map-has-key($palette, 'lightest') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `lightest`.";
   }
@@ -21,10 +21,13 @@
 }
 
 
+
+
+
 /**
  * Retrieves the 'lighter' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -35,7 +38,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function lighter($palette) {
+@function get-lighter($palette) {
   @if not map-has-key($palette, 'lighter') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `lighter`.";
   }
@@ -45,10 +48,13 @@
  
 
 
+
+
+
 /**
  * Retrieves the 'light' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -59,7 +65,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function light($palette) {
+@function get-light($palette) {
   @if not map-has-key($palette, 'light') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `light`.";
   }
@@ -69,10 +75,13 @@
 
 
 
+
+
+
 /**
  * Retrieves the 'base' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -83,7 +92,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function base($palette) {
+@function get-base($palette) {
   @if not map-has-key($palette, 'base') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `base`.";
   }
@@ -92,10 +101,13 @@
 }
 
 
+
+
+
 /**
  * Retrieves the 'dark' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -106,7 +118,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function dark($palette) {
+@function get-dark($palette) {
   @if not map-has-key($palette, 'dark') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `dark`.";
   }
@@ -116,10 +128,13 @@
  
 
 
+
+
+
  /**
  * Retrieves the 'darker' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -130,7 +145,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function darker($palette) {
+@function get-darker($palette) {
   @if not map-has-key($palette, 'darker') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `darker`.";
   }
@@ -139,10 +154,13 @@
 }
 
 
+
+
+
 /**
  * Retrieves the 'darkest' color from a palette generated with @palette
  * 
- * @param  {Map} $palette - Map of colors with associated names
+ * @param {Map} $palette - Map of colors with associated names
  *
  *
  * @example scss
@@ -153,7 +171,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function darkest($palette) {
+@function get-darkest($palette) {
   @if not map-has-key($palette, 'darkest') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `darkest`.";
   }
