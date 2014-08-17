@@ -10,12 +10,13 @@
     &--nav {
         @include absolute(top 50% right 0);
         @include transform( translate(0, -50%) );
-        @include transition($anim);
+        @include transition($anim-NavBtn);
         @include typecsset-font-size(16px, false);
         border: none;
         background: c("navbar");
         padding: .25em 1em;
         color: c("btn--nav");
+        width: em(46);
 
         @include breakpoint(tablet) {
             display: none;
@@ -35,8 +36,8 @@
         }
     }
 
-    &--collapse {
-        padding-top: 1em;
+    &--active {
+        width: 90%;
     }
 }
 

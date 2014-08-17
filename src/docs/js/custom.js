@@ -10,6 +10,7 @@ $(function () {
 
     // Responsive menu spinner
     $('#menu-spinner-button').click(function () {
+        $('header').toggleClass("nav--open");
         $('#sub-nav-collapse').toggleClass("sidebar--open");
     });
 
