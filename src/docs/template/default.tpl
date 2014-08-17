@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="<?php echo $relative_base; ?>css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo $relative_base; ?>css/site.css">
     <link rel="stylesheet" href="<?php echo $relative_base; ?>css/daux-<?php echo $options['theme'];?>.min.css">
+
+    <script src="<?php echo $relative_base; ?>js/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -25,21 +27,19 @@
 
     <header class="header header--main">
         <a class="logo logo--main" href="<?php echo get_url('index'); ?>"><?php echo $options['title']; ?></a>
-                
-        <a href="https://github.com/<?php echo $options['repo']; ?>" target="_blank" id="github-ribbon" class="ribbon"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        
+        <button type="button" class="btn btn--nav" id="menu-spinner-button">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- <a href="https://github.com/< ?php echo $options['repo']; ?>" target="_blank" id="github-ribbon" class="ribbon"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
     </header>
 
     
     <div class="content">
-        <div class="sidebar">
+        <div id="sub-nav-collapse" class="sidebar">
 
-            <!-- For Mobile -->
-            <button type="button" class="btn btn--nav" id="menu-spinner-button">
-                <i class="fa fa-bars"></i>
-            </button>
-
-            <!-- Navigation -->
-            <div id="sub-nav-collapse" class="nav nav--sidebar">
+            <div class="nav nav--sidebar">
                 <?php echo get_navigation($file); ?>
 
                 <?php if ( !empty($options['links']) ) { ?>
@@ -53,6 +53,7 @@
                     </div>
                 <?php } ?>
             </div>
+            
         </div>
 
         <main class="main">

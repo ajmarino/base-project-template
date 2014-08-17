@@ -29,8 +29,6 @@ body {
 
 .content {
     @include clearfix;
-    @include transition($anim-Content);
-    margin-top: h("navbar");
     position: relative;
     flex: 1;
     width: 100%;
@@ -39,26 +37,48 @@ body {
 
     @include breakpoint(tablet) {
         flex-direction: row;
-        margin-top: h("navbar--tablet")
+    }
+}
+
+
+.main,
+.sidebar {
+    padding: h("navbar")+1 1em 1em;
+
+    @include breakpoint(tablet) {
+        
     }
 }
 
 
 
-
 .sidebar {
+    @include relative(top 0 left 0);
     background-color: c("sidebar");
     flex-order: -1;
+    width: 100%;
 
     @include breakpoint(tablet) {
-        flex: 0 0 16em;
+        position: fixed;
+        width: 16em;
+        height: 100%;
+        height: 100vh;
+        padding-top: h("navbar--tablet")+1;
     }
 }
 
 
 
 .main {
+    @include transition($anim-Header);
+    padding: 1em;
     flex: 1;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+        padding-top: h("navbar--tablet")+1;
+        margin-left: $w-Sidebar;
+    }
 }
 
 

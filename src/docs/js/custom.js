@@ -10,7 +10,7 @@ $(function () {
 
     // Responsive menu spinner
     $('#menu-spinner-button').click(function () {
-        $('#sub-nav-collapse').slideToggle();
+        $('#sub-nav-collapse').toggleClass("sidebar--open");
     });
 
     // Catch browser resize

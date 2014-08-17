@@ -1,33 +1,49 @@
-a {
-    color: $light;
-}
-
 .btn {
-    &.btn-sidebar {
-        padding: 7px 10px;
-        background-color: $sidebar-hover;
-        border: none;
+    position: relative;
 
-        .icon-bar {
-            display: block;
-            width: 18px;
-            height: 2px;
-            margin-top: 2px;
-            margin-bottom: 3px;
-            background-color: $dark;
-            
+    .fa {
+        @include relative(left 50%);
+        @include transform( translate(-50%, 0) );
+
+    }
+
+    &--nav {
+        @include absolute(top 50% right 0);
+        @include transform( translate(0, -50%) );
+        @include transition($anim);
+        @include typecsset-font-size(16px, false);
+        border: none;
+        background: c("navbar");
+        padding: .25em 1em;
+        color: c("btn--nav");
+
+        @include breakpoint(tablet) {
+            display: none;
         }
+
 
         &:hover {
-            background-color: $dark;
-
-            .icon-bar {
-                background-color: $light;
+            .no-touch & {
+                background-color: c("sidebar");
+                color: c("navbar");
             }
         }
+
+        &:focus {
+            background-color: c("sidebar");
+            color: c("navbar");
+        }
+    }
+
+    &--collapse {
+        padding-top: 1em;
     }
 }
 
-code {
-    color: $light;
+
+.fa {
+
+    &--bars {
+
+    }
 }
