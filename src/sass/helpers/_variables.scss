@@ -33,12 +33,26 @@ $breakpoints: (
 
 
 /**
+ * Initial palette used to define the diff between the base color and each color from the palette. There can be as many colors as one wants.
+ * 
+ * @Link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
+ *
+ * @type Map
+ */ 
+$base-palette: (
+  "base": #FF6351, 
+  "colors": #CFDFE8 #BFB9C3 #CF9192 #FF6351 #BF4A3C #7F3128 #732C24
+) !default;
+
+
+
+
+/**
  * Colors used thoughout the site using meaningful names
  */
-$colors : (
+$site-colors : (
 	"primary" : "#333",
 );
-
 
 
 /**

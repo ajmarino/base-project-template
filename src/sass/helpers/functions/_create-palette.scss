@@ -1,25 +1,138 @@
 /**
- * Creates a palette of 7 colors from a single color passed in, 3 lighter, 3 darker
+ * Function defining the difference between 2 colors
  *
  * @access private
  * 
+ * @param {Color} $a - first color
+ * @param {Color} $b - second color
+ *
+ * @return {Map}  The color operations to do in order to find $b from $a where keys are the color functions to apply and values are the values to pass to these functions
+ */
+@function color-diff($a, $b) {
+  $sat: saturation($a) - saturation($b);
+  $lig:  lightness($a) -  lightness($b);
+  $fn-sat: if($sat > 0, 'desaturate', 'saturate');
+  $fn-lig: if($lig > 0, 'darken', 'lighten');
+  
+  @return (
+    adjust-hue: -(hue($a) - hue($b)),
+    #{$fn-sat}: abs($sat),
+    #{$fn-lig}: abs($lig)
+  );
+}
+ 
+
+
+
+
+/**
+ * Compute the diff for each color from the initial palette
+ *
+ * @access private
  * 
- * @param {Color} $base-color - Base color of palette
+ * @param {Map} $palette - palette
  *
+ * @requires {function} color-diff
+ * 
+ * @return {List} list of diffs
+ */
+@function palette-diff($palette) {
+  $base: map-get($palette, "base");
+  $colors: map-get($palette, "colors");
+  
+  $diffs: ();
+  
+  @each $color in $colors {
+    $diffs: append($diffs, color-diff($base, $color));
+  }
+  
+  @return $diffs;
+}
+
+
+
+/**
+ * Palette of diffs based on colors in $base-palette:colors
+ * Same length as colors key from map-palette
  *
- * @returns {List} Palette of colors with 3 lighter and 3 darker than the $base-color
+ * @access private
+ * 
+ * @type List
+ */
+$palette-diffs: palette-diff($base-palette);
+
+
+
+
+
+/**
+ * Apply differences returned from `color-diff` function to a color in order to retrieve the second color
  *
+ * @access private
+ * 
+ * @param {Color} $color - color to transform
+ * @param {Map} $diff - diff map
+ * 
+ * @return {Color} transformed color
+ */
+@function apply-diff($color, $diff) {
+  // We call the $key (function), 
+  // passing the $color and the $value as parameters
+  // e.g. `call(adjust-hue, #BADA55, 42)`
+  @each $key, $value in $diff {
+    $color: call($key, $color, $value);
+  }
+  
+  @return $color;
+}
+
+/**
+ * Create a palette from a base color
  *
- * @example scss
- * $green-palette: create-palette(lightgreen);
- * // Returns: #f4f1f3 #d5d5d5 #c2cec0 lightgreen #79b079 #4f864f #497c49
+ * @access private
+ * 
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @requires {function} palette-diff
+ * @requires {function} apply-diff
+ * @requires {variable} $base-palette
+ *
+ * 
+ * @return {List} list of colors
  */
 @function create-palette($base-color) {
-  $palette: ();
- 
-  @each $diff in $palette-diff {
-    $palette: append($palette, apply-diff($base-color, $diff));
+  $colors: ();
+  
+  @each $diff in $palette-diffs {
+    $colors: append($colors, apply-diff($base-color, $diff));
   }
- 
+  
+  @return $colors;
+}
+
+
+
+/**
+ * Create a list of colors from the base color
+ * then turn in into a map with explicit keys
+ *
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @link http://www.sitepoint.com/using-sass-build-color-palettes/
+ * 
+ * @requires {function} create-palette
+ *
+ * @return {Map}
+ */
+@function create-named-palette($base-color) {
+  $palette-colors: create-palette($base-color);
+  // Keys need to be same length as colors in $base-pallet
+  $keys: 'lightest' 'lighter' 'light' 'base' 'dark' 'darker' 'darkest';
+  $palette: ();
+
+  @for $i from 1 through min(length($palette-colors), length($keys)) {
+    $palette: map-merge($palette, (nth($keys, $i): nth($palette-colors, $i)));
+  }
+
   @return $palette;
 }

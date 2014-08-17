@@ -1,11 +1,9 @@
-@import "functions/apply-diff";
-@import "functions/color";
-@import "functions/color-diff";
+
 @import "functions/create-palette";
+@import "functions/get-palette-colors";
+
+@import "functions/color";
 @import "functions/heights";
-@import "functions/palette-colors";
-@import "functions/palette-diff";
-@import "functions/palette";
 @import "functions/position";
 @import "functions/random";
 @import "functions/stripes";

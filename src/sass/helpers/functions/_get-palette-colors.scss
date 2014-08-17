@@ -18,7 +18,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-lightest($palette) {
+@function get_lightest($palette) {
   @if not map-has-key($palette, 'lightest') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `lightest`.";
   }
@@ -50,7 +50,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-lighter($palette) {
+@function get_lighter($palette) {
   @if not map-has-key($palette, 'lighter') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `lighter`.";
   }
@@ -83,7 +83,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-light($palette) {
+@function get_light($palette) {
   @if not map-has-key($palette, 'light') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `light`.";
   }
@@ -116,7 +116,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-base($palette) {
+@function get_base($palette) {
   @if not map-has-key($palette, 'base') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `base`.";
   }
@@ -148,7 +148,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-dark($palette) {
+@function get_dark($palette) {
   @if not map-has-key($palette, 'dark') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `dark`.";
   }
@@ -181,7 +181,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-darker($palette) {
+@function get_darker($palette) {
   @if not map-has-key($palette, 'darker') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `darker`.";
   }
@@ -213,7 +213,7 @@
  * 
  * @return {String} - single color matching the given keyword
  */
-@function get-darkest($palette) {
+@function get_darkest($palette) {
   @if not map-has-key($palette, 'darkest') {
     @warn "`#{inspect($palette)}` doesn't seem to have a key named `darkest`.";
   }

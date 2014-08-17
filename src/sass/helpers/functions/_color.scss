@@ -19,9 +19,9 @@
  * }
  */
 @function c($color) {
-  @if not map-has-key($colors, $color) {
+  @if not map-has-key($site-colors, $color) {
     @warn "No color found for `#{$color}` in $colors map. Property omitted.";
   }
  
-  @return map-get($colors, $color);
+  @return map-get($site-colors, $color);
 }
