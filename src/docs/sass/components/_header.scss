@@ -31,13 +31,13 @@
     text-decoration: none;
     
     &--main {
-        @include transition($anim-Header);
+        @include transition($anim);
          color: c("logo--main");
          font-weight: bold;
 
-         @include breakpoint(tablet) {
+        @include breakpoint(tablet) {
             @include typecsset-font-size(21px);
-         }
+        }
     }
 }
 

@@ -2,13 +2,13 @@
     position: relative;
 
     .fa {
-        @include relative(left 50%);
-        @include transform( translate(-50%, 0) );
-
+        @include absolute(top 50% right 1em);
+        @include transform( translate(0, -50%) );
     }
 
     &--nav {
         @include absolute(top 50% right 0);
+        @include size( 3em h("navbar") );
         @include transform( translate(0, -50%) );
         @include transition($anim-NavBtn);
         @include typecsset-font-size(16px, false);
@@ -16,7 +16,6 @@
         background: c("navbar");
         padding: .25em 1em;
         color: c("btn--nav");
-        width: em(46);
 
         @include breakpoint(tablet) {
             display: none;
@@ -30,14 +29,11 @@
             }
         }
 
-        &:focus {
+        &:focus,
+        .nav--open & {
             background-color: c("sidebar");
             color: c("navbar");
         }
-    }
-
-    &--active {
-        width: 90%;
     }
 }
 

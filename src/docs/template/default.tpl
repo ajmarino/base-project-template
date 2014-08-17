@@ -29,7 +29,7 @@
     <header class="header header--main">
         <a class="logo logo--main" href="<?php echo get_url('index'); ?>"><?php echo $options['title']; ?></a>
         
-        <button type="button" class="btn btn--nav" id="menu-spinner-button">
+        <button type="button" class="btn btn--nav toggle-menu" id="menu-spinner-button">
             <i class="fa fa-bars"></i>
         </button>
 
@@ -39,7 +39,7 @@
     
     <div class="content">
         <div id="sub-nav-collapse" class="sidebar">
-
+            
             <div class="nav nav--sidebar">
                 <?php echo get_navigation($file); ?>
 
@@ -58,11 +58,15 @@
         </div>
 
         <main class="main">
-            <header class="header header--page">
-                <h1><?php echo (isset($page['title']))?$page['title']:$options['title'];?></h1>
-            </header>
+            <a href="#" class="close toggle-menu"></a>
 
-            <?php echo $page['content']; ?>
+            <section class="page">
+                <header class="header header--page">
+                    <h1><?php echo (isset($page['title']))?$page['title']:$options['title'];?></h1>
+                </header>
+
+                <?php echo $page['content']; ?>
+            </section>
         </main>
     </div>
 

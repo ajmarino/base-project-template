@@ -39,14 +39,15 @@ $heights : (
 
 	"footer--main"   : 2em,
 );
-$w-Sidebar : 16em;
+$w-Sidebar : 17em;
 
 
 $z-layers : (
 	"offscreen"        : -1,
 
-	"content--sidebar" : 20,
-	"content--main"    : 30,
+	"page--content"    : 20,
+	"sidebar--close"   : 25,
+	"sidebar"          : 30,
 
 	"footer--main"     : 50,
 
@@ -60,6 +61,11 @@ $anim-Header  : height $anim-DefaultTime linear;
 $anim-Content : margin $anim-DefaultTime linear;
 $anim-Ribbon  : opacity $anim-DefaultTime linear;
 $anim-NavBtn  : width $anim-DefaultTime ease-in-out;
+$anim-Sidebar : all $anim-DefaultTime ease-in-out;
+
+$offCanvasMenu : translate($w-Sidebar, 0);
+
+
 
 
 

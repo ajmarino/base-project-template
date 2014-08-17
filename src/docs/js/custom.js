@@ -9,9 +9,14 @@ $(function () {
     $('table').addClass('table');
 
     // Responsive menu spinner
-    $('#menu-spinner-button').click(function () {
-        $('header').toggleClass("nav--open");
-        $('#sub-nav-collapse').toggleClass("sidebar--open");
+    $('.toggle-menu').click(function () {
+        $('.container').toggleClass("nav--open");
+
+        if ( $('.btn--nav .fa').hasClass('fa-bars') ) {
+            $('.btn--nav .fa').removeClass('fa-bars').addClass('fa-times');
+        } else {
+             $('.btn--nav .fa').removeClass('fa-times').addClass('fa-bars');
+        }
     });
 
     // Catch browser resize
