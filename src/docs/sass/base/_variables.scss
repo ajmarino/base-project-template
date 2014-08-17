@@ -11,31 +11,44 @@ $breakpoints: (
 );
 
 
-
-$site-colors : (
-	"main-bg"   : #fefefe,
-
-	"navbar" : #111,
-
-	"body-text" : #222
-);
 $base-palette: (
   "base": #999, 
   "colors": #fff #ddd #bbb #999 #777 #555 #333
 );
 $gray-palette : create-named-palette(#999);
 
+$site-colors : (
+	"main-bg" : #fff,
+	"sidebar" : #f3f3f3,
+
+	"navbar"     : get_darkest($gray-palette),
+	"logo--main" : #222,
+
+	"body-text" : #222,
+);
+
+
+
 
 $heights : (
-	"navbar" : em(48)
+	"navbar"         : 2em,
+	"navbar--tablet" : 3em,
 );
 
 
 
 $z-layers : (
+	"offscreen" : -1,
 
-	"navbar" : 100
+	"ribbon" : 90,
+	"navbar" : 100,
 );
+
+
+$anim-DefaultTime : 0.3s;
+$anim-Header  : height $anim-DefaultTime linear;
+$anim-Content : margin $anim-DefaultTime linear;
+$anim-Ribbon  : opacity $anim-DefaultTime linear;
 
 
 

@@ -1,13 +1,22 @@
 .header {
     position: relative;
-    box-shadow: 0 1px 5px rgba(white,.25);
-    background-color: get_darkest($gray-palette);
-    margin-bottom: 0;
-    z-index: z("navbar");
-    padding: 10px;
+    margin: 0;
 
-    @include breakpoint(tablet) {
-        padding: 20px;
+    &--main {
+        @include fixed(top 0 right 0 left 0);
+        @include transition($anim-Header);
+        box-shadow: 0 0 1px white;
+        border-bottom: 1px solid #111;
+        background-color: c("navbar");
+        padding: 0 15px;
+        z-index: z("navbar");
+        height: h("navbar");
+        display: flex;
+        align-items: center; 
+
+        @include breakpoint(tablet) {
+            height: h("navbar--tablet");
+        }
     }
 }
 
@@ -16,12 +25,18 @@
 
 .logo {
     font-family: 'Roboto Slab';
-    color: get_lightest($gray-palette);
-    text-shadow: 0 1px 1px rgba(white, .5);
+   
+    text-shadow: 0 1px 1px rgba(white, .2);
     text-decoration: none;
     
     &--main {
-        
+        @include transition($anim-Header);
+         color: c("logo--main");
+         font-weight: bold;
+
+         @include breakpoint(tablet) {
+            @include typecsset-font-size(21px);
+         }
     }
 }
 
@@ -30,4 +45,14 @@
 
 .ribbon {
     @include absolute(top 100% right 0);
+    @include transition($anim-Ribbon);
+    z-index: z("offscreen");
+    opacity: 0;
+    pointer-events: none;
+
+    @include breakpoint(tablet) {
+        opacity: 1;
+        pointer-events: initial;
+        z-index: z("ribbon");
+    }
 }

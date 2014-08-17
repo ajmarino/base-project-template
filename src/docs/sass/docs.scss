@@ -1,6 +1,7 @@
 @import "../../../bower_components/bourbon/dist/bourbon";
 
 @import "../../sass/helpers/helpers";
+@import "../../sass/base/typecsset";
 
 @import "base/fonts";
 @import "base/variables";
@@ -9,3 +10,4 @@
 
 @import "components/misc";
 @import "components/header";
+@import "components/footer";
