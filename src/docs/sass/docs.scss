@@ -1,10 +1,11 @@
-// @import "../../../bower_components/foundation/scss/foundation";
+@import "../../../bower_components/bourbon/dist/bourbon";
 
 @import "../../sass/helpers/helpers";
 
 @import "base/fonts";
 @import "base/variables";
 @import "base/structure";
+@import "base/typography";
 
 @import "components/misc";
-@import "components/navbar";
+@import "components/header";

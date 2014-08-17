@@ -1,8 +1,41 @@
 $font-family-sans-serif : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif      : Georgia, "Times New Roman", Times, serif;
 
-$navbar-height: 50px;
 
+
+$breakpoints: (
+	"nav"     : (min-width: em(464)),
+	"tablet"  : (min-width: em(768)),
+	"labtop"  : (min-width: em(992)),
+	"desktop" : (min-width: em(1200))
+);
+
+
+
+$site-colors : (
+	"main-bg"   : #fefefe,
+
+	"navbar" : #111,
+
+	"body-text" : #222
+);
+$base-palette: (
+  "base": #999, 
+  "colors": #fff #ddd #bbb #999 #777 #555 #333
+);
+$gray-palette : create-named-palette(#999);
+
+
+$heights : (
+	"navbar" : em(48)
+);
+
+
+
+$z-layers : (
+
+	"navbar" : 100
+);
 
 
 
@@ -21,9 +54,4 @@ $syntax-number: #09559b;
 $syntax-label: #001775;
 
 
-@mixin sans-serif($weight: normal, $size: 14px, $lineheight: 20px) {
-    font-weight: $weight;
-    font-size: $size;
-    font-family: $font-family-sans-serif;
-    line-height: $lineheight;
-}
+

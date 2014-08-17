@@ -1,0 +1,33 @@
+.header {
+    position: relative;
+    box-shadow: 0 1px 5px rgba(white,.25);
+    background-color: get_darkest($gray-palette);
+    margin-bottom: 0;
+    z-index: z("navbar");
+    padding: 10px;
+
+    @include breakpoint(tablet) {
+        padding: 20px;
+    }
+}
+
+
+
+
+.logo {
+    font-family: 'Roboto Slab';
+    color: get_lightest($gray-palette);
+    text-shadow: 0 1px 1px rgba(white, .5);
+    text-decoration: none;
+    
+    &--main {
+        
+    }
+}
+
+
+
+
+.ribbon {
+    @include absolute(top 100% right 0);
+}
