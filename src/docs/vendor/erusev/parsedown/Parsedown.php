@@ -283,6 +283,9 @@ class Parsedown
                     'name' => 'h'.$level,
                     'text' => $text,
                     'handler' => 'line',
+                    'attributes' => array(
+                        'class' => "h h--".$level,
+                    ),
                 ),
             );
 
@@ -306,6 +309,9 @@ class Parsedown
                     'text' => array(
                         'name' => 'code',
                         'text' => $text,
+                    ),
+                    'attributes' => array(
+                        'class' => 'code',
                     ),
                 ),
             );
@@ -393,6 +399,9 @@ class Parsedown
             $Element = array(
                 'name' => 'code',
                 'text' => '',
+                'attributes' => array(
+                    'class' => 'code',
+                ),
             );
 
             if (isset($matches[2]))
@@ -410,6 +419,9 @@ class Parsedown
                     'name' => 'pre',
                     'handler' => 'element',
                     'text' => $Element,
+                    'attributes' => array(
+                        'class' => 'pre',
+                    ),
                 ),
             );
 
@@ -471,7 +483,11 @@ class Parsedown
                 'element' => array(
                     'name' => $name,
                     'handler' => 'elements',
+                    'attributes' => array(
+                        'class' => 'list',
+                    ),
                 ),
+                
             );
 
             $Block['li'] = array(
@@ -479,6 +495,9 @@ class Parsedown
                 'handler' => 'li',
                 'text' => array(
                     $matches[2],
+                ),
+                'attributes' => array(
+                    'class' => 'li',
                 ),
             );
 
@@ -506,6 +525,9 @@ class Parsedown
                 'handler' => 'li',
                 'text' => array(
                     $matches[1],
+                ),
+                'attributes' => array(
+                    'class' => 'li',
                 ),
             );
 
@@ -549,6 +571,9 @@ class Parsedown
                     'name' => 'blockquote',
                     'handler' => 'lines',
                     'text' => (array) $matches[1],
+                    'attributes' => array(
+                        'class' => 'bq',
+                    ),
                 ),
             );
 
@@ -864,6 +889,9 @@ class Parsedown
                 'name' => 'p',
                 'text' => $Line['text'],
                 'handler' => 'line',
+                'attributes' => array(
+                    'class' => 'p',
+                ),
             ),
         );
 

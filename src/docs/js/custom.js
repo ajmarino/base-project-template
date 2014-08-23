@@ -9,7 +9,8 @@ $(function () {
     $('table').addClass('table');
 
     // Responsive menu spinner
-    $('.toggle-menu').click(function () {
+    $('.toggle-menu').click(function (e) {
+        e.preventDefault();
         $('.container').toggleClass("nav--open");
 
         if ( $('.btn--nav .fa').hasClass('fa-bars') ) {

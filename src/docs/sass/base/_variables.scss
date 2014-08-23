@@ -37,7 +37,7 @@ $heights : (
 	"navbar"         : 2em,
 	"navbar--tablet" : 3em,
 
-	"footer--main"   : 2em,
+	"footer"         : 2.5em,
 );
 $w-Sidebar : 17em;
 
@@ -63,7 +63,7 @@ $anim-Ribbon  : opacity $anim-DefaultTime linear;
 $anim-NavBtn  : width $anim-DefaultTime ease-in-out;
 $anim-Sidebar : all $anim-DefaultTime ease-in-out;
 
-$offCanvasMenu : translate($w-Sidebar, 0);
+$offCanvasMenu : translateX($w-Sidebar);
 
 
 
