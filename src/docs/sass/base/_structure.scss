@@ -42,14 +42,6 @@ body {
 }
 
 
-.main,
-.sidebar {
-    @include breakpoint(tablet) {
-        padding-top: h("navbar--tablet")+1;
-    }
-}
-
-
 
 .sidebar {
     @include fixed(top 0 left 0);
@@ -58,6 +50,7 @@ body {
     @include transition($anim-Sidebar);
     height: 100vh;
     background-color: c("sidebar");
+    border-right: 1px solid c("sidebar--border");
     flex-order: -1;
     z-index: z("sidebar");
     padding: h("navbar")+1 1em 1em;
@@ -70,6 +63,7 @@ body {
         @include transform( translateX(0) );
     }
 }
+
 
 
 
@@ -116,54 +110,9 @@ body {
 
 
 
-
-
-
-
-
-.el {
-        background-color: $sidebar-background;
-        border-right: 1px solid $lines;
-        overflow-x: hidden;
-    }
-
-    .right-column {
-        .content-page {
-            padding: 20px;
-            min-height: 100%;
-            background-color: white;
-        }
-    }
-
-
-.content-area,
-.article-tree {
-    overflow: auto;
-    padding: 0px;
-
-    @media (min-width: 767px) {
-        height: 100%;
-    }
-}
-
-//mobile friendly sub-nav
-.responsive-collapse {
-    padding: 10px 15px;
-    display: none;
-    background-color: $lines;
-    border-bottom: 1px solid $lines;
-
-    @media (max-width: 767px) {
-        display: block;
-    }
-}
-
-.sub-nav-collapse {
-    @media (max-width: 768px) {
-        display: none;
-    }
-
-    @media (min-width: 768px) {
-        display: block;
+.main,
+.sidebar {
+    @include breakpoint(tablet) {
+        padding-top: h("navbar--tablet")+1;
     }
 }

@@ -1,6 +1,6 @@
-$font-family-sans-serif : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif      : Georgia, "Times New Roman", Times, serif;
-
+$ff-Sans  : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-Serif : "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+$ff-Mono  : "Droid Sans Mono", monospace;
 
 
 $breakpoints: (
@@ -17,15 +17,20 @@ $base-palette: (
 );
 $gray-palette : create-named-palette(#999);
 
+
+
+
 $site-colors : (
 	"main-bg" : #fff,
-	"sidebar" : #f3f3f3,
+	"body-text" : #222,
 
 	"navbar"     : get_darkest($gray-palette),
 	"logo--main" : #222,
 	"btn--nav"   : #fff,
-
-	"body-text" : #222,
+	
+	"sidebar"         : #f7f7f7,
+	"sidebar--border" : #eee,
+	
 
 	"footer--main" : #ccc,
 );
@@ -39,7 +44,7 @@ $heights : (
 
 	"footer"         : 2.5em,
 );
-$w-Sidebar : 17em;
+$w-Sidebar : 14em;
 
 
 $z-layers : (

@@ -19,6 +19,12 @@
             padding: 0 1em;
         }
     }
+
+
+    &--page {
+        border-bottom: 1px solid c("sidebar--border");
+        margin-bottom: 1em;
+    }
 }
 
 

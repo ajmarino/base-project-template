@@ -1,0 +1,50 @@
+.page {
+	.h {
+		font-family: $ff-Serif;
+		font-weight: lighter;
+		margin-bottom: .5em;
+
+		&--1 {
+			@include fs(36px, false);
+			margin-bottom: 0;
+		}
+
+		&--2 {
+			@include fs(30px);
+		}
+
+		&--3 {
+			@include fs(24px);
+		}
+	}
+
+
+	.p {
+		@include fs(14px, false);
+		margin-bottom: .5em;
+
+		&--modified {
+			@include fs(10px, false);
+			margin-bottom: 0;
+		}
+	}
+
+
+	.list {
+		.p {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+
+	.pre {
+		padding: 0;
+	}
+
+	.code {
+		@include fs(12px);
+		font-family: $ff-Mono;
+	}
+}
