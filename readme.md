@@ -28,6 +28,7 @@ Use `bash compile_docs.sh` from main project directory to compile docs to /docs
 * grunt-autoprefixer
 * grunt-csso
 * grunt-sassdoc
+* grunt-shell
 
 
 

@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 		'sass:docs',
 		'autoprefixer:docs',
 		'csso:docs',
+		'shell',
 		'sassdoc'
 	]);
 
