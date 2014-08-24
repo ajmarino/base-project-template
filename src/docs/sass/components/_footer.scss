@@ -1,12 +1,13 @@
 .footer {
 	@include fixed(right 0 bottom 0 left 0);
 	width: 100%;
-	z-index: z("footer--main");
-	background: c("footer--main");
+	z-index: z("footer__main");
+	background: c("footer__bg");
 	display: flex;
     align-items: center;
     padding: 0 .5em;
     height: h("footer");
+    border-top: 1px solid c("footer__border");
 
     @include breakpoint(tablet) {
         
@@ -15,6 +16,6 @@
     .footer__text {
     	@include typecsset-font-size(10px, 20px);
     	margin: 0;
-    	color: get_light($gray-palette);
+    	color: c("footer__text");
     }
 }

@@ -2,19 +2,20 @@
 	.h {
 		font-family: $ff-Serif;
 		font-weight: lighter;
-		margin-bottom: .5em;
+		margin: 1em 0 .5em;
+		line-height: 1;
 
 		&--1 {
 			@include fs(36px, false);
-			margin-bottom: 0;
+			margin: 0;
 		}
 
 		&--2 {
-			@include fs(30px);
+			@include fs(30px, false);
 		}
 
 		&--3 {
-			@include fs(24px);
+			@include fs(24px, false);
 		}
 	}
 
@@ -22,6 +23,12 @@
 	.p {
 		@include fs(14px, false);
 		margin-bottom: .5em;
+
+		.code {
+			padding: 1px 4px;
+			background: c("inline-code--bg");
+			color: c("inline-code--text");
+		}
 
 		&--modified {
 			@include fs(10px, false);
@@ -37,14 +44,38 @@
 	}
 
 
-
-
-	.pre {
-		padding: 0;
-	}
-
 	.code {
 		@include fs(12px);
 		font-family: $ff-Mono;
+	}
+
+	.pre {
+		background: c("code--bg");
+		padding: 1em;
+		margin-bottom: 1em;
+		border: 1px solid c("sidebar__border");
+		border-radius: 5px;
+
+		.code {
+			@include fs(16px);
+			color: white;
+		}
+	}
+
+	
+
+
+	.hljs {
+		&-tag       { color: c("code--tag"); }
+		&-title     { color: c("code--title"); }
+		&-attribute { color: c("code--attribute"); }
+		&-value     { color: c("code--value"); }
+	}
+
+
+
+
+	.example {
+		margin: 0 0 2em;
 	}
 }

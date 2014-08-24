@@ -5,7 +5,7 @@
     &--main {
         @include fixed(top 0 right 0 left 0);
         @include transition($anim-Header);
-        box-shadow: 0 0 1px white;
+        box-shadow: 0 0 3px rgba(black, .3);
         border-bottom: 1px solid #111;
         background-color: c("navbar");
         padding: 0 0.5em;
@@ -15,14 +15,14 @@
         align-items: center;
 
         @include breakpoint(tablet) {
-            height: h("navbar--tablet");
+            height: h("navbar__tablet");
             padding: 0 1em;
         }
     }
 
 
     &--page {
-        border-bottom: 1px solid c("sidebar--border");
+        border-bottom: 1px solid c("sidebar__border");
         margin-bottom: 1em;
     }
 }
@@ -38,7 +38,7 @@
     
     &--main {
         @include transition($anim);
-         color: c("logo--main");
+         color: c("logo__main");
          font-weight: bold;
 
         @include breakpoint(tablet) {

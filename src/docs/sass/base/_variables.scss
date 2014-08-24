@@ -19,20 +19,37 @@ $gray-palette : create-named-palette(#999);
 
 
 
+$color-code-red    : #f92672;
+$color-code-blue   : #66d9ef;
+$color-code-yellow : #e6db74;
+$color-code-green  : #a6e22e;
 
 $site-colors : (
 	"main-bg" : #fff,
 	"body-text" : #222,
 
-	"navbar"     : get_darkest($gray-palette),
-	"logo--main" : #222,
-	"btn--nav"   : #fff,
+	"navbar"     : #333,
+	"logo__main" : #fff,
+	"btn__nav"   : #fff,
 	
-	"sidebar"         : #f7f7f7,
-	"sidebar--border" : #eee,
+	"sidebar"         : #fafafa,
+	"sidebar__border" : #ccc,
 	
+	"inline-code--bg"   : #f9f2f4,
+	"inline-code--text" : #c7254e,
 
-	"footer--main" : #ccc,
+	
+	"code--bg"        : #222,
+	"code--tag"       : white,
+	"code--title"     : $color-code-red,
+	"code--attribute" : $color-code-green,
+	"code--value"     : $color-code-yellow,
+
+
+
+	"footer__bg"     : #111,
+	"footer__border" : #555,
+	"footer__text"   : #fff,
 );
 
 
@@ -40,9 +57,9 @@ $site-colors : (
 
 $heights : (
 	"navbar"         : 2em,
-	"navbar--tablet" : 3em,
+	"navbar__tablet" : 3em,
 
-	"footer"         : 2.5em,
+	"footer"         : 1.8em,
 );
 $w-Sidebar : 14em;
 
@@ -50,11 +67,11 @@ $w-Sidebar : 14em;
 $z-layers : (
 	"offscreen"        : -1,
 
-	"page--content"    : 20,
-	"sidebar--close"   : 25,
+	"page__content"    : 20,
+	"sidebar__close"   : 25,
 	"sidebar"          : 30,
 
-	"footer--main"     : 50,
+	"footer__main"     : 50,
 
 	"ribbon"           : 90,
 	"navbar"           : 100,

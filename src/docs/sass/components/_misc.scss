@@ -15,7 +15,7 @@
         border: none;
         background: c("navbar");
         padding: .25em 1em;
-        color: c("btn--nav");
+        color: c("btn__nav");
 
         @include breakpoint(tablet) {
             display: none;

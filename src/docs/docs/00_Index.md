@@ -57,7 +57,10 @@ The docs in `/docs/sass/` pertain mostly to development.  This lists are the var
 ```
 <a href="#" class="button">Default Button</a>
 ```
-<a href="#" class="button">Default Button</a>
+
+<div class="example">
+	<a href="#" class="button">Default Button</a>
+</div>
 
 
 

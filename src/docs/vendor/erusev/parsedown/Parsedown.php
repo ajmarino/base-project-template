@@ -1196,6 +1196,9 @@ class Parsedown
                 'element' => array(
                     'name' => 'code',
                     'text' => $text,
+                    'attributes' => array(
+                        'class' => 'code',
+                    ),
                 ),
             );
         }

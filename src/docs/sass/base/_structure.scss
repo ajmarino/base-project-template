@@ -50,7 +50,7 @@ body {
     @include transition($anim-Sidebar);
     height: 100vh;
     background-color: c("sidebar");
-    border-right: 1px solid c("sidebar--border");
+    border-right: 1px solid c("sidebar__border");
     flex-order: -1;
     z-index: z("sidebar");
     padding: h("navbar")+1 1em 1em;
@@ -93,14 +93,14 @@ body {
 
         .nav--open & {
             opacity: 1;
-            z-index: z("sidebar--close");
+            z-index: z("sidebar__close");
         }
     }
 
     .page {
         @include transition($anim);
         position: relative;
-        z-index: z("page--content");
+        z-index: z("page__content");
 
         .nav--open & {
             filter: blur(3px);
@@ -113,6 +113,6 @@ body {
 .main,
 .sidebar {
     @include breakpoint(tablet) {
-        padding-top: h("navbar--tablet")+1;
+        padding-top: h("navbar__tablet")+1;
     }
 }
