@@ -76,6 +76,23 @@
 
 
 	.example {
+		position: relative;
 		margin: 0 0 2em;
+		padding: 1em;
+		border: 1px solid c("sidebar__border");
+		border-radius: 5px;
+		background: c("sidebar");
+
+		&:after {
+			@include absolute(top 0 right 0);
+			@include fs(12px);
+			display: block;
+			content: "example";
+			border-radius: 0 5px 0 5px;
+			border-left: 1px solid c("sidebar__border");
+			border-bottom: 1px solid c("sidebar__border");
+			padding: 0 .5em;
+			background: white;
+		}
 	}
 }
