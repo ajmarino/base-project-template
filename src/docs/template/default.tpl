@@ -35,7 +35,7 @@
     </header>
 
     
-    <div class="content">
+    <div id="smoothContent" class="content m-scene">
         <div id="sub-nav-collapse" class="sidebar">
             
             <div class="nav nav--sidebar">
@@ -54,7 +54,7 @@
             
         </div>
 
-        <main class="main">
+        <main class="main scene_element scene_element--fadein">
             <a href="#" class="close toggle-menu"></a>
             <section class="page">
                 <header class="header header--page">
@@ -82,7 +82,8 @@ if (typeof jQuery == 'undefined')
     document.write(unescape("%3Cscript src='<?php echo $relative_base; ?>js/jquery-1.11.0.min.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 
-<script src="<?php echo $relative_base; ?>js/bootstrap.min.js"></script>
+<script src="<?php echo $relative_base; ?>js/jquery.smoothState.js"></script>
+<!-- <script src="<?php echo $relative_base; ?>js/bootstrap.min.js"></script> -->
 <script src="<?php echo $relative_base; ?>js/custom.js"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

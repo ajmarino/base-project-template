@@ -1,6 +1,29 @@
 $(function () {
-    $('.aj-nav').click(function (e) {
+    var $body = $('html, body'),
+        content = $('#main').smoothState({
+
+            // Runs when a link has been activated
+            onStart: {
+                duration: 500, // Duration of our animation
+                render: function (url, $container) {
+                    // toggleAnimationClass() is a public method
+                    // for restarting css animations with a class
+                    content.toggleAnimationClass('is-exiting');
+
+                    // Scroll user to the top
+                    $body.animate({
+                        scrollTop: 0
+                    });
+                }
+            }
+        }).data('smoothState');
+
+
+    $('a[href="#"]').click(function (e) {
         e.preventDefault();
+    });
+
+    $('.nav__link--folder').click(function () {
         $(this).parent().siblings().find('ul').slideUp();
         $(this).next().slideToggle();
     });

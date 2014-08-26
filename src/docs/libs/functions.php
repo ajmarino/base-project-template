@@ -110,16 +110,17 @@
     function build_navigation($tree, $current_dir, $url) {
         global $mode, $base_path, $docs_path, $options;
         $return = "";
-        if ($mode === 'Static') $t = relative_path($current_dir . "/.", $url) . '/';
+        if ($mode === 'Static') $t = relative_path( ($current_dir === '../../docs' || $current_dir === '../../docs/') ? $current_dir  . "/": $current_dir, $url) . '/';
         else {
             $t = "http://" . $base_path . '/';
             if (!$options['clean_urls']) $t .= 'index.php?';
-            $rel = clean_url($current_dir, 'Live');
+            $rel = clean_url($current_dir, 'Static');
             $t .= ($rel === '') ? '' : $rel . '/';
         }
         foreach ($tree as $key => $node)
             if (is_array($node)) {
                 $return .= "<li";
+                
                 if (!(strpos($url, $key) === FALSE)) $return .= " class=\"nav--open\"";
                 $return .= ">";
                 $link = "#";
@@ -131,8 +132,8 @@
                 $return .= "<a href=\"" . $link . "\" class=\"" . $nav_class . "nav__link nav__link--folder\">";
                 $return .= clean_url($key, "Title");
                 $return .= "</a>";
-                $return .= "<ul class=\"nav nav--subnav\">";
-                $dir = ($current_dir === '') ? $key : $current_dir . '/' . $key;
+                $return .= "<ul class=\"nav nav--subnav\" style=\"display:none;\">";
+                $dir = ($current_dir === '') ? $key : $key;
                 $return .= build_navigation($node, $dir, $url);
                 $return .= "</ul>";
                 $return .= "</li>";
@@ -142,7 +143,7 @@
                 if ($url === $current_dir . '/' . $node) $return .= " class=\"nav__link--active\"";
                 $return .= ">";
                 $link = $t . clean_url($node, $mode);
-                $return .= "<a href=\"" . $link . "\">" . clean_url($node, "Title");
+                $return .= "<a class=\"nav__link\" href=\"" . $link . "\">" . clean_url($node, "Title");
                 $return .= "</a></li>";
             }
         return $return;

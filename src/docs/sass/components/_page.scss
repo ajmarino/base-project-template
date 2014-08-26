@@ -96,3 +96,32 @@
 		}
 	}
 }
+
+
+.m-scene {
+	.scene_element {
+		animation-duration: 0.5s;
+		transition-timing-function: ease-in;
+		animation-fill-mode: both;
+		
+		&--fadein {
+			animation-name: fadeIn;
+		}
+	}
+
+	&.is-exiting {
+		.scene_element {
+			animation-direction: alternate-reverse;
+		}
+	}
+}
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
