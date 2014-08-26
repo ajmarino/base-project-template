@@ -1,4 +1,6 @@
 $(function () {
+    hljs.initHighlightingOnLoad();
+    
     var $body = $('html, body'),
         content = $('#main').smoothState({
 
@@ -24,7 +26,7 @@ $(function () {
     });
 
     $('.nav__link--folder').click(function () {
-        $(this).parent().siblings().find('ul').slideUp();
+        // $(this).parent().siblings().find('ul').slideUp();
         $(this).next().slideToggle();
     });
 

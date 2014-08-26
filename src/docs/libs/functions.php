@@ -132,7 +132,7 @@
                 $return .= "<a href=\"" . $link . "\" class=\"" . $nav_class . "nav__link nav__link--folder\">";
                 $return .= clean_url($key, "Title");
                 $return .= "</a>";
-                $return .= "<ul class=\"nav nav--subnav\" style=\"display:none;\">";
+                $return .= "<ul class=\"nav nav--subnav nav--closed\" >";
                 $dir = ($current_dir === '') ? $key : $key;
                 $return .= build_navigation($node, $dir, $url);
                 $return .= "</ul>";
