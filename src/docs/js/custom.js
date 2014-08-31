@@ -26,8 +26,8 @@ $(function () {
     });
 
     $('.nav__link--folder').click(function () {
-        // $(this).parent().siblings().find('ul').slideUp();
-        $(this).next().slideToggle();
+        $(this).toggleClass('nav__link--subnav-open');
+        $(this).next().slideToggle().toggleClass('nav--closed').toggleClass('nav--open');
     });
 
     // Bootstrap Table Class

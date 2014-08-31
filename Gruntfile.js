@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 				tasks : ["css"]
 			},
 			docs : {
-				files : ["src/docs/sass/docs.scss", "src/docs/sass/**/*.scss"],
+				files : ["src/docs/sass/docs.scss", "src/docs/sass/**/*.scss", "src/docs/js/*.js", "src/docs/docs/**/*.*"],
 				tasks : ["docs"]
 			}
 		}

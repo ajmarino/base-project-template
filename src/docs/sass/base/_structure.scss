@@ -89,10 +89,12 @@ body {
         z-index: -1;
         background: rgba(black, .35);
         opacity: 0;
+        visibility: hidden;
         box-shadow: inset 0 0 10px rgba(black, .5);
 
         .nav--open & {
             opacity: 1;
+            visibility: visible;
             z-index: z("sidebar__close");
         }
     }

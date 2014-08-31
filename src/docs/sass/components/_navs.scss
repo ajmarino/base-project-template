@@ -3,12 +3,54 @@
 	&--main {
 		list-style: none;
 		margin: 0 0 1em;
+		border-top: 1px solid c("sidebar__border");
+		border-bottom: 1px solid c("sidebar__highlight");
 
-		a {
-			&:link,
-			&:visited {
-				display: block;
-				padding: .25em .5em;
+		.nav__link {
+			@include transition($anim-Sidebar);
+			position: relative;
+			display: block;
+			color: c("body-text");
+			padding: .25em .5em;
+			text-decoration: none;
+			border-bottom: 1px solid c("sidebar__border");
+			border-top: 1px solid c("sidebar__highlight");
+
+			&:hover {
+				background: c("sidebar__highlight");
+			}
+
+
+			&--subnav-open {
+				background: c("sidebar__highlight");
+				border-bottom-color: c("sidebar__highlight");
+			}
+			
+
+			&--subnav,
+			&--subnav-open {
+				&:after {
+					@include absolute(top 50% right .5em);
+					@include transform( translate(0, -50%) );
+					display: block;
+					font-family: "FontAwesome";
+				}
+			}
+
+			&--subnav:after      { content: "\f078"; }
+			&--subnav-open:after { content: "\f077"; }
+		}
+	}
+	
+	&--subnav {
+		margin: 0;
+		background: c("sidebar__highlight");
+
+		.nav__link {
+			padding-left: 3em;
+
+			&:hover {
+				background: c("sidebar");
 			}
 		}
 	}
