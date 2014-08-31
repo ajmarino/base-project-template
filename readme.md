@@ -1,23 +1,30 @@
 # Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![License](http://b.repl.ca/v1/license-MIT-aacc22.png)]()
 
-Grunt organization based on Chris Coyier's Grunt Boilerplate: https://github.com/chriscoyier/My-Grunt-Boilerplate
+Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
 
-Docs compiled using SassDocs and Daux.io
-
-Use `bash compile_docs.sh` from main project directory to compile docs to /docs
+Docs compiled using [SassDocs](https://github.com/SassDoc/sassdoc) and [Daux.io](https://github.com/justinwalsh/daux.io)
 
 
-### Bower Components
-[![HTML5 Boilerplate 4.3.0](http://b.repl.ca/v1/HTML5_Boilerplate-4.3.0-blue.png)](https://github.com/h5bp/html5-boilerplate)<br>
-[![jQuery 2.1.1](http://b.repl.ca/v1/jQuery-2.1.1-blue.png)](https://github.com/jquery/jquery)<br>
-[![Bourbon 4.0.2](http://b.repl.ca/v1/Bourbon-4.0.2-blue.png)](https://github.com/thoughtbot/bourbon)<br>
-[![Normalize.css 3.0.1](http://b.repl.ca/v1/Normalize.css-3.0.1-blue.png)](https://github.com/necolas/normalize.css)<br>
-[![Typecsset 0.3.0](http://b.repl.ca/v1/Typecsset-0.3.0-blue.png)](https://github.com/csswizardry/typecsset)<br>
-[![Foundation 5.3.3](http://b.repl.ca/v1/Foundation-5.3.3-blue.png)](https://github.com/zurb/foundation)<br>
+##  Install
+After downloading files, run `bash setup-project.sh`. This will run the following commands provided they are installed:
+
+	npm init
+	bower init
+	npm install --save-dev ...
+	bower install --save-dev ...
+
+After filling out the information for the bower.json and package.json files, it will intall the following base components
+
+###  Bower Components
+* HTML5 Boilerplate
+* jQuery
+* Bourbon
+* Bitters
+* Normalize.css 
 
 
-### NPM Components
+###  NPM Components
 * grunt
 * grunt-contrib-clean
 * grunt-contrib-concat
@@ -31,10 +38,25 @@ Use `bash compile_docs.sh` from main project directory to compile docs to /docs
 * grunt-shell
 
 
+###  Misc Components
+[Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `src/sass/base`<br>
 
-#### Planned Updates
-* 0.7.1 - styles added for main docs, copied from daux.io less and converted to sass, with updated colors
-* 0.8.0 - updates template and js
-	* change code blocks to only be inline or hidden, to make a 2 column view
-* 1.0.0 - customized template and color scheme, with ability to compile docs using grunt, instead of the shell script
-* 1.1.0 - main docs template updated, based on upcoming foundation for apps framework
+
+
+
+##  Grunt Commands
+
+There are 3 main grunt commands included in `/grunt`:
+
+* css  - Compiles main.scss in `src/sass` to `*/css/main.css`
+* js   - Compiles `src/js` into 1 file in `*/js/app.min.js`
+* docs - Compiles `src/docs/docs` into `/docs` as static html files rdy to be hosted on a server
+
+There is also a `grunt watch` command that will watch the `/src` directory for changes and run the appropriate grunt task.
+
+
+
+
+
+##  Docs
+All docs files are located in `src/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
