@@ -38,17 +38,18 @@
     <div id="smoothContent" class="content m-scene">
         <div id="sub-nav-collapse" class="sidebar">
             
-            <div class="nav nav--sidebar">
+            <div class="nav">
                 <?php echo get_navigation($file); ?>
 
                 <?php if ( !empty($options['links']) ) { ?>
-                    <div class="block block--help-links">
+                    <nav class="nav nav--extras">
                         <?php foreach($options['links'] as $name => $url) { ?>
-                            <a href="<?php echo $url;?>" target="_blank" class="nav__link nav__link--alt"><?php echo $name;?></a><br>
+                            <a href="<?php echo $url;?>" target="_blank" class="nav__link nav__link--alt"><?php echo $name;?></a>
                         <?php } ?>
+                    </nav>
+                    
 
-                        <a href="#" id="toggleCodeBlockBtn" onclick="toggleCodeBlocks();" class="nav__link nav__link--alt">Show Code Blocks Inline</a><br>
-                    </div>
+                    <a href="#" id="toggleCodeBlocks" class="nav__link nav__link--alt nav__link--code-blocks" data-state="visible">Hide Code Blocks</a>
                 <?php } ?>
             </div>
             
