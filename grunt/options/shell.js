@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 			command: 'mkdir docs'
 		},
 		create_docs: {
-			command: 'bash compile_docs.sh'
+			command: 'bash scripts/compile_docs.sh'
 		}
 	}
 

@@ -7,7 +7,7 @@ Docs compiled using [SassDocs](https://github.com/SassDoc/sassdoc) and [Daux.io]
 
 
 ##  Install
-After downloading files, run `bash setup-project.sh`. This will run the following commands provided they are installed:
+After downloading files, run `bash scripts/setup-project.sh`. This will run the following commands provided they are installed:
 
 	npm init
 	bower init
