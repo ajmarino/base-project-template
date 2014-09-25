@@ -1,0 +1,30 @@
+/**
+ * Function for returning a height/width value from a sass map, see $sizes var
+ * 
+ * @param  {obj} $name - item to get height for
+ *
+ *
+ * @group Helpers
+ * 
+ * 
+ * @return {string} - height value from sass map
+ * 
+ *
+ * @example scss
+ * // Usage
+ * .el {
+ *     height: s('navbar');
+ * }
+ *
+ * // Output
+ * .el {
+ *     height: #fff;
+ * }
+ */
+@function s($item) {
+  @if not map-has-key($sizes, $item) {
+    @warn "No height found for `#{$item}` in $sizes map. Property omitted.";
+  }
+ 
+  @return map-get($sizes, $item);
+}

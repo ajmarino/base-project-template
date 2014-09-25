@@ -1,5 +1,7 @@
 /**
  * Base heading sizes, set in px and converted to rem with px fallback
+ *
+ * @group Global Styling
  */
 $headings : (
 	"h1" : 48px,
@@ -23,6 +25,8 @@ $typecsset-show-baseline:       true;
 
 /**
  * Breakpoints for responsive design, any name/ pair can go here
+ *
+ * @group Global Styling
  */
 $breakpoints: (
 	"tablet"  : (min-width: 48em), // 768px
@@ -34,6 +38,8 @@ $breakpoints: (
 
 /**
  * Initial palette used to define the diff between the base color and each color from the palette. There can be as many colors as one wants.
+ *
+ * @group Color Palette
  * 
  * @Link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
  *
@@ -46,12 +52,24 @@ $base-palette: (
 
 
 
+$c-DarkBrown : #1e150e;
+$c-Yellow    : #ffc602;
 
 /**
- * Colors used thoughout the site using meaningful names
+ * Colors used thoughout the site using meaningful names, colrs set using $var-name are defined above sass map in _variables.scss
+ *
+ * @group Global Styling
  */
 $site-colors : (
-	"primary" : "#333",
+	"main-bg"          : #000,
+	"bg-bottom-border" : $c-DarkBrown,
+
+	"main-content-bg" : #fff,
+	"sidebar-bg"      : #333,
+
+	"content-top-border" : $c-Yellow,
+
+	"user-status-border" : #535353,
 );
 
 
@@ -59,17 +77,46 @@ $site-colors : (
 /**
  * Assigns stacking order to items from 1 place, assigned with meaningful names
  * and in 1 place for easier site-wide organization
+ *
+ * @group Global Styling
  */
 $z-layers: (
-	"var-name" : 5
+	"body-bottom-border" : 1,
+	"main-container"     : 2
 );
 
 
 
 /**
  * Simple base animation to animate any properties that can be animated
+ *
+ * @group Global Styling
  */
 $anim : all 0.3s linear;
 
 
+
+
+/**
+ * Sizes array for various dimensions
+ *
+ * @group Global Styling
+ */
+
+$sizes: (
+	"body-bottom-border" : 54px,
+
+
+	"main-container-width" : 1000px,
+	"sidebar-width"        : 166px,
+	"main-content-width"   : 834px,
+
+
+	"main-header-height" : 172px,
+	"user-status-width"  : 650px,
+	"user-status-height" : 132px,
+);
+$s-main-container : 1000px;
+$s-sidebar        : 166px;
+$s-main-content   : $s-main-container - $s-sidebar;
 
