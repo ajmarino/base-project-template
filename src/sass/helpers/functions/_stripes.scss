@@ -1,46 +1,47 @@
 /**
- * Generates bg stripes from a list of colors
+ * Generates bg stripes from a list of `$colors`
  * 
- * @param  {List} $colors                - list of colors to use, with or without color stops
- * @param  {Int}  $direction (to bottom) - direction of colors for linear gradiant
+ * @param  {List} $colors            - list of colors to use, with or without color stops
+ * @param  {Int}  $direction (90deg) - Direction of colors for linear gradiant
+ * @param  {Bool} $random (false)    - Choose to use random stops
  *
  * @group Misc
- * 
  *
  * @example scss
- * $bp1: #fa9300, #66c9ee, #c9c9c9, #82b964, #d24d33, #fffbdb, #2e77bb, #6bd5b1, #f87aa0, #c9c9c9, #72664e, #ccd600, #fffbdb, #df620e, #993838, #ff9600, #d24d33, #8960a7, #82b964, #f87aa0, #d43f3f, #668000, #ff9600, #8960a7, #c9c9c9, #993838, #ccd600, #668000, #f4cc13, #72664e, #fa9300, #66c9ee, #c9c9c9, #82b964, #ccd600, #fffbdb, #2e77bb, #6bd5b1, #f87aa0, #c9c9c9, #fa9300, #66c9ee, #c9c9c9, #82b964, #ccd600, #fffbdb, #fa9300;
- * background-image: stripes($bp1, to right);
+ * 	$colors: #1abc9c #2ecc71 #3498db #9b59b6 #34495e #f1c40f #e67e22 #e74c3c #ecf0f1 #95a5a6;
+ * 	$custom-stops: #1abc9c 10%, #2ecc71 12.5%, #3498db 28%, #9b59b6 35%, #34495e 60%, #f1c40f 69%, #e67e22 83%, #e74c3c 88%, #ecf0f1 96%, #95a5a6 100%;
  *
- * @return {background-image} $bg - linear gradient to apply to item
+ *  // Equal stops
+ *  background: stripes($colors, $direction);
+ *
+ *  // Random stops
+ *  background: stripes($colors, 90deg, $random: true); 
+ *
+ *  // Custom stops
+ *  background: stripes($custom-stops, 90deg);
+ *
+ * @requires _stripes-custom-stops
+ * @requires _stripes-equal-stops
+ * @requires _stripes-random-stops
+ *
+ * @return {String} linear gradient to apply to item
  */
-@function stripes($colors, $direction: "to bottom") {
-  // $colors   : if(type-of($colors) != 'list', ($colors), $colors);
-  $stripes  : 100% / length($colors);
-  $firstCol : nth($colors, 1);
-  $auto     : if( type-of($firstCol) == list, false, true );
-  $gradient : ();
-   
-  @for $i from 1 through length($colors) {
-     $item : nth($colors, $i);
-     $dump : ();
-
-
-     @if $auto == true {
-          $dump : $item $stripes * ($i - 1), $item $stripes * $i;
-     }
-     @else {
-          @if $i > 1 {
-               $prev : nth($colors, $i - 1);
-               $dump : $dump, nth($item, 1) nth($prev, 2);
-          }
-          
-          $dump : $dump, $item;
-     }
-     
-     $gradient : join($gradient, $dump, comma);
+@function stripes($colors, $direction: 90deg, $random: false) {
+  // If lonely color
+  @if length($colors) == 1 { @return $colors; }
+ 
+  // Else
+  $type: 'equal';
+ 
+  @if $random {
+    $type: 'random';
+  }
+ 
+  @else if length(nth($colors, 1)) > 1 {
+    $type: 'custom';
   }
   
-  $bg : #{"linear-gradient(" #{$direction} ", " #{$gradient} ")"};
+  $bg : #{"linear-gradient($direction, call('_stripes-#{$type}-stops', $colors))"};
   @return $bg;
 }
 
