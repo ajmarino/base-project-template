@@ -1,0 +1,23 @@
+/**
+ * Outputs a font stack
+ *
+ * @param {String} $stack-name - short name for font stack
+ *
+ * 
+ * @group Helpers
+ * 
+ * 
+ * @example scss
+ * // Usage
+ * .el {
+ *     @include ff("Helvetica");
+ * }
+ *
+ * // Output
+ * .el {
+ * 	   font-family: Helvetica, Arial, sans-serif;
+ * }
+ */
+@mixin ff($stack-name) {
+	font-family: map-get($font-stacks, $stack-name);
+}
