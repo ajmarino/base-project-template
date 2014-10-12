@@ -1,0 +1,144 @@
+/**
+ * Breakpoints for responsive design, any name/ pair can go here.
+ * <br>See `breakpoint` mixin
+ *
+ * @group Global Styling
+ */
+$breakpoints: (
+	"tablet"  : (min-width: 48em), // 768px
+	"labtop"  : (min-width: 62em), // 992px
+	"desktop" : (min-width: 75em)  // 1200px
+);
+
+
+
+
+
+/**
+ * Font Stacks
+ * <br>See `ff` mixin under `helpers
+ * 
+ * @group Global Styling
+ */
+$font-stacks : (
+	"Helvetica" : (Helvetica, Arial, sans-serif),
+);
+
+
+
+
+
+/**
+ * Base heading sizes, set in px and converted to rem with px fallback.
+ * <br>See `fs` mixin under `helpers`
+ *
+ * @group Global Styling
+ */
+$headings : (
+	"h1" : 48px,
+	"h2" : 36px,
+	"h3" : 30px,
+	"h4" : 24px,
+	"h5" : 20px,
+	"h6" : 18px
+);
+$typecsset-h1-size: map-get($headings, "h1") !default;
+$typecsset-h2-size: map-get($headings, "h2") !default;
+$typecsset-h3-size: map-get($headings, "h3") !default;
+$typecsset-h4-size: map-get($headings, "h4") !default;
+$typecsset-h5-size: map-get($headings, "h5") !default;
+$typecsset-h6-size: map-get($headings, "h6") !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline:       true;
+
+
+/**
+ * Font Stacks
+ * <br>See `ff` mixin under `helpers
+ * 
+ * @group Global Styling
+ */
+$font-stacks : (
+	"Helvetica" : (Helvetica, Arial, sans-serif),
+);
+
+
+
+
+
+/**
+ * Initial palette used to define the diff between the base color and each color from the palette.
+ * <br>See `color palatte` group for helpful mixins
+ * 
+ * 
+ * @group Color Palette
+ * 
+ * @link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
+ *
+ * @type Map
+ */ 
+$base-palette: (
+  "base": #FF6351, 
+  "colors": #CFDFE8 #BFB9C3 #CF9192 #FF6351 #BF4A3C #7F3128 #732C24
+) !default;
+
+
+
+
+
+/**
+ * Colors used thoughout the site using meaningful names, colors set using $c-name are defined above sass this map in _variables.scss.
+ * <br>See `c` mixin under `helpers`
+ * 
+ *
+ * @group Global Styling
+ */
+$site-colors : (
+	"main-bg"          : #000,
+);
+
+
+
+
+/**
+ * Sizes array for various dimensions, use s mixin to retrieve values.
+ * <br>See `s` mixin under `helpers`
+ * 
+ *
+ * @group Global Styling
+ */
+$sizes: (
+	"main-content-width" : 75%,
+);
+
+
+
+
+
+/**
+ * Various transitions, defined by usage name or by properties effected
+ * <br>See `transition` mixin under `helpers`
+ *
+ * @group Global Styling
+ */
+$transitions : (
+	"all"    : all 0.3s linear,
+	"border" : border 0.3s linear,
+	"width"  : width 0.5s ease-in-out,
+);
+
+
+
+
+
+/**
+ * Assigns stacking order to items from one place, assigned with meaningful names.
+ * <br>See `z` mixin under `helpers`
+ * 
+ *
+ * @group Global Styling
+ */
+$z-layers: (
+	"main-container"     : 1
+);
