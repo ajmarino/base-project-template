@@ -12,7 +12,7 @@
  *   $items : rand(5, 10);
  *
  * 
- * @return {Int}      - random number between upper and lower boundries
+ * @return {Int}      - Random number between upper and lower boundries
  */
 @function rand($min, $max) {
   @return random($max - $min) + $min;

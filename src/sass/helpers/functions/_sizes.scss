@@ -1,13 +1,14 @@
 /**
- * Function for returning a height/width value from a sass map, see $sizes var
+ * Function for getting a size value.
+ * <br>See `$sizes` var under `Global Styling`
  * 
- * @param  {obj} $name - item to get height for
+ * @param  {string} $name - item to get height for
  *
  *
  * @group Helpers
  * 
  * 
- * @return {string} - height value from sass map
+ * @return {string} - Named value to get size for from sass map
  * 
  *
  * @example scss

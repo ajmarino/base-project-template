@@ -1,12 +1,13 @@
 /**
- * Function for returning a z-index value from a sass map, see $z-layers var
+ * Function for getting a z-index value.
+ * <br>See `$z-layers` var under `Global Styling`
  * 
- * @param  {obj} $layer - item to get z index of
+ * @param  {sting} $layer - Named item to get z index of
  *
  * @group Helpers
  * 
  * 
- * @return {int}        - z-index # from sass map
+ * @return {int}        - Z-index
  * 
  *
  * @example scss

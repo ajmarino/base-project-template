@@ -1,7 +1,7 @@
 /**
- * Absolute position mixin using private _position function
+ * Absolute position mixin using `_position` function.
  *
- * @param {List} $args - list of offsets and values
+ * @param {List} $args - List of offsets and values
  *
  *
  * @group Helpers
@@ -30,9 +30,9 @@
 
 
 /**
- * Relative position mixin using private _position function
+ * Relative position mixin using `_position` function.
  *
- * @param {List} $args - list of offsets and values
+ * @param {List} $args - List of offsets and values
  *
  *
  * @group Helpers
@@ -63,9 +63,9 @@
 
 
 /**
- * Fixed position mixin using private _position function
+ * Fixed position mixin using `_position` function.
  *
- * @param {List} $args - list of offsets and values
+ * @param {List} $args - List of offsets and values
  *
  *
  * @group Helpers

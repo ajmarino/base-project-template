@@ -1,11 +1,11 @@
 /**
- * Mixin for adding a triangle to a before or after psuedo element
+ * Mixin for adding a triangle to a `:before` or `:after` psuedo element.
  *
  * @param {String} $element         - psuedo element to use, only allows "before" or "after"
  * @param {String} $direction       - direction for the arrow to face
  * @param {List}   $position        - List of offsets and values
  * @param {String} $color (inherit) - color for arrow
- * @param {Int}    $size (1em)    - size of arrow
+ * @param {Int}    $size (1em)      - size of arrow
  *
  *
  * @group Misc
