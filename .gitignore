@@ -6,7 +6,7 @@
 Thumbs.db
 
 /docs
-/src/docs/css/site.css
-/src/docs/css/main-docs.css
-/src/docs/css/daux-black.min.css
-/src/docs/css/*.map
+*/docs/css/site.css
+*/docs/css/main-docs.css
+*/docs/css/daux-black.min.css
+*/docs/css/*.map
