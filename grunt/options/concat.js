@@ -17,15 +17,15 @@ module.exports = function (grunt) {
 				seperator : ";",
 				banner    : "<%= banner %>\n"
 			},
-			src  : ["src/js/*.js"],
-			dest : "<%= assetDir %>/js/app.js"
+			src  : ["<%= assetDir %>/js/*.js"],
+			dest : "<%= outputDir %>/js/app.js"
 		},
 		plugins : {
 			options : {
 				seperator : ";"
 			},
 			files : {
-				"<%= assetDir %>/js/plugins.js" : ["path/to/file"],
+				"<%= outputDir %>/js/plugins.js" : ["path/to/file"],
 			}
 		}
 	}

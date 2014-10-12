@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 	/**
 	 * Deletes old versions of files to help with cache busting, at least i think so
 	 */
-	clean.css  = ['<%= assetDir %>/css/main.css', '<%= assetDir %>/css/main.min.css'];
-	clean.js   = ['<%= assetDir %>/js/*.js', '<%= assetDir %>/js/*.map', '!<%= assetDir %>/js/vendor'];
+	clean.css  = ['<%= outputDir %>/css/main.css', '<%= outputDir %>/css/main.min.css'];
+	clean.js   = ['<%= outputDir %>/js/*.js', '<%= outputDir %>/js/*.map', '!<%= outputDir %>/js/vendor'];
 	clean.docs = ['docs/**/*.*'];
 	clean.sass = ['docs/sass'];
 

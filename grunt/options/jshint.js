@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 			}
 		},
 		target: {
-			src : ['src/js/*.js']
+			src : ['<%= assetDir %>/js/*.js']
 		}
 	}
 

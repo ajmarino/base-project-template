@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 				banner : "<%= banner %>"
 			},
 			files : {
-				"<%= assetDir %>/css/main.css" : "src/sass/main.scss",
+				"<%= outputDir %>/css/main.css" : "<%= assetDir %>/sass/main.scss",
 			}
 		},
 		docs : {
@@ -29,8 +29,8 @@ module.exports = function (grunt) {
 				style  : "compressed",
 			},
 			files : {
-				"src/docs/css/site.css" : "src/sass/main.scss",
-				"src/docs/css/main-docs.css" : "src/docs/sass/docs.scss"
+				"<%= assetDir %>/docs/css/site.css" : "<%= assetDir %>/sass/main.scss",
+				"<%= assetDir %>/docs/css/main-docs.css" : "<%= assetDir %>/docs/sass/docs.scss"
 			}
 		}
 	}

@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 	 */
 	sassdoc = {
 		default : {
-			src  : ["src/sass/"],
+			src  : ["<%= assetDir %>/sass/"],
 			dest : "docs/sass",
 			options : {
 				package : "package.json",

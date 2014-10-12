@@ -2,7 +2,8 @@ module.exports = function (grunt) {
 
 	// Initialize config.
 	grunt.initConfig({
-		assetDir : "public",
+		assetDir  : "assets",
+		outputDir : "public",
 		pkg: require('./package.json'),
 
 		/**
@@ -19,15 +20,15 @@ module.exports = function (grunt) {
 		 */
 		watch : {
 			scripts : {
-				files : ["src/js/*.js"],
+				files : ["<%= assetDir %>/js/*.js"],
 				tasks : ["js"]
 			},
 			sass : {
-				files : ["src/sass/main.scss", "src/sass/**/*.scss"],
+				files : ["<%= assetDir %>/sass/main.scss", "<%= assetDir %>/sass/**/*.scss"],
 				tasks : ["css"]
 			},
 			docs : {
-				files : ["src/docs/sass/docs.scss", "src/docs/sass/**/*.scss", "src/docs/js/*.js", "src/docs/docs/**/*.*"],
+				files : ["<%= assetDir %>/docs/sass/docs.scss", "<%= assetDir %>/docs/sass/**/*.scss", "<%= assetDir %>/docs/js/*.js", "<%= assetDir %>/docs/docs/**/*.*"],
 				tasks : ["docs"]
 			}
 		}

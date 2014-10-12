@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 				banner : '<%= banner %>'
 			},
 			files : {
-				'<%= assetDir %>/css/main.min.css' : ['<%= assetDir %>/css/main.css']
+				'<%= outputDir %>/css/main.min.css' : ['<%= outputDir %>/css/main.css']
 			}
 		},
 		docs : {
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 				report : 'min'
 			},
 			files : {
-				'src/docs/css/daux-black.min.css' : ['src/docs/css/main-docs.css']
+				'<%= assetDir %>/docs/css/daux-black.min.css' : ['<%= assetDir %>/docs/css/main-docs.css']
 			}
 		}
 	}
