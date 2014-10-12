@@ -5,7 +5,7 @@
 	"docs_path"     : "docs",
 	"image"         : "img/app.png",
 	"theme"         : "black",
-	"template"      :"default",
+	"template"      : "default",
 	"toggle_code"   : true,
 	"breadcrumbs"   : false,
 	"date_modified" : true,

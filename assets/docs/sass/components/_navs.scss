@@ -22,7 +22,8 @@
 
 		&--subnav,
 		&--subnav-open,
-		&--alt {
+		&--alt,
+		&--code-blocks {
 			&:after {
 				@include absolute(top 50% right .5em);
 				@include transform( translate(0, -50%) );
@@ -49,6 +50,9 @@
 		
 		&--code-blocks {
 			border-top: 1px solid c("sidebar__border");
+
+			&[data-state="hidden"]:after  { content: "\f06e"; }
+			&[data-state="visible"]:after { content: "\f070"; }
 		}
 	}
 
