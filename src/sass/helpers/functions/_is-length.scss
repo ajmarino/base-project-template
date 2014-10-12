@@ -1,0 +1,19 @@
+/**
+ * Checks whether the given `$value` is a valid length.<br>
+ * Can be any valid CSS length
+ *
+ * @access private
+ *
+ * @param {*} $value - Value to validate
+ *
+ * @group Helpers
+ *
+ * @link http://www.sitepoint.com/bulletproof-function-validate-length-values-sass/
+ *
+ * @return {Bool}
+ */
+@function is-length($value) {
+	@return contains(0 "auto" "inherit" "initial", $value)
+		or type-of($value) == "number" and not unitless($value)
+		or str-slice($value + "", 1, 5) == "calc(";
+}
