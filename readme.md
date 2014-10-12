@@ -48,9 +48,11 @@ After filling out the information for the bower.json and package.json files, it 
 
 There are 3 main grunt commands included in `/grunt`:
 
-* css  - Compiles main.scss in `src/sass` to `*/css/main.css`
-* js   - Compiles `src/js` into 1 file in `*/js/app.min.js`
-* docs - Compiles `src/docs/docs` into `/docs` as static html files rdy to be hosted on a server
+* css  - Compiles main.scss in `assetDir/sass` to `outputDir/css/main.css`
+* js   - Compiles `assetDir/js` into 1 file in `outputDir/js/app.min.js`
+* docs - Compiles `assetDir/docs/docs` into `/docs` as static html files rdy to be hosted on a server
+
+ assetDir and outputDir are defined in Gruntfile.js
 
 There is also a `grunt watch` command that will watch the `/src` directory for changes and run the appropriate grunt task.
 
