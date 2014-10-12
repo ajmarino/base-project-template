@@ -22,9 +22,6 @@
  *     padding: 10px 5px;
  *     padding: 1rem .5rem;
  * }
- *
- * 
- * @returns {Object} property passed in with rem and px fallback 
  */
 @mixin rem($property, $values) {
   $px : ();

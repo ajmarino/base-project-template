@@ -1,6 +1,5 @@
 /**
  * Breakpoints for responsive design, any name/ pair can go here.
- * <br>See `breakpoint` mixin
  *
  * @group Global Styling
  */
@@ -16,7 +15,6 @@ $breakpoints: (
 
 /**
  * Font Stacks
- * <br>See `ff` mixin under `helpers
  * 
  * @group Global Styling
  */
@@ -30,7 +28,6 @@ $font-stacks : (
 
 /**
  * Base heading sizes, set in px and converted to rem with px fallback.
- * <br>See `fs` mixin under `helpers`
  *
  * @group Global Styling
  */
@@ -76,6 +73,10 @@ $font-stacks : (
  * 
  * @link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
  *
+ *
+ * @prop {string} $base-palette.base (#ff6351) - Base color for color palette creation
+ * 
+ * 
  * @type Map
  */ 
 $base-palette: (
@@ -89,7 +90,6 @@ $base-palette: (
 
 /**
  * Colors used thoughout the site using meaningful names, colors set using $c-name are defined above sass this map in _variables.scss.
- * <br>See `c` mixin under `helpers`
  * 
  *
  * @group Global Styling
@@ -103,7 +103,6 @@ $site-colors : (
 
 /**
  * Sizes array for various dimensions, use s mixin to retrieve values.
- * <br>See `s` mixin under `helpers`
  * 
  *
  * @group Global Styling
@@ -118,7 +117,6 @@ $sizes: (
 
 /**
  * Various transitions, defined by usage name or by properties effected
- * <br>See `transition` mixin under `helpers`
  *
  * @group Global Styling
  */
@@ -134,7 +132,6 @@ $transitions : (
 
 /**
  * Assigns stacking order to items from one place, assigned with meaningful names.
- * <br>See `z` mixin under `helpers`
  * 
  *
  * @group Global Styling

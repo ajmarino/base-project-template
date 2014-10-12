@@ -37,8 +37,6 @@
  *
  * @throws Warning if $element is not 'before' or 'after'
  * @throws Watning if $direction is not 'top right bottom left'
- * 
- * @returns {Object} property and values to create the triangle
  */
 @mixin triangle($element, $direction, $position, $color: currentColor, $size: 1em) {
   // Make sure the element is valid

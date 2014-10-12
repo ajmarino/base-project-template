@@ -33,8 +33,6 @@
  *   scrollbar-face-color: #333;
  *   scrollbar-track-color: #ccc;
  * }
- * 
- * @returns {Object} styles for scrollbars in Webkit and IE
  */
 @mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%)) {
 	::-webkit-scrollbar {
