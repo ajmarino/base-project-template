@@ -92,10 +92,10 @@ $typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-fo
 /*------------------------------------*\
     #SHARED
 \*------------------------------------*/
-/**
- * A lot of elements in Typecsset need to share some declarations (mainly for
- * vertical rhythm), so we `@extend` some silent classes.
- */
+//
+// A lot of elements in Typecsset need to share some declarations (mainly for
+// vertical rhythm), so we `@extend` some silent classes.
+//
 %typecsset-reset {
     margin:  0;
     padding: 0;
