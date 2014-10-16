@@ -15,7 +15,7 @@
  *  background: stripes($colors, $direction);
  *
  *  // Random stops
- *  background: stripes($colors, 90deg, $random: true); 
+ *  background: stripes($colors, 90deg, true); 
  *
  *  // Custom stops
  *  background: stripes($custom-stops, 90deg);
