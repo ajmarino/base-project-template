@@ -19,6 +19,6 @@
  * 		transition: border 0.3s linear;
  * }
  */
-@mixin transition($transition-name: all) {
+@mixin trans($transition-name: all) {
 	transition: map-get($transitions, $transition-name);
 }
