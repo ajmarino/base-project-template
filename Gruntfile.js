@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
 	// Initialize config.
 	grunt.initConfig({
-		assetDir  : "assets",
+		assetDir  : "resources/assets",
 		outputDir : "public",
 		pkg: require('./package.json'),
 
@@ -54,8 +54,8 @@ module.exports = function (grunt) {
 
 
 	// Load all our tasks from dir ./grunt
-	grunt.loadTasks('grunt');
-	grunt.loadTasks('grunt/options');
+	grunt.loadTasks('resources/grunt');
+	grunt.loadTasks('resources/grunt/options');
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -64,6 +64,16 @@ module.exports = function (grunt) {
 	// an external task like grunt-contrib-uglify
 	// for two different things, and not at the 
 	// same time
-	grunt.registerTask("default", ['css', 'js']);
+	grunt.registerTask("default", "Runs all grunt tasks",[
+		'clean',
+		'sass',
+		'autoprefixer',
+		'csso',
+		'concat',
+		'uglify',
+		'jshint',
+		'shell',
+		'sassdoc'
+	]);
 	
 };
