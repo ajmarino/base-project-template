@@ -2,7 +2,8 @@
  * Outputs a font stack.
  * <br>See `$font-stack` under `Global Styling`
  *
- * @param {String} $stack-name - Short name for font stack
+ * @param {string} $stack-name         - Short name for font stack
+ * @param {map}    $map ($font-stacks) - Name of map of font stacks
  *
  * 
  * @group Helpers
@@ -19,6 +20,6 @@
  * 	   font-family: Helvetica, Arial, sans-serif;
  * }
  */
-@mixin ff($stack-name) {
-	font-family: map-get($font-stacks, $stack-name);
+@mixin ff($stack-name, $map: $font-stacks) {
+	font-family: map-get($map, $stack-name);
 }

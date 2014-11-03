@@ -2,7 +2,8 @@
  * Mixin for inserting a breakpoint.
  * <br>See `$breakpoints` under `Global Styling`
  *
- * @param {String} $name - name of breakpoint
+ * @param  {String} $name               - Names breakpoint to get
+ * @param  {map}    $map ($breakpoints) - Name of map of breakpoints
  *
  * @group Helpers
  *
@@ -29,9 +30,9 @@
  *      }
  *  }
  */
-@mixin breakpoint($name) {
-  @if map-has-key($breakpoints, $name) {
-    @media #{inspect(map-get($breakpoints, $name))} {
+@mixin breakpoint($name, $map: $breakpoints) {
+  @if map-has-key($map, $name) {
+    @media #{inspect(map-get($map, $name))} {
       @content;
     }
   }

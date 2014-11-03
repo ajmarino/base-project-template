@@ -2,12 +2,13 @@
  * Function for getting a z-index value.
  * <br>See `$z-layers` var under `Global Styling`
  * 
- * @param  {sting} $layer - Named item to get z index of
+ * @param  {sting} $layer           - Named item to get z index of
+ * @param  {map}   $map ($z-layers) - Name of z-layers map
  *
  * @group Helpers
  * 
  * 
- * @return {int}        - Z-index
+ * @return {int}  - Z-index
  * 
  *
  * @example scss
@@ -21,10 +22,10 @@
  *     z-index: 10;
  * }
  */
-@function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
+@function z($layer, $map: $z-layers) {
+  @if not map-has-key($map, $layer) {
     @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
   }
  
-  @return map-get($z-layers, $layer);
+  @return map-get($map, $layer);
 }

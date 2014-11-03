@@ -2,7 +2,8 @@
  * Function for getting a size value.
  * <br>See `$sizes` var under `Global Styling`
  * 
- * @param  {string} $name - item to get height for
+ * @param  {string} $name         - Named item to get size for
+ * @param  {map}    $map ($sizes) - Name of map to get size from
  *
  *
  * @group Helpers
@@ -22,10 +23,10 @@
  *     height: #fff;
  * }
  */
-@function s($item) {
-  @if not map-has-key($sizes, $item) {
+@function s($item, $map: $sizes) {
+  @if not map-has-key($map, $item) {
     @warn "No height found for `#{$item}` in $sizes map. Property omitted.";
   }
  
-  @return map-get($sizes, $item);
+  @return map-get($map, $item);
 }

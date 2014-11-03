@@ -1,7 +1,8 @@
 /**
  * Function for getting a color value from a sass map.
  * 
- * @param  {string} $color - Named item to get color for
+ * @param  {string} $color 				- Named color to get
+ * @param  {map}    $map ($site-colors) - Name of map to get color from
  *
  * 
  * @group Helpers
@@ -21,10 +22,10 @@
  *     color: #fff;
  * }
  */
-@function c($color) {
-  @if not map-has-key($site-colors, $color) {
+@function c($color, $map: $site-colors) {
+  @if not map-has-key($map, $color) {
     @warn "No color found for `#{$color}` in $site-colors map. Property omitted.";
   }
  
-  @return map-get($site-colors, $color);
+  @return map-get($map, $color);
 }
