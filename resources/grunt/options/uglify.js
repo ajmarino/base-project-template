@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 				sourceMap  : true
 			},
 			files : {
-				"<%= outputDir %>/js/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
+				"<%= outputDir %>/js/vendor/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
 			}
 		}
 	}

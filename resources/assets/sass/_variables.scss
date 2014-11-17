@@ -1,5 +1,6 @@
 /**
  * Breakpoints for responsive design, any name/ pair can go here.
+ * <br>See `breakpoint` mixin under `Helpers`
  *
  * @group Global Styling
  */
@@ -15,6 +16,7 @@ $breakpoints: (
 
 /**
  * Font Stacks
+ * <br>See `ff` mixin under `Helpers`
  * 
  * @group Global Styling
  */
@@ -90,7 +92,7 @@ $base-palette: (
 
 /**
  * Colors used thoughout the site using meaningful names, colors set using $c-name are defined above sass this map in _variables.scss.
- * 
+ * <br>See `c` mixin under `Helpers`
  *
  * @group Global Styling
  */
@@ -102,8 +104,8 @@ $site-colors : (
 
 
 /**
- * Sizes array for various dimensions, use s mixin to retrieve values.
- * 
+ * Sizes array for various dimensions
+ * <br>See `s` mixin to under `Helpers` 
  *
  * @group Global Styling
  */
@@ -117,6 +119,7 @@ $sizes: (
 
 /**
  * Various transitions, defined by usage name or by properties effected
+ * <br>See `trans` mixin under `Helpers`
  *
  * @group Global Styling
  */
@@ -132,6 +135,7 @@ $transitions : (
 
 /**
  * Assigns stacking order to items from one place, assigned with meaningful names.
+ * <br>See `z` mixin under `Helpers`
  * 
  *
  * @group Global Styling
