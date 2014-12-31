@@ -1,0 +1,23 @@
+.debug {
+	@include fixed(top 0 right 0);
+	background-color: #FCF8E3;
+	border-bottom: 1px solid #FBEED5;
+	border-left: 1px solid #FBEED5;
+	color: #C09853;
+	padding: 3px 6px;
+	z-index: z("debug");
+}
+
+
+.debug__link {
+	@include trans("color");
+	color: #C09853;
+	text-decoration: none;
+
+
+	&:hover {
+		.no-touch & {
+			color: darken(#C09853, 10%);
+		}
+	}
+}

@@ -127,6 +127,7 @@ $transitions : (
 	"all"    : all 0.3s linear,
 	"border" : border 0.3s linear,
 	"width"  : width 0.5s ease-in-out,
+	"color"  : color 0.3s linear,
 );
 
 
@@ -141,5 +142,7 @@ $transitions : (
  * @group Global Styling
  */
 $z-layers: (
-	"main-container"     : 1
+	"main-container"     : 1,
+
+	"debug" : 1000,
 );
