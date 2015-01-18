@@ -34,36 +34,16 @@ module.exports = function (grunt) {
 		}
 	});
 
-
-	/**
-	 * Creates a hash out of the compiled js or css file whenever they are changed
-	 */
-	grunt.registerTask('cache-bust', 'Updates asset-version.txt whenever a src js or sass file changes', function (type) {
-		if (type === "css") {
-			var source = grunt.file.read("public/css/main.css");
-		} else {
-			var source = grunt.file.read("public/js/app.js");
-		}
-
-		var hash = require('crypto').createHash('sha1').update(source).digest('hex').substr(0, 10);
-
-		grunt.file.write("public/assets-version.txt", hash);
-		grunt.log.ok("Updated cache busting to " + hash);
-	});
-
-
-
 	// Load all our tasks from dir ./grunt
 	grunt.loadTasks('resources/grunt/tasks');
 	grunt.loadTasks('resources/grunt/options');
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// Create Tasks that link to the tasks in ./grunt
-	// This is helpful because you might want to use
-	// an external task like grunt-contrib-uglify
-	// for two different things, and not at the 
-	// same time
+
+	/**
+	 * Runs all grunt tasks when using `grunt`
+	 */
 	grunt.registerTask("default", "Runs all grunt tasks",[
 		'clean',
 		'sass',
@@ -73,7 +53,8 @@ module.exports = function (grunt) {
 		'uglify',
 		'jshint',
 		'shell',
-		'sassdoc'
+		'sassdoc',
+		'cache-bust:css'
 	]);
 	
 };
