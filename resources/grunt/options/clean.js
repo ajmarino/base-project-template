@@ -1,3 +1,6 @@
+/**
+ * Deletes old versions of files to help with cache busting
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -7,13 +10,12 @@ module.exports = function (grunt) {
 	var clean = grunt.config('clean') || {};
 
 
-	/**
-	 * Deletes old versions of files to help with cache busting, at least i think so
-	 */
+
 	clean.css  = ['<%= outputDir %>/css/main.css', '<%= outputDir %>/css/main.min.css'];
 	clean.js   = ['<%= outputDir %>/js/*.js', '<%= outputDir %>/js/*.map', '!<%= outputDir %>/js/vendor'];
-	clean.docs = ['docs/**/*.*'];
-	clean.sass = ['docs/sass'];
+	clean.docs = ['docs/sass'];
+	// clean.docs = ['docs/**/*.*'];
+
 
 	// Puts the original or modified object back into the config
 	grunt.config('clean', clean);

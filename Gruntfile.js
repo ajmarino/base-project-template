@@ -54,7 +54,7 @@ module.exports = function (grunt) {
 
 
 	// Load all our tasks from dir ./grunt
-	grunt.loadTasks('resources/grunt');
+	grunt.loadTasks('resources/grunt/tasks');
 	grunt.loadTasks('resources/grunt/options');
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');

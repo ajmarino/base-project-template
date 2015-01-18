@@ -1,3 +1,9 @@
+/**
+ * Optimizes and minifies css
+ * 
+ * CSSO - http://bem.info/tools/optimizers/csso/description/
+ * Grunt-Csso - https://npmjs.org/package/grunt-csso
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -6,13 +12,6 @@ module.exports = function (grunt) {
 	 */
 	var csso = grunt.config('csso') || {};
 
-
-
-	/**
-	 * Optimizes and minifies css
-	 * CSSO - http://bem.info/tools/optimizers/csso/description/
-	 * Grunt-Csso - https://npmjs.org/package/grunt-csso
-	 */
 	csso = {
 		dev : {
 			options : {
@@ -22,7 +21,8 @@ module.exports = function (grunt) {
 			files : {
 				'<%= outputDir %>/css/main.min.css' : ['<%= outputDir %>/css/main.css']
 			}
-		},
+		}
+		/*
 		docs : {
 			options : {
 				report : 'min'
@@ -31,6 +31,7 @@ module.exports = function (grunt) {
 				'<%= assetDir %>/docs/css/daux-black.min.css' : ['<%= assetDir %>/docs/css/main-docs.css']
 			}
 		}
+		*/
 	}
 
 

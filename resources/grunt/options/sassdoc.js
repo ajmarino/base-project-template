@@ -1,3 +1,6 @@
+/**
+ * Creates docs based on source sass files
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -6,14 +9,6 @@ module.exports = function (grunt) {
 	 */
 	var sassdoc = grunt.config('sassdoc') || {};
 
-
-
-	/**
-	 * Compiles sass files
-	 * only need to compile 1 file as that should include everything else
-	 *
-	 *  styles: nested, compact, compressed, expanded.
-	 */
 	sassdoc = {
 		default : {
 			src  : ["<%= assetDir %>/sass/"],

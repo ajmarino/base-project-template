@@ -1,3 +1,9 @@
+/**
+ * Combines, minifies, and creates a source map for the js files
+ *
+ * dev     - indv component js
+ * plugins - external plugins loaded with bower
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -6,13 +12,6 @@ module.exports = function (grunt) {
 	 */
 	var uglify = grunt.config('uglify') || {};
 
-
-
-	/**
-	 * Combines, minifies, and creates a source map for the js files
-	 * dev - main js files
-	 * scrollbar - 3 librarys used to create stylized scrollbar in modals
-	 */
 	uglify = {
 		dev : {
 			options : {

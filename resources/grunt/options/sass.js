@@ -1,3 +1,9 @@
+/**
+ * Compiles sass files
+ * only need to compile 1 file as that should include everything else
+ *
+ *  styles: nested, compact, compressed, expanded.
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -6,14 +12,6 @@ module.exports = function (grunt) {
 	 */
 	var sass = grunt.config('sass') || {};
 
-
-
-	/**
-	 * Compiles sass files
-	 * only need to compile 1 file as that should include everything else
-	 *
-	 *  styles: nested, compact, compressed, expanded.
-	 */
 	sass = {
 		dev : {
 			options : {
@@ -23,7 +21,8 @@ module.exports = function (grunt) {
 			files : {
 				"<%= outputDir %>/css/main.css" : "<%= assetDir %>/sass/main.scss",
 			}
-		},
+		}
+		/*
 		docs : {
 			options : {
 				style  : "compressed",
@@ -33,6 +32,7 @@ module.exports = function (grunt) {
 				"<%= assetDir %>/docs/css/main-docs.css" : "<%= assetDir %>/docs/sass/docs.scss"
 			}
 		}
+		*/
 	}
 
 

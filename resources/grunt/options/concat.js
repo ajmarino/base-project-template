@@ -1,3 +1,6 @@
+/**
+ * Combines idnv js files into a single combined file
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -7,10 +10,6 @@ module.exports = function (grunt) {
 	var concat = grunt.config('concat') || {};
 
 
-
-	/**
-	 * Combines all js files into a single file
-	 */
 	concat = {
 		dev : {
 			options : {
@@ -19,7 +18,8 @@ module.exports = function (grunt) {
 			},
 			src  : ["<%= assetDir %>/js/*.js"],
 			dest : "<%= outputDir %>/js/app.js"
-		},
+		}
+		/*
 		plugins : {
 			options : {
 				seperator : ";"
@@ -28,6 +28,7 @@ module.exports = function (grunt) {
 				"<%= outputDir %>/js/plugins.js" : ["path/to/file"],
 			}
 		}
+		*/
 	}
 
 

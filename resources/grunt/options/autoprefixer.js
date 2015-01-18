@@ -1,3 +1,6 @@
+/**
+ * Adds vendor prefixes based on supported browsers
+ */
 module.exports = function (grunt) {
 	
 	/**
@@ -7,20 +10,21 @@ module.exports = function (grunt) {
 	var autoprefixer = grunt.config('autoprefixer') || {};
 
 
-	// Custom options
 	autoprefixer = {
 		dev : {
 			options : {
 				browsers : ['last 2 versions', 'ie 9']
 			},
 			src : "<%= outputDir %>/css/main.css"
-		},
+		}
+		/*
 		docs : {
 			options : {
 				browsers : ['last 2 versions', 'ie 9']
 			},
 			src : "<%= assetDir %>/docs/css/main-docs.css"
 		}
+		*/
 	}
 
 
