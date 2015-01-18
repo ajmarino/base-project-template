@@ -17,12 +17,12 @@ After downloading files, run `bash scripts/setup-project.sh`. This will run the 
 After filling out the information for the bower.json and package.json files, it will intall the following base components
 
 ###  Bower Components
-* HTML5 Boilerplate
-* jQuery
-* Bourbon
-* Bitters
-* Normalize.css 
-
+* HTML5 Boilerplate v4.3.0
+* jQuery v2.1.3
+* Bourbon v4.1.1
+* Normalize.css v3.0.2
+* Bootstrap Sass v3.3.1
+* Font Awesome v4.2.0
 
 ###  NPM Components
 * grunt
@@ -40,13 +40,13 @@ After filling out the information for the bower.json and package.json files, it 
 
 ###  Misc Components
 [Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `src/sass/base`<br>
-
+[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css)
 
 
 
 ##  Grunt Commands
 
-There are 3 main grunt commands included in `/grunt`:
+There are 3 main grunt commands included in `resources/grunt/tasks`:
 
 * css  - Compiles main.scss in `assetDir/sass` to `outputDir/css/main.css`
 * js   - Compiles `assetDir/js` into 1 file in `outputDir/js/app.min.js`
@@ -54,11 +54,14 @@ There are 3 main grunt commands included in `/grunt`:
 
 `assetDir and outputDir are defined in Gruntfile.js`
 
-There is also a `grunt watch` command that will watch the `/src` directory for changes and run the appropriate grunt task.
+There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
 
 
 
 
 
 ##  Docs
-All docs files are located in `src/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+
+
+

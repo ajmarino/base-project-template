@@ -6,7 +6,7 @@
  */
 $breakpoints: (
 	"tablet"  : (min-width: 48em), // 768px
-	"labtop"  : (min-width: 62em), // 992px
+	"laptop"  : (min-width: 62em), // 992px
 	"desktop" : (min-width: 75em)  // 1200px
 );
 
@@ -49,7 +49,7 @@ $typecsset-h5-size: map-get($headings, "h5") !default;
 $typecsset-h6-size: map-get($headings, "h6") !default;
 
 // Would you like to show a baseline grid? This is handy during development.
-$typecsset-show-baseline:       true;
+$typecsset-show-baseline: true;
 
 
 /**
@@ -97,7 +97,7 @@ $base-palette: (
  * @group Global Styling
  */
 $site-colors : (
-	"main-bg"          : #000,
+	"main-bg" : #000,
 );
 
 

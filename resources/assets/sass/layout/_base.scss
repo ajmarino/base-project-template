@@ -3,11 +3,3 @@
 *:after {
 	box-sizing: border-box;
 }
-
-body {
-	background: white;
-
-	@include option(default) {
-		background: black;
-	};
-}
