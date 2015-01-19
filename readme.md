@@ -39,8 +39,8 @@ After filling out the information for the bower.json and package.json files, it 
 
 
 ###  Misc Components
-[Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `src/sass/base`<br>
-[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - located in `src/sass/base`<br>
+[Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `resources/assets/sass/base`<br>
+[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - located in `resources/assets/sass/base`<br>
 
 
 
