@@ -13,32 +13,12 @@ module.exports = function (grunt) {
 		banner : "/*\n" +
 				 " * <%= pkg.name %>\n" +
 				 " * <%= pkg.version %> | <%= grunt.template.today('yyyy-mm-dd') %>\n" +
-				 " */\n",
-
-		/**
-		 * Watches files in /src for changes and runs the appriopate tasks
-		 */
-		watch : {
-			scripts : {
-				files : ["<%= assetDir %>/js/*.js"],
-				tasks : ["js"]
-			},
-			sass : {
-				files : ["<%= assetDir %>/sass/main.scss", "<%= assetDir %>/sass/**/*.scss"],
-				tasks : ["css"]
-			},
-			docs : {
-				files : ["<%= assetDir %>/docs/sass/docs.scss", "<%= assetDir %>/docs/sass/**/*.scss", "<%= assetDir %>/docs/js/*.js", "<%= assetDir %>/docs/docs/**/*.*"],
-				tasks : ["docs"]
-			}
-		}
+				 " */\n"
 	});
 
 	// Load all our tasks from dir ./grunt
 	grunt.loadTasks('resources/grunt/tasks');
 	grunt.loadTasks('resources/grunt/options');
-	
-	grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 	/**
