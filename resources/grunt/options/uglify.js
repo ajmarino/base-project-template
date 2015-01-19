@@ -30,7 +30,8 @@ module.exports = function (grunt) {
 				sourceMap  : true
 			},
 			files : {
-				"<%= outputDir %>/js/vendor/jquery.min.js"    : "bower_components/jquery/dist/jquery.js"
+				"<%= outputDir %>/js/vendor/jquery.min.js"    : "bower_components/jquery/dist/jquery.js",
+				"<%= outputDir %>/js/vendor/bootstrap.min.js" : "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"
 			}
 		}
 	}

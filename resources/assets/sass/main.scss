@@ -3,12 +3,17 @@
 
 @import "helpers/helpers";
 
-@import "base/normalize";
-@import "base/typecsset";
-@import "base/debug";
+@import
+	"base/normalize",
+	"../../../bower_components/normalize-opentype.css/normalize-opentype",
+	"base/typecsset",
+	"base/debug";
 
-@import "layout/base";
+@import
+	"layout/base";
 
 
 
-@import "base/print";
+@import
+	"helpers/utility",
+	"base/print";

@@ -1,35 +1,34 @@
 @import "../variables";
 
-@import "functions/create-palette";
-@import "functions/get-palette-colors";
+@import
+	"functions/create-palette",
+	"functions/get-palette-colors";
 
-@import "functions/color";
-@import "functions/contains";
-@import "functions/is-length";
-@import "functions/is-size";
-@import "functions/position";
-@import "functions/random";
-@import "functions/shade";
-@import "functions/sizes";
-@import "functions/stripes-equal-stops";
-@import "functions/stripes-custom-stops";
-@import "functions/stripes-random-stops";
-@import "functions/stripes";
-@import "functions/strip-units";
-@import "functions/tint";
-@import "functions/z-index";
+@import
+	"functions/color",
+	"functions/contains",
+	"functions/is-length",
+	"functions/is-size",
+	"functions/position",
+	"functions/random",
+	"functions/shade",
+	"functions/sizes",
+	"functions/stripes-equal-stops",
+	"functions/stripes-custom-stops",
+	"functions/stripes-random-stops",
+	"functions/stripes",
+	"functions/strip-units",
+	"functions/tint",
+	"functions/z-index";
 
-
-@import "mixins/breakpoint";
-@import "mixins/font-family";
-@import "mixins/font-size";
-@import "mixins/option";
-@import "mixins/parent-option";
-@import "mixins/positions";
-@import "mixins/rem";
-@import "mixins/scrollbars";
-@import "mixins/transitions";
-@import "mixins/triangles";
-
-
-@import "utility";
+@import
+	"mixins/breakpoint",
+	"mixins/font-family",
+	"mixins/font-size",
+	"mixins/option",
+	"mixins/parent-option",
+	"mixins/positions",
+	"mixins/rem",
+	"mixins/scrollbars",
+	"mixins/transitions",
+	"mixins/triangles";
