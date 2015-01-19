@@ -26,11 +26,55 @@ $(function () {
  * Main App
  * *******************************************************************************************/
 var App = function () {
+	var config = {
+		page_target : $('body').data('target') ? $('body').data('target') : "#",
+		page_width  : $(window).outerWidth()
+	};
+
+
 	/**
 	 * Init the app
 	 */
 	var init = function () {
 		console.log("Init");
+
+
+		// Animates body to anchor tag on page
+		$('.js-slide-page').click(function () {
+			var target = $(this).attr('href');
+
+			slidePage(target);
+
+			if ($(this).data('focus') !== "" ) {
+				var focus = $(this).data('focus');
+
+				$(focus).focus();
+			}
+		});
+
+
+		// Slides the page to a target is passed in the url on page load
+		if ( config.page_target !== "#" ) {
+			setTimeout(	slidePage( config.page_target ), 1500);
+		}
+	};
+
+
+
+	/**
+	 * Slides the page to a specific location
+	 * 
+	 * @param  {string} anchor - id of div to slide too
+	 */
+	var slidePage = function (anchor) {
+		$("html, body").animate(
+			{
+				scrollTop: $(anchor).offset().top - 22 + "px"
+			},{
+				duration: 500,
+				easing: "swing"
+			}); 
+		return false;
 	};
 
 
@@ -38,7 +82,9 @@ var App = function () {
 	 * AVAILABLE TO GLOBAL SCOPE
 	 * *******************************************************************************************/
 	return {
-		init : init
+		config    : config,
+		init      : init,
+		slidePage : slidePage
 	};
 
 }();
