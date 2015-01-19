@@ -52,7 +52,7 @@ There are 3 main grunt commands included in `resources/grunt/tasks`:
 * js   - Compiles `assetDir/js` into 1 file in `outputDir/js/app.min.js`
 * docs - Compiles `assetDir/docs/docs` into `/docs` as static html files rdy to be hosted on a server
 
-`assetDir and outputDir are defined in Gruntfile.js`
+`assetDir` and `outputDir` are defined in `Gruntfile.js`
 
 There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
 
@@ -60,7 +60,7 @@ There is also a `grunt watch` command that will watch the `/resources/assets` di
 
 
 ## Sassdoc
-Sassdoc generated documentation is located at `docs/sass`.  These files use settings from package.json to apply project specific naming and other data to the compiled docs.
+Sassdoc generated documentation is located at `docs/sass`.  These files use settings from `package.json` to apply project specific naming and other data to the compiled docs.
 
 
 ##  Docs

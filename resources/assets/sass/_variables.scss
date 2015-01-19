@@ -52,6 +52,7 @@ $typecsset-h6-size: map-get($headings, "h6") !default;
 $typecsset-show-baseline: true;
 
 
+
 /**
  * Font Stacks
  * <br>See `ff` mixin under `helpers
@@ -61,8 +62,6 @@ $typecsset-show-baseline: true;
 $font-stacks : (
 	"Helvetica" : (Helvetica, Arial, sans-serif),
 );
-
-
 
 
 
@@ -91,7 +90,7 @@ $base-palette: (
 
 
 /**
- * Colors used thoughout the site using meaningful names, colors set using $c-name are defined above sass this map in _variables.scss.
+ * Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
  * <br>See `c` mixin under `Helpers`
  *
  * @group Global Styling
@@ -138,7 +137,6 @@ $transitions : (
  * Assigns stacking order to items from one place, assigned with meaningful names.
  * <br>See `z` mixin under `Helpers`
  * 
- *
  * @group Global Styling
  */
 $z-layers: (
@@ -146,3 +144,4 @@ $z-layers: (
 
 	"debug" : 1000,
 );
+

@@ -14,13 +14,13 @@
  *
  * @example scss
  * // Usage
- * .el {
+ * .navbar {
  *     height: s('navbar');
  * }
  *
  * // Output
- * .el {
- *     height: #fff;
+ * .navbar {
+ *     height: 3em;
  * }
  */
 @function s($item, $map: $sizes) {
