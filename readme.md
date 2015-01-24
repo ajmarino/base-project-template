@@ -13,32 +13,39 @@ After downloading files, run `bash scripts/setup-project.sh`. This will run the 
 	bower init
 	npm install --save-dev ...
 	bower install --save-dev ...
+	composer install --dev ...
 
-After filling out the information for the bower.json and package.json files, it will intall the following base components
-
-###  Bower Components
-* HTML5 Boilerplate
-* jQuery
-* Bourbon
-* Normalize.css
-* Bootstrap Sass
-* Font Awesome
-
-###  NPM Components
-* grunt
-* grunt-contrib-clean
-* grunt-contrib-concat
-* grunt-contrib-jshint
-* grunt-contrib-sass
-* grunt-contrib-uglify
-* grunt-contrib-watch
-* grunt-autoprefixer
-* grunt-csso
-* grunt-sassdoc
-* grunt-shell
+After filling out the information for the bower.json and package.json files, it will install the following base components:
 
 
-###  Misc Components
+###  Bower
+* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+* [jQuery](https://github.com/jquery/jquery)
+* [Bourbon](https://github.com/thoughtbot/bourbon)
+* [Normalize.css](https://github.com/necolas/normalize.css)
+* [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
+* [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
+
+###  NPM
+* [grunt](https://github.com/gruntjs/grunt)
+* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
+* [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
+* [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
+* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
+* [grunt-csso](https://github.com/t32k/grunt-csso)
+* [grunt-sassdoc](https://github.com/SassDoc/grunt-sassdoc)
+* [grunt-shell](https://github.com/sindresorhus/grunt-shell)
+
+
+### Composer
+* [Way Generators](https://github.com/jeffreyway/laravel-4-generators)
+* [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
+
+
+###  Misc
 [Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `resources/assets/sass/base`<br>
 [Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - located in `resources/assets/sass/base`<br>
 

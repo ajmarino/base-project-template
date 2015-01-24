@@ -110,7 +110,7 @@
     function build_navigation($tree, $current_dir, $url) {
         global $mode, $base_path, $docs_path, $options;
         $return = "";
-        if ($mode === 'Static') $t = relative_path( ($current_dir === '../../docs' || $current_dir === '../../docs/') ? $current_dir  . "/": $current_dir, $url) . '/';
+        if ($mode === 'Static') $t = relative_path( ($current_dir === '../../../docs' || $current_dir === '../../../docs/') ? $current_dir  . "/": $current_dir, $url) . '/';
         else {
             $t = "http://" . $base_path . '/';
             if (!$options['clean_urls']) $t .= 'index.php?';
