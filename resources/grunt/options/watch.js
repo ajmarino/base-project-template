@@ -15,13 +15,35 @@ module.exports = function (grunt) {
 			tasks : ["js"]
 		},
 		sass : {
-			files : ["<%= assetDir %>/sass/main.scss", "<%= assetDir %>/sass/**/*.scss"],
+			files : [
+				"<%= assetDir %>/sass/main.scss",
+				"<%= assetDir %>/sass/**/*.scss",
+				"!<%= assetDir %>/sass/admin"
+			],
 			tasks : ["css"]
 		},
 		docs : {
-			files : ["<%= assetDir %>/docs/sass/docs.scss", "<%= assetDir %>/docs/sass/**/*.scss", "<%= assetDir %>/docs/js/*.js", "<%= assetDir %>/docs/docs/**/*.*"],
+			files : [
+				"<%= assetDir %>/docs/sass/docs.scss",
+				"<%= assetDir %>/docs/sass/**/*.scss",
+				"<%= assetDir %>/docs/js/*.js",
+				"<%= assetDir %>/docs/docs/**/*.*"
+			],
 			tasks : ["docs"]
-		}
+		},
+		admin_sass : {
+			files: [
+				"resources/assets/sass/admin.scss",
+				"resources/assets/sass/admin/**/*.scss"
+			],
+			tasks: ["admin_sass"]
+		},
+		admin_js : {
+			files: [
+				"resources/assets/js/admin/*.js"
+			],
+			tasks: ["admin_js"]
+		} 
 	}
 
 

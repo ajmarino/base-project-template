@@ -29,6 +29,15 @@ module.exports = function (grunt) {
 			files : {
 				'<%= assetDir %>/docs/css/daux-black.min.css' : ['<%= assetDir %>/docs/css/main-docs.css']
 			}
+		},
+		admin : {
+			options : {
+				report : 'min',
+				banner : '<%= banner %>'
+			},
+			files : {
+				'<%= outputDir %>/css/admin.min.css'  : ['<%= outputDir %>/css/admin.css'],
+			}
 		}
 	}
 

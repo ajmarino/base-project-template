@@ -34,6 +34,17 @@ module.exports = function (grunt) {
 				"<%= outputDir %>/js/vendor/bootstrap.min.js" : "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
 				"<%= outputDir %>/js/vendor/modernizr.min.js" : "bower_components/modernizr/modernizr.js",
 			}
+		},
+		admin : {
+			options : {
+				mangle        : true,
+				compressed    : true,
+				banner        : "<%= banner %>",
+				sourceMap     : true
+			},
+			files : {
+				"<%= outputDir %>/js/admin.min.js" : ["<%= assetDir %>/js/admin/*.js"]
+			}
 		}
 	}
 

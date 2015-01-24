@@ -11,9 +11,30 @@ module.exports = function (grunt) {
 
 
 
-	clean.css  = ['<%= outputDir %>/css/main.css', '<%= outputDir %>/css/main.min.css'];
-	clean.js   = ['<%= outputDir %>/js/*.js', '<%= outputDir %>/js/*.map', '!<%= outputDir %>/js/vendor'];
+	clean.css  = [
+		'<%= outputDir %>/css/main.css',
+		'<%= outputDir %>/css/main.min.css'
+	];
+
+	clean.js   = [
+		'<%= outputDir %>/js/app.js',
+		'<%= outputDir %>/js/app.min.js',
+		'<%= outputDir %>/js/app.min.js.map',
+		'!<%= outputDir %>/js/vendor'
+	];
+	
 	clean.docs = ['docs/**/*.*'];
+	
+	clean.admin_sass = [
+		'<%= outputDir %>/css/admin.css',
+		'<%= outputDir %>/css/admin.min.css',
+	];
+
+	clean.admin_js = [
+		'<%= outputDir %>/js/admin.js',
+		'<%= outputDir %>/js/admin.min.js',
+		'<%= outputDir %>/js/admin.min.js.map',
+	];
 
 
 	// Puts the original or modified object back into the config

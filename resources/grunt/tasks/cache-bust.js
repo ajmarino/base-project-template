@@ -6,6 +6,10 @@ module.exports = function (grunt) {
 
 		if (type === "css") {
 			var source = grunt.file.read("public/css/main.css");
+		} else if (type === "admin_sass") {
+			var source = grunt.file.read("public/css/admin.css");
+		} else if (type === "admin_js") {
+			var source = grunt.file.read("public/js/admin.js");
 		} else {
 			var source = grunt.file.read("public/js/app.js");
 		}

@@ -1,6 +1,6 @@
 module.exports = function(grunt) {  
 	
-	grunt.registerTask("css", "Compile just the sass source files", [
+	grunt.registerTask("css", "Compile main sass source files", [
 		'clean:css',
 		'clean:docs',
 		'sass:dev',

@@ -18,6 +18,14 @@ module.exports = function (grunt) {
 			},
 			src  : ["<%= assetDir %>/js/*.js"],
 			dest : "<%= outputDir %>/js/app.js"
+		},
+		admin : {
+			options : {
+				seperator : ";",
+				banner    : "<%= banner %>\n"
+			},
+			src  : ["<%= assetDir %>/js/admin/*.js"],
+			dest : "<%= outputDir %>/js/admin.js"
 		}
 		/*
 		plugins : {

@@ -30,6 +30,15 @@ module.exports = function (grunt) {
 				"<%= assetDir %>/docs/css/site.css" : "<%= assetDir %>/sass/main.scss",
 				"<%= assetDir %>/docs/css/main-docs.css" : "<%= assetDir %>/docs/sass/docs.scss"
 			}
+		},
+		admin : {
+			options : {
+				style  : "compact",
+				banner : "<%= banner %>"
+			},
+			files : {
+				"<%= outputDir %>/css/admin.css" : "resources/assets/sass/admin.scss",
+			}
 		}
 	}
 
