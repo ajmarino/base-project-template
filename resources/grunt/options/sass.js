@@ -21,8 +21,7 @@ module.exports = function (grunt) {
 			files : {
 				"<%= outputDir %>/css/main.css" : "<%= assetDir %>/sass/main.scss",
 			}
-		}
-		/*
+		},
 		docs : {
 			options : {
 				style  : "compressed",
@@ -32,7 +31,6 @@ module.exports = function (grunt) {
 				"<%= assetDir %>/docs/css/main-docs.css" : "<%= assetDir %>/docs/sass/docs.scss"
 			}
 		}
-		*/
 	}
 
 

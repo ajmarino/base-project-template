@@ -15,12 +15,10 @@ module.exports = function (grunt) {
 		},
 		create_docs_folder: {
 			command: 'mkdir docs'
-		}
-		/*
+		},
 		create_docs: {
 			command: 'bash scripts/compile_docs.sh'
 		}
-		*/
 	}
 
 	// Puts the original or modified object back into the config

@@ -10,12 +10,12 @@
         background-color: c("navbar");
         padding: 0 0.5em;
         z-index: z("navbar");
-        height: h("navbar");
+        height: s("navbar", $heights);
         display: flex;
         align-items: center;
 
         @include breakpoint(tablet) {
-            height: h("navbar__tablet");
+            height: s("navbar__tablet", $heights);
             padding: 0 1em;
         }
     }
@@ -37,7 +37,7 @@
     text-decoration: none;
     
     &--main {
-        @include transition($anim);
+        @include trans();
          color: c("logo__main");
          font-weight: bold;
 

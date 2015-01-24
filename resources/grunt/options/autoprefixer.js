@@ -16,15 +16,13 @@ module.exports = function (grunt) {
 				browsers : ['last 2 versions', 'ie 9']
 			},
 			src : "<%= outputDir %>/css/main.css"
-		}
-		/*
+		},
 		docs : {
 			options : {
 				browsers : ['last 2 versions', 'ie 9']
 			},
 			src : "<%= assetDir %>/docs/css/main-docs.css"
 		}
-		*/
 	}
 
 

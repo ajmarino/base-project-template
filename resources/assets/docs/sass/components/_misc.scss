@@ -8,7 +8,7 @@
 
     &--nav {
         @include absolute(top 50% right 0);
-        @include size( 3em h("navbar") );
+        @include size( 3em s("navbar", $heights) );
         @include transform( translate(0, -50%) );
         @include transition($anim-NavBtn);
         @include typecsset-font-size(16px, false);

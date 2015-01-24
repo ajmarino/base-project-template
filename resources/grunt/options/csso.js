@@ -21,8 +21,7 @@ module.exports = function (grunt) {
 			files : {
 				'<%= outputDir %>/css/main.min.css' : ['<%= outputDir %>/css/main.css']
 			}
-		}
-		/*
+		},
 		docs : {
 			options : {
 				report : 'min'
@@ -31,7 +30,6 @@ module.exports = function (grunt) {
 				'<%= assetDir %>/docs/css/daux-black.min.css' : ['<%= assetDir %>/docs/css/main-docs.css']
 			}
 		}
-		*/
 	}
 
 
