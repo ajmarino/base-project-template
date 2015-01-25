@@ -7,7 +7,7 @@
 	"theme"         : "black",
 	"template"      : "default",
 	"toggle_code"   : true,
-	"breadcrumbs"   : false,
+	"breadcrumbs"   : true,
 	"date_modified" : true,
 	"repo"          : "ajmarino/base-project-template",
 	"links"         : {

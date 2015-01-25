@@ -1,109 +1,126 @@
 .nav {
-	.nav__link {
-		@include transition($anim-Sidebar);
-		position: relative;
-		display: block;
-		color: c("body-text");
-		padding: .25em .5em;
-		text-decoration: none;
-		border-bottom: 1px solid c("sidebar__border");
-		border-top: 1px solid c("sidebar__highlight");
-
-		&:hover {
-			background: c("sidebar__highlight");
-		}
-
-
-		&--subnav-open {
-			background: c("sidebar__highlight");
-			border-bottom-color: c("sidebar__highlight");
-		}
-		
-
-		&--subnav,
-		&--subnav-open,
-		&--alt,
-		&--code-blocks {
-			&:after {
-				@include absolute(top 50% right .5em);
-				@include transform( translate(0, -50%) );
-				display: block;
-				font-family: "FontAwesome";
-				font-size: .8em;
-				width: 1em;
-				text-align: center;
-			}
-		}
-
-		&--subnav:after      { content: "\f078"; }
-		&--subnav-open:after { content: "\f077"; }
-
-
-		&--alt {
-			padding-left: 1em;
-
-			&[href^="https"]:after  { content: "\f08e"; }
-			&[href$="zip"]:after   { content: "\f0ed"; }
-			&[href*="issues"]:after { content: "\f128"; }
-		}
-
-		
-		&--code-blocks {
-			border-top: 1px solid c("sidebar__border");
-
-			&[data-state="hidden"]:after  { content: "\f06e"; }
-			&[data-state="visible"]:after { content: "\f070"; }
-		}
-	}
-
 
 	&--main,
 	&--extras {
 		list-style: none;
 		margin: 0 0 1em;
-		border-top: 1px solid c("sidebar__border");
-		border-bottom: 1px solid c("sidebar__highlight");
+
 	}
 	
 
 	&--main {
 		margin-bottom: 2em;
+
+		li {
+			margin-top: 0;
+		}
 	}
 
 
 	&--extras {
-
+		.nav__link {
+			margin-top: 0;
+		}
 	}
 
 
 	&--subnav {
 		margin: 0;
-		background: c("sidebar__highlight");
+		background: c("sidebar__subnav-bg");
 
 		.nav__link {
-			padding-left: 3em;
-
-			&:hover {
-				background: c("sidebar");
-			}
+			padding-left: 2em;
+			color: c("sidebar__subnav-a");
 		}
 	}
 
+
+	&--open {
+		
+		> .nav__link {
+			color: c("nav-link-active") !important;
+			background: white;
+			border-right: 1px solid #fff;
+			margin-right: -1px;
+			border-top: 1px solid c("sidebar__border");
+			border-bottom: 1px solid c("sidebar__border");
+
+			&:hover {
+				background: white;
+			}
+		}
+
+		> .nav--subnav {
+			display: block;
+			border-right: 1px solid c("sidebar__border");
+		}
+	}
 
 	&--closed {
 		display: none;
 	}
+}
 
-	&--open {
-		
-		> a {
-			background: white;
-			border-right: 1px solid #fff;
-			margin-right: -1px;
-		}
 
-		.nav--subnav {
-			display: block;
+.nav__link {
+	@include transition($anim-Sidebar);
+	@include fs(14px);
+	position: relative;
+	display: block;
+	color: c("nav-link");
+	padding: .5em 1em;
+	text-decoration: none;
+
+	&:hover {
+		background: c("nav-hover");
+
+		.nav--open & {
+			background: c("nav-open-hover");
+			color: c("nav-hover");
 		}
 	}
+
+
+	&--subnav-open {
+		background: c("sidebar__subnav-bg");
+		color: c("nav-link-active");
+
+		&:hover {
+			background: c("nav-open-hover");
+		}
+	}
+	
+
+	&--subnav,
+	&--subnav-open,
+	&--alt,
+	&--code-blocks {
+		&:after {
+			@include absolute(top 50% right 1em);
+			@include transform( translate(0, -50%) );
+			display: block;
+			font-family: "FontAwesome";
+			width: 1em;
+			text-align: center;
+		}
+	}
+
+	&--subnav:after      { content: "\f078"; }
+	&--subnav-open:after { content: "\f077"; }
+
+
+	&--alt {
+		padding-left: 1em;
+
+		&[href^="https"]:after  { content: "\f08e"; }
+		&[href$="zip"]:after   { content: "\f0ed"; }
+		&[href*="issues"]:after { content: "\f128"; }
+	}
+
+	
+	&--code-blocks {
+		&[data-state="hidden"]:after  { content: "\f06e"; }
+		&[data-state="visible"]:after { content: "\f070"; }
+	}
 }
+

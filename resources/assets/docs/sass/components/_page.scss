@@ -2,12 +2,11 @@
 	.h {
 		font-family: $ff-Serif;
 		font-weight: lighter;
-		margin: 1.5em 0 .5em;
+		margin: 1.5em 0 .25em;
 		line-height: 1;
 
 		&--1 {
 			@include fs(36px, false);
-			margin: 0;
 		}
 
 		&--2 {
@@ -22,7 +21,8 @@
 
 	.p {
 		@include fs(14px, false);
-		margin-bottom: .5em;
+		margin-bottom: 1em;
+		margin-top: 1em;
 
 		.code {
 			padding: 1px 4px;
@@ -32,14 +32,35 @@
 
 		&--modified {
 			@include fs(10px, false);
-			margin-bottom: 0;
+			margin-bottom: .5em;
+		}
+	}
+	
+	a {
+		@include trans("color");
+		color: c("page-link");
+		text-decoration: none;
+		
+		&:hover {
+			color: shade( c("page-link"), 50 );
+		}
+
+		&:visited {
+			color: c("page-link-visited");
+
+			&:hover {
+				color: shade( c("page-link-visited"), 50 );
+			}
 		}
 	}
 
-
 	.list {
+		.li {
+			margin-top: 0;
+		}
+
 		.p {
-			margin-bottom: 0;
+			margin: 0;
 		}
 	}
 
@@ -48,6 +69,12 @@
 		@include fs(12px);
 		font-family: $ff-Mono;
 	}
+
+	pre.code {
+		padding: .5em 1.5em;
+		background: c("example");
+	}
+
 
 	.pre {
 		background: c("code--bg");
@@ -70,8 +97,16 @@
 		&-title     { color: c("code--title"); }
 		&-attribute { color: c("code--attribute"); }
 		&-value     { color: c("code--value"); }
+		&-comment   { color: c("code--comment"); }
+
+		&-tag {
+
+		}
 	}
 
+	.xml {
+		.hljs-tag { color: c("sidebar"); }
+	}
 
 
 
@@ -81,7 +116,7 @@
 		padding: 1em;
 		border: 1px solid c("sidebar__border");
 		border-radius: 5px;
-		background: c("sidebar");
+		background: c("example");
 
 		&:after {
 			@include absolute(top 0 right 0);
@@ -94,6 +129,11 @@
 			padding: 0 .5em;
 			background: white;
 		}
+	}
+
+
+	table {
+		min-height: 0;
 	}
 }
 

@@ -10,7 +10,7 @@ $ff-Mono  : "Droid Sans Mono", monospace;
 $breakpoints: (
 	"nav"     : (min-width: em(464)),
 	"tablet"  : (min-width: em(768)),
-	"labtop"  : (min-width: em(992)),
+	"laptop"  : (min-width: em(992)),
 	"desktop" : (min-width: em(1200))
 );
 
@@ -27,32 +27,42 @@ $color-code-red    : #f92672;
 $color-code-blue   : #66d9ef;
 $color-code-yellow : #e6db74;
 $color-code-green  : #a6e22e;
-
 $site-colors : (
 	"main-bg" : #fff,
 	"body-text" : #222,
 
-	"navbar"     : #333,
-	"logo__main" : #fff,
-	"btn__nav"   : #fff,
+	"navbar"     : #fcfcfc,
+	"navbar-bd"  : #c9c9c9,
+	"logo__main" : #333,
+	"btn__nav"   : #333,
 	
-	"sidebar"            : #f5f5f5,
-	"sidebar__border"    : #ddd,
+	"sidebar"            : #343434,
+	"sidebar__border"    : #c9c9c9,
+	"sidebar__subnav-bg" : #e3e3e3,
+	"sidebar__subnav-a"  : gray,
 	"sidebar__highlight" : #fff,
 	
+	"nav-link"        : #b3b3b3,
+	"nav-link-active" : #404040,
+	"nav-hover"       : #4a4a4a,
+	"nav-open-hover"  : #d6d6d6,
+
 	"inline-code--bg"   : #f9f2f4,
 	"inline-code--text" : #c7254e,
 
-	
+	"page-link"         : #2980B9,
+	"page-link-visited" : #998099,
+
+	"example"         : #f7f7f7,
 	"code--bg"        : #222,
 	"code--tag"       : white,
 	"code--title"     : $color-code-red,
 	"code--attribute" : $color-code-green,
 	"code--value"     : $color-code-yellow,
+	"code--comment"   : #999,
+	
 
-
-
-	"footer__bg"     : #111,
+	"footer__bg"     : #1d1d1d,
 	"footer__border" : #555,
 	"footer__text"   : #fff,
 );
@@ -61,12 +71,12 @@ $site-colors : (
 
 
 $heights : (
-	"navbar"         : 2em,
+	"navbar"         : 3em,
 	"navbar__tablet" : 3em,
 
 	"footer"         : 1.8em,
 );
-$w-Sidebar : 14em;
+$w-Sidebar : 17em;
 
 
 $z-layers : (
@@ -87,7 +97,7 @@ $anim-DefaultTime : 0.3s;
 $anim-Header  : height $anim-DefaultTime linear;
 $anim-Content : margin $anim-DefaultTime linear;
 $anim-Ribbon  : opacity $anim-DefaultTime linear;
-$anim-NavBtn  : width $anim-DefaultTime ease-in-out;
+$anim-NavBtn  : all $anim-DefaultTime ease-in-out;
 $anim-Sidebar : all $anim-DefaultTime ease-in-out;
 
 $offCanvasMenu : translateX($w-Sidebar);
