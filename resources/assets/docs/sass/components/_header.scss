@@ -40,7 +40,7 @@
         font-weight: bold;
 
         @include breakpoint(tablet) {
-            @include typecsset-font-size(21px);
+            @include fs(20px);
         }
     }
 }

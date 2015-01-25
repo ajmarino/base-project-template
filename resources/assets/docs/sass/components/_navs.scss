@@ -1,4 +1,5 @@
 .nav {
+	margin-top: 1em;
 
 	&--main,
 	&--extras {
@@ -36,14 +37,11 @@
 
 
 	&--open {
-		
 		> .nav__link {
 			color: c("nav-link-active") !important;
-			background: white;
-			border-right: 1px solid #fff;
-			margin-right: -1px;
+			background: c("sidebar__subnav-bg");
 			border-top: 1px solid c("sidebar__border");
-			border-bottom: 1px solid c("sidebar__border");
+			border-right: 1px solid c("sidebar__border");
 
 			&:hover {
 				background: white;

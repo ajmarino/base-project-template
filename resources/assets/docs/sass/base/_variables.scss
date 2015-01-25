@@ -27,6 +27,7 @@ $color-code-red    : #f92672;
 $color-code-blue   : #66d9ef;
 $color-code-yellow : #e6db74;
 $color-code-green  : #a6e22e;
+$color-code-blue   : #66d9ef;
 $site-colors : (
 	"main-bg" : #fff,
 	"body-text" : #222,
@@ -60,6 +61,9 @@ $site-colors : (
 	"code--attribute" : $color-code-green,
 	"code--value"     : $color-code-yellow,
 	"code--comment"   : #999,
+	"code--keyword"   : $color-code-red,
+	"code--string"    : $color-code-yellow,
+	"code--class"     : $color-code-blue,
 	
 
 	"footer__bg"     : #1d1d1d,
