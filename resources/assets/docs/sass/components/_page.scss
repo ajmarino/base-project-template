@@ -87,6 +87,10 @@
 			@include fs(16px);
 			color: white;
 		}
+
+		.xml {
+			.hljs-tag { color: c("main-bg"); }
+		}
 	}
 
 	
