@@ -13,21 +13,6 @@ $breakpoints: (
 
 
 
-
-/**
- * Font Stacks
- * <br>See `ff` mixin under `Helpers`
- * 
- * @group Global Styling
- */
-$font-stacks : (
-	"Helvetica" : (Helvetica, Arial, sans-serif),
-);
-
-
-
-
-
 /**
  * Base heading sizes, set in px and converted to rem with px fallback.
  *
@@ -53,6 +38,8 @@ $typecsset-show-baseline: true;
 
 
 
+
+
 /**
  * Font Stacks
  * <br>See `ff` mixin under `helpers
@@ -62,6 +49,7 @@ $typecsset-show-baseline: true;
 $font-stacks : (
 	"Helvetica" : (Helvetica, Arial, sans-serif),
 );
+
 
 
 
@@ -81,8 +69,8 @@ $font-stacks : (
  * @type Map
  */ 
 $base-palette: (
-  "base": #FF6351, 
-  "colors": #CFDFE8 #BFB9C3 #CF9192 #FF6351 #BF4A3C #7F3128 #732C24
+  "base": #999, 
+  "colors": (#ccc, #bbb, #aaa, #999, #888, #777, #666)
 ) !default;
 
 

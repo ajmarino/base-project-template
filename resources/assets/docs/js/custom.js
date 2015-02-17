@@ -29,11 +29,13 @@ $(function () {
     $('#toggleCodeBlocks').click(function () {
         if ( $(this).attr("data-state") === "visible" ) {
             $('.page .pre').slideUp();
+            $('.page pre.code').slideUp();
             $(this)
                 .attr("data-state", "hidden")
                 .text("Show Code Blocks");
         } else {
              $('.page .pre').slideDown();
+             $('.page pre.code').slideDown();
             $(this)
                 .attr("data-state", "visible")
                 .text("Hide Code Blocks");
