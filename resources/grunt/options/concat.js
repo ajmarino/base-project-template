@@ -26,17 +26,17 @@ module.exports = function (grunt) {
 			},
 			src  : ["<%= assetDir %>/js/admin/*.js"],
 			dest : "<%= outputDir %>/js/admin.js"
-		}
-		/*
-		plugins : {
+		},
+		bower_css : {
 			options : {
 				seperator : ";"
 			},
 			files : {
-				"<%= outputDir %>/js/plugins.js" : ["path/to/file"],
+				"<%= assetDir %>/sass/vendor/_normalize.scss"          : ["bower_components/normalize.css/normalize.css"],
+				"<%= assetDir %>/sass/vendor/_normalize-opentype.scss" : ["bower_components/normalize-opentype.css/normalize-opentype.css"],
 			}
 		}
-		*/
+		
 	}
 
 

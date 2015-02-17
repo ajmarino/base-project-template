@@ -1,19 +1,24 @@
 @import
 	"../../../bower_components/bourbon/app/assets/stylesheets/bourbon",
-	"../../../bower_components/susy/sass/susy";
+	"../../../bower_components/susy/sass/susy",
+	"../../../bower_components/fontawesome/scss/font-awesome";
 
 
 @import "helpers/helpers";
 
+
 @import
-	"base/normalize",
-	"../../../bower_components/normalize-opentype.css/normalize-opentype",
+	"vendor/normalize",
+	"vendor/normalize-opentype";
+
+
+@import
 	"base/typecsset",
 	"base/debug";
 
+
 @import
 	"layout/base";
-
 
 
 @import

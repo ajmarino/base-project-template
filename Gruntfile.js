@@ -24,12 +24,14 @@ module.exports = function (grunt) {
 	/**
 	 * Runs all grunt tasks when using `grunt`
 	 */
-	grunt.registerTask("default", "Runs all grunt tasks",[
+	grunt.registerTask("default", "Compile all the things!",[
 		'clean',
+		'concat:bower_css',
 		'sass',
 		'autoprefixer',
 		'csso',
-		'concat',
+		'concat:dev',
+		'concat:admin',
 		'uglify',
 		'jshint',
 		'shell',

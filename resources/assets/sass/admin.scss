@@ -4,8 +4,11 @@
 @import "helpers/helpers";
 
 @import
-	"base/normalize",
-	"../../../bower_components/normalize-opentype.css/normalize-opentype",
+	"vendor/normalize",
+	"vendor/normalize-opentype";
+
+
+@import
 	"base/typecsset";
 
 @import
