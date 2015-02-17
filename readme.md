@@ -64,6 +64,18 @@ There are 3 main grunt commands included in `resources/grunt/tasks`:
 There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
 
 
+## Adding New Components
+
+When adding new components through bower, there are a few places in the grunt options that need to be updated so that these plugins will be compiled and minified correctly.  
+
+### Javascript
+
+Un-comment the plugin option in `resources/grunt/options/concat.js`.  Add all external plugins as needed to the array.  Then un-comment the last line of the plugin options in `resources/grunt/options/uglify.js`
+
+
+### Sass or CSS
+Duplicate the normalize line under `bower_css` in `resources/grunt/options/concat.js`, and update create a new file in `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
+
 
 
 ## Sassdoc
