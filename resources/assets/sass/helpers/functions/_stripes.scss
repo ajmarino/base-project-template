@@ -1,8 +1,8 @@
 /// Generates bg stripes from a list of `$colors`
 /// 
 /// @param  {List} $colors            - list of colors to use, with or without color stops
-/// @param  {Int}  $direction (90deg) - Direction of colors for linear gradiant
-/// @param  {Bool} $random (false)    - Choose to use random stops
+/// @param  {Int}  $direction [90deg] - Direction of colors for linear gradiant
+/// @param  {Bool} $random [false]    - Choose to use random stops
 /// 
 /// @group Misc
 /// 
