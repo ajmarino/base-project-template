@@ -34,6 +34,7 @@ module.exports = function (grunt) {
 			files : {
 				"<%= assetDir %>/sass/vendor/_normalize.scss"          : ["bower_components/normalize.css/normalize.css"],
 				"<%= assetDir %>/sass/vendor/_normalize-opentype.scss" : ["bower_components/normalize-opentype.css/normalize-opentype.css"],
+				"<%= assetDir %>/sass/vendor/_font-awesome.scss"       : ["bower_components/fontawesome/css/font-awesome.css"],
 			}
 		},
 

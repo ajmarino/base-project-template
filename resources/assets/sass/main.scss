@@ -1,27 +1,30 @@
+// Added via bower
 @import
-	"bourbon",
-	"susy",
-	"font-awesome";
+    "bourbon",                      // css mixins, helpful tools
+    "susy",                         // grid system
+    "helpers/helpers";              // custom mixins / functions
 
 
-@import "helpers/helpers";
-
-
+// created when `grunt` is run from the cmd line - DO NOT MODIFY
 @import
-	"vendor/normalize",
-	"vendor/normalize-opentype";
-
-
-@import
-	"base/base",
-	"base/typecsset",
-	"base/debug";
+    "vendor/normalize",             // normalize.css
+    "vendor/normalize-opentype",    // allows fancy characters if supported
+    "vendor/font-awesome";          // icon font
 
 
 @import
-	"layout/base";
+    "base/base",                    // html5 boilerplate base css
+    "base/typecsset",               // font sizing and vertical grid system
+    "base/debug";                   // debug text showing active media query
+
+
+// Start of site css
+@import
+    "layout/base";
+
+
 
 
 @import
-	"helpers/utility",
-	"base/print";
+    "helpers/utility",              // Screenreader classes
+    "base/print";                   // Basic resets for printing

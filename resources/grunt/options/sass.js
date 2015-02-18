@@ -20,7 +20,6 @@ module.exports = function (grunt) {
 					"bower_components/bootstrap-sass-official/assets/stylesheets",
 					"bower_components/bourbon/app/assets/stylesheets",
 					"bower_components/susy/sass",
-					"bower_components/fontawesome/scss"
 				]
 			},
 			files : {
@@ -30,6 +29,11 @@ module.exports = function (grunt) {
 		docs : {
 			options : {
 				style  : "compressed",
+				loadPath: [
+					"bower_components/bootstrap-sass-official/assets/stylesheets",
+					"bower_components/bourbon/app/assets/stylesheets",
+					"bower_components/susy/sass",
+				]
 			},
 			files : {
 				"<%= assetDir %>/docs/css/site.css"      : "<%= assetDir %>/sass/main.scss",

@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.registerTask("default", "Compile all the things!",[
 		'clean',
-		'concat:bower_css',
+		'plugins',
 		'sass',
 		'autoprefixer',
 		'csso',
