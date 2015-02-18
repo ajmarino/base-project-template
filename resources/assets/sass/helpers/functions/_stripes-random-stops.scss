@@ -1,15 +1,13 @@
-/**
- * Creates a linear-gradient using random color stops.<br>
- * See `stripes` function in `Misc`
- *
- * @param {List} $colors - List of colors
- *
- * @access private
- *
- * @group Misc
- *
- * @return {Linear Gradient}
- */
+/// Creates a linear-gradient using random color stops.<br>
+/// See `stripes` function in `Misc`
+/// 
+/// @param {List} $colors - List of colors
+/// 
+/// @access private
+/// 
+/// @group Misc
+/// 
+/// @return {Linear Gradient}
 @function _stripes-random-stops($colors) {
 	@if length(nth($colors, 1)) > 1 {
 		@return _stripes-custom-stops($colors);

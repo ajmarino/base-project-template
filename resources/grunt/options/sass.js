@@ -16,7 +16,12 @@ module.exports = function (grunt) {
 		dev : {
 			options : {
 				style  : "compact",
-				banner : "<%= banner %>"
+				loadPath: [
+					"bower_components/bootstrap-sass-official/assets/stylesheets",
+					"bower_components/bourbon/app/assets/stylesheets",
+					"bower_components/susy/sass",
+					"bower_components/fontawesome/scss"
+				]
 			},
 			files : {
 				"<%= outputDir %>/css/main.css" : "<%= assetDir %>/sass/main.scss",
@@ -34,7 +39,6 @@ module.exports = function (grunt) {
 		admin : {
 			options : {
 				style  : "compact",
-				banner : "<%= banner %>"
 			},
 			files : {
 				"<%= outputDir %>/css/admin.css" : "resources/assets/sass/admin.scss",

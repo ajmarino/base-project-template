@@ -1,43 +1,43 @@
-/**
- * Mixin for adding a triangle to a `:before` or `:after` psuedo element.
- *
- * @param {String} $element         - psuedo element to use, only allows "before" or "after"
- * @param {String} $direction       - direction for the arrow to face
- * @param {List}   $position        - List of offsets and values
- * @param {String} $color (inherit) - color for arrow
- * @param {Int}    $size (1em)      - size of arrow
- *
- *
- * @group Misc
- *
- * 
- * 
- * @example scss
- * // Usage
- * .el {
- *     @include triangle(after, left, top 50% right -10px, #333, 12px);
- * }
- *
- * // Output
- * .el {
- *     &:after {
- *       position: absolute;
- *       top: 50%;
- *       right: -10px;
- *       width: 0;
- *       height: 0;
- *       content: '';
- *       z-index: 2;
- *       border-right: 12px solid #333;
- *       border-top: 12px solid transparent;
- *       border-bottom: 12px solid transparent;
- *     }
- * }
- *
- *
- * @throws Warning if $element is not 'before' or 'after'
- * @throws Watning if $direction is not 'top right bottom left'
- */
+/// 
+/// Mixin for adding a triangle to a `:before` or `:after` psuedo element.
+/// 
+/// @param {String} $element         - psuedo element to use, only allows "before" or "after"
+/// @param {String} $direction       - direction for the arrow to face
+/// @param {List}   $position        - List of offsets and values
+/// @param {String} $color (inherit) - color for arrow
+/// @param {Int}    $size (1em)      - size of arrow
+/// 
+/// 
+/// @group Misc
+/// 
+/// 
+/// 
+/// @example scss
+/// // Usage
+/// .el {
+///     @include triangle(after, left, top 50% right -10px, #333, 12px);
+/// }
+/// 
+/// // Output
+/// .el {
+///     &:after {
+///       position: absolute;
+///       top: 50%;
+///       right: -10px;
+///       width: 0;
+///       height: 0;
+///       content: '';
+///       z-index: 2;
+///       border-right: 12px solid #333;
+///       border-top: 12px solid transparent;
+///       border-bottom: 12px solid transparent;
+///     }
+/// }
+/// 
+/// 
+/// @throws Warning if $element is not 'before' or 'after'
+/// @throws Watning if $direction is not 'top right bottom left'
+/// 
 @mixin triangle($element, $direction, $position, $color: currentColor, $size: 1em) {
   // Make sure the element is valid
   @if not index(before after, $element) {

@@ -1,18 +1,41 @@
-/**
- * Function defining the difference between 2 colors and the color functions required to turn
- * color $a into color $b.
- *
- * @access private
- *
- *
- * @group Color Palette
- * 
- * 
- * @param {Color} $a - first color
- * @param {Color} $b - second color
- *
- * @return {Map}  The color operations to transform $a to $b, with corresponding values
- */
+/// 
+/// Initial palette used to define the diff between the base color and each color from the palette.
+/// <br>See `color palatte` group for helpful mixins
+/// 
+/// 
+/// @group Color Palette
+/// 
+/// @link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
+/// 
+/// 
+/// @prop {string} $base-palette.base (#ff6351) - Base color for color palette creation
+/// 
+/// 
+/// @type Map
+///  
+$base-palette: (
+  "base": #999, 
+  "colors": (#ccc, #bbb, #aaa, #999, #888, #777, #666)
+) !default;
+
+
+
+
+/// 
+/// Function defining the difference between 2 colors and the color functions required to turn
+/// color $a into color $b.
+/// 
+/// @access private
+/// 
+/// 
+/// @group Color Palette
+/// 
+/// 
+/// @param {Color} $a - first color
+/// @param {Color} $b - second color
+/// 
+/// @return {Map}  The color operations to transform $a to $b, with corresponding values
+/// 
 @function color-diff($a, $b) {
   $sat: saturation($a) - saturation($b);
   $lig:  lightness($a) -  lightness($b);
@@ -30,19 +53,19 @@
 
 
 
-/**
- * Compute the diff for each color from the initial palette.
- *
- * @access private
- *
- * @group Color Palette
- * 
- * @param {Map} $palette - palette
- *
- * @requires {function} color-diff
- * 
- * @return {List} List of diffs to apply to turn 1 color into another
- */
+/// 
+/// Compute the diff for each color from the initial palette.
+/// 
+/// @access private
+/// 
+/// @group Color Palette
+/// 
+/// @param {Map} $palette - palette
+/// 
+/// @requires {function} color-diff
+/// 
+/// @return {List} List of diffs to apply to turn 1 color into another
+/// 
 @function palette-diff($palette) {
   $base: map-get($palette, "base");
   $colors: map-get($palette, "colors");
@@ -58,33 +81,33 @@
 
 
 
-/**
- * Palette of diffs based on colors in `$base-palette:colors`.
- *
- * @access private
- *
- * @group Color Palette
- * 
- * @type List
- */
+/// 
+/// Palette of diffs based on colors in `$base-palette:colors`.
+/// 
+/// @access private
+/// 
+/// @group Color Palette
+/// 
+/// @type List
+/// 
 $palette-diffs: palette-diff($base-palette);
 
 
 
 
 
-/**
- * Apply differences returned from `color-diff` function to a color in order to create the second color.
- *
- * @access private
- *
- * @group Color Palette
- * 
- * @param {Color} $color - color to transform
- * @param {Map} $diff - diff map
- * 
- * @return {Color} Transformed color
- */
+/// 
+/// Apply differences returned from `color-diff` function to a color in order to create the second color.
+/// 
+/// @access private
+/// 
+/// @group Color Palette
+/// 
+/// @param {Color} $color - color to transform
+/// @param {Map} $diff - diff map
+/// 
+/// @return {Color} Transformed color
+/// 
 @function apply-diff($color, $diff) {
   // We call the $key (function), 
   // passing the $color and the $value as parameters
@@ -96,22 +119,25 @@ $palette-diffs: palette-diff($base-palette);
   @return $color;
 }
 
-/**
- * Create a 6 color palette, 3 darker 3 lighter, from a base color.
- *
- * @access private
- *
- * @group Color Palette
- * 
- * @param {Color} $base-color - base color for the palette
- *
- * @requires {function} palette-diff
- * @requires {function} apply-diff
- * @requires {variable} $base-palette
- *
- * 
- * @return {List} List of colors
- */
+
+
+
+/// 
+/// Create a 6 color palette, 3 darker 3 lighter, from a base color.
+/// 
+/// @access private
+/// 
+/// @group Color Palette
+/// 
+/// @param {Color} $base-color - base color for the palette
+/// 
+/// @requires {function} palette-diff
+/// @requires {function} apply-diff
+/// @requires {variable} $base-palette
+/// 
+/// 
+/// @return {List} List of colors
+/// 
 @function create-palette($base-color) {
   $colors: ();
   
@@ -124,20 +150,20 @@ $palette-diffs: palette-diff($base-palette);
 
 
 
-/**
- * Create a list of colors from the base color then turn it into a map with explicit keys.
- * <br>See `Color Palette` group, `get_` functions
- *
- * @param {Color} $base-color - base color for the palette
- *
- * @group Color Palette
- *
- * @link http://www.sitepoint.com/using-sass-build-color-palettes/
- * 
- * @requires {function} create-palette
- *
- * @return {Map}
- */
+/// 
+/// Create a list of colors from the base color then turn it into a map with explicit keys.
+/// <br>See `Color Palette` group, `get_` functions
+/// 
+/// @param {Color} $base-color - base color for the palette
+/// 
+/// @group Color Palette
+/// 
+/// @link http://www.sitepoint.com/using-sass-build-color-palettes/
+/// 
+/// @requires {function} create-palette
+/// 
+/// @return {Map}
+/// 
 @function create-named-palette($base-color) {
   $palette-colors: create-palette($base-color);
   // Keys need to be same length as colors in $base-pallet

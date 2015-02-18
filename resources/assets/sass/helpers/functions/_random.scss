@@ -1,19 +1,19 @@
-/**
- * Custom random function to allow minimun value
- * 
- * @param  {Int} $min - lower boundry
- * @param  {Int} $max - upper boundry
- *
- *
- * @group Helpers
- * 
- * 
- * @example scss
- *   $items : rand(5, 10);
- *
- * 
- * @return {Int}      - Random number between upper and lower boundries
- */
+/// 
+/// Custom random function to allow minimun value
+/// 
+/// @param  {Int} $min - lower boundry
+/// @param  {Int} $max - upper boundry
+/// 
+/// 
+/// @group Helpers
+/// 
+/// 
+/// @example scss
+///   $items : rand(5, 10);
+/// 
+/// 
+/// @return {Int}      - Random number between upper and lower boundries
+/// 
 @function rand($min, $max) {
   @return random($max - $min) + $min;
 }

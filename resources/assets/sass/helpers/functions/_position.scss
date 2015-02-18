@@ -1,16 +1,16 @@
-/**
- * Private method used to add positioning.
- * <br>See `absolute`, `relative` or `fixed` mixins under `Helpers`
- *
- * @access private
- *
- *
- * @group Helpers
- * 
- * 
- * @param {String} $position - position
- * @param {List}   $args     - list of offsets and values
- */
+/// 
+/// Private method used to add positioning.
+/// <br>See `absolute`, `relative` or `fixed` mixins under `Helpers`
+/// 
+/// @access private
+/// 
+/// 
+/// @group Helpers
+/// 
+/// 
+/// @param {String} $position - position
+/// @param {List}   $args     - list of offsets and values
+/// 
 @mixin _position($position, $args) {
 
   @each $o in top right bottom left {

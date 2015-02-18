@@ -1,15 +1,15 @@
-/**
- * Creates a linear-gradient using custom color stops.<br>
- * See `stripes` function in `Misc`
- *
- * @param {List} $colors - List of colors with specific color stops
- *
- * @access private
- *
- * @group Misc
- *
- * @return {Linear Gradient}
- */
+/// 
+/// Creates a linear-gradient using custom color stops.<br>
+/// See `stripes` function in `Misc`
+/// 
+/// @param {List} $colors - List of colors with specific color stops
+/// 
+/// @access private
+/// 
+/// @group Misc
+/// 
+/// @return {Linear Gradient}
+/// 
 @function _stripes-custom-stops($colors) {
 	$gradients: ();
 

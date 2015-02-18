@@ -1,9 +1,9 @@
-/**
- * Breakpoints for responsive design, any name/ pair can go here.
- * <br>See `breakpoint` mixin under `Helpers`
- *
- * @group Global Styling
- */
+/// 
+/// Breakpoints for responsive design, any name/ pair can go here.
+/// <br>See `breakpoint` mixin under `Helpers`
+/// 
+/// @group Global Styling
+/// 
 $breakpoints: (
 	"tablet"  : (min-width: 48em), // 768px
 	"laptop"  : (min-width: 62em), // 992px
@@ -13,11 +13,11 @@ $breakpoints: (
 
 
 
-/**
- * Base heading sizes, set in px and converted to rem with px fallback.
- *
- * @group Global Styling
- */
+/// 
+/// Base heading sizes, set in px and converted to rem with px fallback.
+/// 
+/// @group Global Styling
+/// 
 $headings : (
 	"h1" : 48px,
 	"h2" : 36px,
@@ -40,12 +40,12 @@ $typecsset-show-baseline: true;
 
 
 
-/**
- * Font Stacks
- * <br>See `ff` mixin under `helpers
- * 
- * @group Global Styling
- */
+/// 
+/// Font Stacks
+/// <br>See `ff` mixin under `helpers
+/// 
+/// @group Global Styling
+/// 
 $font-stacks : (
 	"Helvetica" : (Helvetica, Arial, sans-serif),
 );
@@ -53,36 +53,12 @@ $font-stacks : (
 
 
 
-/**
- * Initial palette used to define the diff between the base color and each color from the palette.
- * <br>See `color palatte` group for helpful mixins
- * 
- * 
- * @group Color Palette
- * 
- * @link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
- *
- *
- * @prop {string} $base-palette.base (#ff6351) - Base color for color palette creation
- * 
- * 
- * @type Map
- */ 
-$base-palette: (
-  "base": #999, 
-  "colors": (#ccc, #bbb, #aaa, #999, #888, #777, #666)
-) !default;
-
-
-
-
-
-/**
- * Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
- * <br>See `c` mixin under `Helpers`
- *
- * @group Global Styling
- */
+/// 
+/// Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
+/// <br>See `c` mixin under `Helpers`
+/// 
+/// @group Global Styling
+/// 
 $site-colors : (
 	"main-bg" : #000,
 );
@@ -90,12 +66,12 @@ $site-colors : (
 
 
 
-/**
- * Sizes array for various dimensions
- * <br>See `s` mixin to under `Helpers` 
- *
- * @group Global Styling
- */
+/// 
+/// Sizes array for various dimensions
+/// <br>See `s` mixin to under `Helpers` 
+/// 
+/// @group Global Styling
+/// 
 $sizes: (
 	"main-content-width" : 75%,
 );
@@ -104,12 +80,12 @@ $sizes: (
 
 
 
-/**
- * Various transitions, defined by usage name or by properties effected
- * <br>See `trans` mixin under `Helpers`
- *
- * @group Global Styling
- */
+/// 
+/// Various transitions, defined by usage name or by properties effected
+/// <br>See `trans` mixin under `Helpers`
+/// 
+/// @group Global Styling
+/// 
 $transitions : (
 	"all"    : all 0.3s linear,
 	"border" : border 0.3s linear,
@@ -121,12 +97,12 @@ $transitions : (
 
 
 
-/**
- * Assigns stacking order to items from one place, assigned with meaningful names.
- * <br>See `z` mixin under `Helpers`
- * 
- * @group Global Styling
- */
+/// 
+/// Assigns stacking order to items from one place, assigned with meaningful names.
+/// <br>See `z` mixin under `Helpers`
+/// 
+/// @group Global Styling
+/// 
 $z-layers: (
 	"main-container"     : 1,
 

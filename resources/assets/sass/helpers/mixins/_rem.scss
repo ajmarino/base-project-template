@@ -1,28 +1,28 @@
-/**
- * Adds rem & px fallback values for property passed in.
- *
- * @param {String} $property - CSS property you want to apply a value to
- * @param {Int}    $values   - Rem values you want to apply to $property
- *
- *
- * @group Helpers
- *  
- * 
- * @example scss
- * //  Usage
- * .el {
- *     @include rem(font-size, 1.6rem);
- *     @include rem(padding, 1rem .5rem)
- * }
- *
- * // Output
- * .el {
- *     font-size: 16px;
- *     font-size: 1.6rem;
- *     padding: 10px 5px;
- *     padding: 1rem .5rem;
- * }
- */
+/// 
+/// Adds rem & px fallback values for property passed in.
+/// 
+/// @param {String} $property - CSS property you want to apply a value to
+/// @param {Int}    $values   - Rem values you want to apply to $property
+/// 
+/// 
+/// @group Helpers
+///  
+/// 
+/// @example scss
+/// //  Usage
+/// .el {
+///     @include rem(font-size, 1.6rem);
+///     @include rem(padding, 1rem .5rem)
+/// }
+/// 
+/// // Output
+/// .el {
+///     font-size: 16px;
+///     font-size: 1.6rem;
+///     padding: 10px 5px;
+///     padding: 1rem .5rem;
+/// }
+/// 
 @mixin rem($property, $values) {
   $px : ();
   $rem: ();

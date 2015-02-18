@@ -1,34 +1,34 @@
-/**
- * Creates a modifier syntax for BEM notation
- *
- *
- * @param {string} $name - Name of modifier
- *
- * 
- * @group Helpers
- *
- * 
- * @link http://www.csstyle.io/
- *
- * 
- * @example sass
- *  // Source
- *  .button {
- *		background: blue;
- * 		
- *  	@include option(save) {
- *  		background: green;
- *  	}
- *  }
- *
- *  // Output
- *  .button {
- *  	background: blue;
- *  }
- *  .button--save {
- *   	background: green;
- *  }
- */
+/// 
+/// Creates a modifier syntax for BEM notation
+/// 
+/// 
+/// @param {string} $name - Name of modifier
+/// 
+/// 
+/// @group Helpers
+/// 
+/// 
+/// @link http://www.csstyle.io/
+/// 
+/// 
+/// @example sass
+///  // Source
+///  .button {
+/// 		background: blue;
+/// 		
+///  	@include option(save) {
+///  		background: green;
+///  	}
+///  }
+/// 
+///  // Output
+///  .button {
+///  	background: blue;
+///  }
+///  .button--save {
+///   	background: green;
+///  }
+/// 
 @mixin option($name){
   &.\--#{$name}{
     @content;
