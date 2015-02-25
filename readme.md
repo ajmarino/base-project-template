@@ -30,6 +30,7 @@ After filling out the information for the bower.json and package.json files, it 
 * [grunt](https://github.com/gruntjs/grunt)
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
 * [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
+* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
 * [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
 * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
@@ -47,7 +48,7 @@ After filling out the information for the bower.json and package.json files, it 
 
 ###  Misc
 [Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `resources/assets/sass/base`<br>
-[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - located in `resources/assets/sass/base`<br>
+[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - copied into `resources/assets/sass/vendor`<br>
 
 
 
@@ -65,16 +66,17 @@ There is also a `grunt watch` command that will watch the `/resources/assets` di
 
 
 ## Adding New Components
-
 When adding new components through bower, there are a few places in the grunt options that need to be updated so that these plugins will be compiled and minified correctly.  
 
-### Javascript
 
+
+### Javascript
 Un-comment the plugin option in `resources/grunt/options/concat.js`.  Add all external plugins as needed to the array.  Then un-comment the last line of the plugin options in `resources/grunt/options/uglify.js`
 
 
+
 ### Sass or CSS
-Duplicate the normalize line under `bower_css` in `resources/grunt/options/concat.js`, and update create a new file in `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
+Follow the current examples under `bower_css` in `resources/grunt/options/concat.js`, which will copy any css files into `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
 
 
 

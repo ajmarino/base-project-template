@@ -1,4 +1,5 @@
-// Added via bower
+// Bower components / Custom mixins & functions
+// add new bower component paths to grunt/options/sass.js in the dev object
 @import
     "bourbon",                      // css mixins, helpful tools
     "susy",                         // grid system
@@ -15,7 +16,7 @@
 @import
     "base/base",                    // html5 boilerplate base css
     "base/typecsset",               // font sizing and vertical grid system
-    "base/debug";                   // debug text showing active media query
+    "base/debug";                   // debug link with active media query text
 
 
 // Start of site css
@@ -26,5 +27,5 @@
 
 
 @import
-    "helpers/utility",              // Screenreader classes
-    "base/print";                   // Basic resets for printing
+    "helpers/utility",              // screenreader classes
+    "base/print";                   // basic resets for printing

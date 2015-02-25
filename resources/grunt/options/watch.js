@@ -53,14 +53,11 @@ module.exports = function (grunt) {
 
 	// Loads the task files
 	grunt.loadNpmTasks('grunt-contrib-watch');
-};
 
 
-
-/**
- * Creates a hash out of the compiled js or css file whenever they are changed
- */
-module.exports = function (grunt) {
+	/**
+	 * Creates a hash out of the compiled js or css file whenever they are changed
+	 */
 	grunt.registerTask('cache-bust', 'Updates asset-version.txt whenever a src js or sass file changes', function (type) {
 
 		if (type === "css") {
