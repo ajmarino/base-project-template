@@ -1,7 +1,11 @@
+////
+//// @group Math
+//// @link https://unindented.org/articles/trigonometry-in-sass/
+////
+
+
 /// 
 /// Pi value used for trig functions
-/// 
-/// @group Math
 /// 
 $pi: 3.14159265359 !global;
 
@@ -10,10 +14,6 @@ $pi: 3.14159265359 !global;
 
 ///
 /// Raise a number to a specific power
-/// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
-/// @group Math
 /// 
 /// @param {Number} $number - base number to raise
 /// @param {Number} $exp    - number of times to multiply base
@@ -28,7 +28,6 @@ $pi: 3.14159265359 !global;
 ///     margin-bottom: 4px;
 /// }
 ///
-
 @function pow($number, $exp) {
     $value: 1;
     
@@ -51,10 +50,6 @@ $pi: 3.14159265359 !global;
 
 /// 
 /// Find the factorial of a number, by multipling each number from 1 to the given
-/// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
-/// @group Math
 /// 
 /// @param {Number} $number - number to start with
 /// 
@@ -87,10 +82,6 @@ $pi: 3.14159265359 !global;
 /// 
 /// Convert an angle to radians
 /// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
-/// @group Math
-/// 
 /// @param {Number} $angle - angle to convert
 /// 
 @function rad($angle) {
@@ -111,10 +102,6 @@ $pi: 3.14159265359 !global;
 ///
 /// Find the sin value of an angle
 /// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
-/// @group Math
-/// 
 /// @param {Number} $angle - angle to convert
 ///
 @function sin($angle) {
@@ -134,10 +121,6 @@ $pi: 3.14159265359 !global;
 
 ///
 /// Find the cos value of an angle
-/// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
-/// @group Math
 /// 
 /// @param {Number} $angle - angle to convert
 ///
@@ -160,11 +143,7 @@ $pi: 3.14159265359 !global;
 ///
 /// Find the tan value of an angle
 /// 
-/// @link https://unindented.org/articles/trigonometry-in-sass/
-/// 
 /// @param {Number} $angle - angle to convert
-/// 
-/// @group Math
 ///
 @function tan($angle) {
     @return sin($angle) / cos($angle);

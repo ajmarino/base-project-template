@@ -1,27 +1,35 @@
 @import "../variables";
 
 @import
-	"functions/create-palette",
-	"functions/get-palette-colors";
+	"functions/backgrounds/equal-stops",
+	"functions/backgrounds/custom-stops",
+	"functions/backgrounds/random-stops",
+	"functions/backgrounds/stripes",
 
-@import
-	"functions/color",
-	"functions/contains",
-	"functions/is-length",
-	"functions/is-size",
+	"functions/checks/is-length",
+	"functions/checks/is-size",
+	"functions/checks/contains",
+	
+	"functions/color-palette/base-palette",
+	"functions/color-palette/color-diff",
+	"functions/color-palette/palette-diff",
+	"functions/color-palette/apply-diff",
+	"functions/color-palette/create-palette",
+	"functions/color-palette/create-named-palette",
+	"functions/color-palette/get-palette-colors",
+
+	"functions/getters/color",
+	"functions/getters/sizes",
+	"functions/getters/z-index",
+
 	"functions/long-shadow",
 	"functions/math",
 	"functions/position",
 	"functions/random",
 	"functions/shade",
-	"functions/sizes",
-	"functions/stripes-equal-stops",
-	"functions/stripes-custom-stops",
-	"functions/stripes-random-stops",
-	"functions/stripes",
 	"functions/strip-units",
-	"functions/tint",
-	"functions/z-index";
+	"functions/tint";
+
 
 @import
 	"mixins/breakpoint",

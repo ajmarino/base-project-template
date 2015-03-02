@@ -2,7 +2,7 @@
 /// Breakpoints for responsive design, any name/ pair can go here.
 /// <br>See `breakpoint` mixin under `Helpers`
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $breakpoints: (
 	"tablet"  : (min-width: 48em), // 768px
@@ -16,7 +16,7 @@ $breakpoints: (
 /// 
 /// Base heading sizes, set in px and converted to rem with px fallback.
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $headings : (
 	"h1" : 48px,
@@ -44,7 +44,7 @@ $typecsset-show-baseline: true;
 /// Font Stacks
 /// <br>See `ff` mixin under `helpers
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $font-stacks : (
 	"Helvetica" : (Helvetica, Arial, sans-serif),
@@ -57,7 +57,7 @@ $font-stacks : (
 /// Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
 /// <br>See `c` mixin under `Helpers`
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $site-colors : (
 	"main-bg" : #000,
@@ -70,7 +70,7 @@ $site-colors : (
 /// Sizes array for various dimensions
 /// <br>See `s` mixin to under `Helpers` 
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $sizes: (
 	"main-content-width" : 75%,
@@ -84,7 +84,7 @@ $sizes: (
 /// Various transitions, defined by usage name or by properties effected
 /// <br>See `trans` mixin under `Helpers`
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $transitions : (
 	"all"    : all 0.3s linear,
@@ -101,7 +101,7 @@ $transitions : (
 /// Assigns stacking order to items from one place, assigned with meaningful names.
 /// <br>See `z` mixin under `Helpers`
 /// 
-/// @group Global Styling
+/// @group Site Styles
 /// 
 $z-layers: (
 	"main-container"     : 1,
