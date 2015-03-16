@@ -1,11 +1,10 @@
 @import "../variables";
 
 @import
-	"functions/backgrounds/equal-stops",
-	"functions/backgrounds/custom-stops",
-	"functions/backgrounds/random-stops",
-	"functions/backgrounds/stripes",
+	
 
+	"functions/checks/last-simple-selector",
+	"functions/checks/build-quantity-selector",
 	"functions/checks/is-length",
 	"functions/checks/is-size",
 	"functions/checks/contains",
@@ -23,7 +22,11 @@
 	"functions/getters/z-index",
 
 	"functions/randomize/random-number",
-
+	
+	"functions/style/bg-stripes-custom-stops",
+	"functions/style/bg-stripes-equal-stops",
+	"functions/style/bg-stripes-random-stops",
+	"functions/style/bg-stripes",
 	"functions/style/long-shadow",
 	"functions/style/position",
 	"functions/style/shade",
@@ -36,6 +39,11 @@
 
 
 @import
+	"mixins/checks/at-least",
+	"mixins/checks/at-most",
+	"mixins/checks/between",
+	"mixins/checks/exactly",
+
 	"mixins/breakpoint",
 	"mixins/font-family",
 	"mixins/font-size",
@@ -46,3 +54,4 @@
 	"mixins/scrollbars",
 	"mixins/transitions",
 	"mixins/triangles";
+

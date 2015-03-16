@@ -5,7 +5,7 @@
 /// @param  {Int} $max - upper boundry
 /// 
 /// 
-/// @group Helpers
+/// @group Randomizers
 /// 
 /// 
 /// @example scss
@@ -14,6 +14,6 @@
 /// 
 /// @return {Int}      - Random number between upper and lower boundries
 /// 
-@function rand($min, $max) {
+@function rand-num($min, $max) {
   @return random($max - $min) + $min;
 }
