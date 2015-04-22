@@ -25,18 +25,20 @@ module.exports = function (grunt) {
 	 * Runs all grunt tasks when using `grunt`
 	 */
 	grunt.registerTask("default", "Compile all the things!",[
-		'clean',
-		'plugins',
+		'bower-compile',
+		'clean:css',
+		'clean:js',
+		'clean:docs',
+		'concat:dev',
 		'sass',
 		'autoprefixer',
 		'csso',
-		'concat:dev',
-		'concat:admin',
-		'uglify',
+		'uglify:dev',
 		'jshint',
 		'shell',
 		'sassdoc',
-		'cache-bust:css'
+		'cache-bust:css',
+		'watch'
 	]);
 	
 };

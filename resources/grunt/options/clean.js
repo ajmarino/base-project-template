@@ -9,7 +9,16 @@ module.exports = function (grunt) {
 	 */
 	var clean = grunt.config('clean') || {};
 
+	// Add any files created with uglify:plugins to this obj
+	clean.bower = [
+		"<%= assetDir %>/sass/vendor/*.scss",
 
+		"<%= outputDir %>/fonts/fontawesome-webfont.*",
+
+		"<%= outputDir %>/js/vendor/bootstrap.min.js",
+		"<%= outputDir %>/js/vendor/jquery.min.js",
+		"<%= outputDir %>/js/vendor/modernizr.min.js",
+	];
 
 	clean.css  = [
 		'<%= outputDir %>/css/main.css',
