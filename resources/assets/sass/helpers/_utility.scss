@@ -1,9 +1,14 @@
+@import "functions/utility/pesticide";
+
 /// 
 /// Hide visually and from screen readers:
-/// http://juicystudio.com/article/screen-readers-display-none.php
 /// 
-
-.hidden {
+/// @group Utility
+/// 
+/// @link http://juicystudio.com/article/screen-readers-display-none.php
+/// 
+%u-hidden,
+.u-hidden {
     display: none !important;
     visibility: hidden;
 }
@@ -11,11 +16,13 @@
 
 /// 
 /// Hide only visually, but have it available for screen readers:
-/// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 /// 
-
-.visuallyhidden,
-.sr-only {
+/// @group Utility
+/// 
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// 
+%u-sr-only,
+.u-sr-only {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -25,12 +32,13 @@
     position: absolute;
     width: 1px;
     
+
     /// 
     /// Extends the .visuallyhidden class to allow the element
     /// to be focusable when navigated to via the keyboard:
+    /// 
     /// https://www.drupal.org/node/897638
     /// 
-
     &.focusable:active,
     &.focusable:focus {
         clip: auto;
@@ -46,10 +54,13 @@
 /// 
 /// Hide visually and from screen readers, but maintain layout
 /// 
-
-.invisible {
+/// @group Utility
+/// 
+%u-invisible,
+.u-invisible {
     visibility: hidden;
 }
+
 
 /// 
 /// Clearfix: contain floats
@@ -62,13 +73,17 @@
 /// 2. The use of `table` rather than `block` is only necessary if using
 ///    `:before` to contain the top-margins of child elements.
 /// 
+/// @group Utility
+/// 
+%clearfix,
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";   // [1]
+        display: table; // [2]
+    }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";   /// [1]
-    display: table; /// [2]
-}
-
-.clearfix:after {
-    clear: both;
+    &:after {
+        clear: both;
+    }
 }

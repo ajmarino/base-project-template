@@ -7,12 +7,12 @@
 /// @link http://cl.ly/image/2w3z1E3c2f2h
 /// 
 /// 
-/// @prop {string} $base-palette.base [#999] - Base color for color palette creation
+/// @prop {string} $base-palette.base [#F2614E] - Base color for color palette creation
 /// 
 /// 
 /// @type Map
 ///  
 $base-palette: (
-  "base": #999, 
-  "colors": (#ccc, #bbb, #aaa, #999, #888, #777, #666)
+  "base": #F2614E, 
+  "colors": (#D1DFEA, #BFB9C5, #CA8F91, #F2614E, #B7493A, #7A3027, #6E2B22)
 ) !default;
