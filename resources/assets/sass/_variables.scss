@@ -5,10 +5,19 @@
 /// 
 /// @link http://pesticide.io/
 /// 
-$pesticide-debug-outline: false;
+$pesticide-debug-outline: true;
 $pesticide-debug-depth: false;
 
 
+
+/// 
+/// Enable Namespace visual debugging
+/// 
+/// @group Debug
+/// 
+/// @link http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+/// 
+$namespace-debug: false;
 
 
 
