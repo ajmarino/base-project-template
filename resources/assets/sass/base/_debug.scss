@@ -19,7 +19,7 @@
 		$show-breakpoints: ("tablet", "laptop", "desktop");
 		@each $bp in $show-breakpoints {
 			$width: inspect(map-get($breakpoints, $bp));
-			@include breakpoint($bp) {
+			@include mq($bp) {
 				content: "#{$bp}: #{$width}";
 			}
         }
