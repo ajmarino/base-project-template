@@ -1,6 +1,6 @@
 # Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![License](http://b.repl.ca/v1/license-MIT-red.png)]()
+[![License](http://b.repl.ca/v1/license-MIT-009900.png)]()
 [![Version 1.7.0](http://b.repl.ca/v1/version-1.7.0-lightgray.png)]()
 
 Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
@@ -88,3 +88,10 @@ Sassdoc generated documentation is located at `docs/sass`.  These files use sett
 
 ##  Docs
 All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+
+
+## Future Updates
+
+* Add admin components based off The74
+* Convert Grunt to Gulp for use with Laravel 5 Elixir
+* 
