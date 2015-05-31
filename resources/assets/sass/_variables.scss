@@ -10,6 +10,8 @@ $pesticide-debug-depth: false;
 
 
 
+
+
 /// 
 /// Enable Namespace visual debugging
 /// 
@@ -18,6 +20,17 @@ $pesticide-debug-depth: false;
 /// @link http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 /// 
 $namespace-debug: false;
+
+
+
+/// 
+/// Sets the active theme name
+/// 
+/// @group Styling
+/// 
+/// @link https://smacss.com/book/type-theme
+/// 
+$theme: "default";
 
 
 
@@ -81,6 +94,32 @@ $font-stacks : (
 
 
 
+// Color Scheme
+// examples based on the official Sass styleguide
+// ============
+// Descriptive colors:
+$c-hopbush         : #c69;
+$c-bouquet         : #b37399;
+$c-venus           : #998099;
+$c-patina          : #699;
+$c-nebula          : #d2e1dd;
+$c-white           : #fff;
+$c-dawn-pink       : #f2ece4;
+$c-wafer           : #e1d7d2;
+$c-iron            : #dadbdf;
+$c-regent-grey     : #808c99;
+$c-pale-sky        : #6b717f;
+$c-midnight-blue   : #036;
+$c-black           : #000;
+
+// Messages
+$c-message         : #f4ecbb !default;
+$c-important       : #d00 !default;
+$c-notice          : #66b !default;
+$c-success         : #5cb85c !default;
+$c-info            : #5bc0de !default;
+$c-warning         : #f0ad4e !default;
+$c-danger          : #d9534f !default;
 
 /// 
 /// Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
@@ -89,7 +128,7 @@ $font-stacks : (
 /// @group Site Styles
 /// 
 $site-colors : (
-	"main-bg" : #000,
+	"main-bg" : $c-white,
 );
 
 
