@@ -1,0 +1,22 @@
+/// 
+/// Create a percentage based on an aspect ratio
+/// 
+/// @group Utility
+/// 
+/// @param {number} $numerator
+/// @param {number} $denominator
+/// 
+/// @example scss
+/// // Usage
+/// .el {
+///     padding-bottom: aspect-ratio(16, 9);
+/// }
+/// 
+/// // Output
+/// .el {
+///     padding-bottom: 56.25%;
+/// }
+/// 
+@function aspect-ratio($numerator, $denominator) {
+    @return (($numerator / $denominator) * 100%);
+}

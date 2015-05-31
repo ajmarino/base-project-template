@@ -3,8 +3,18 @@
 @import
 	"functions/checks/last-simple-selector",
 	"functions/checks/build-quantity-selector",
+	"functions/checks/is-bool",
+	"functions/checks/is-color",
+	"functions/checks/is-empty",
+	"functions/checks/is-integer",
 	"functions/checks/is-length",
+	"functions/checks/is-list",
+	"functions/checks/is-negative",
+	"functions/checks/is-null",
+	"functions/checks/is-number",
+	"functions/checks/is-positive",
 	"functions/checks/is-size",
+	"functions/checks/is-string",
 	"functions/checks/contains",
 	
 	"functions/color-palette/base-palette",
@@ -31,9 +41,10 @@
 	"functions/style/tint",
 
 	"functions/math",
-	
-	"functions/utility/strip-units";
 
+	"functions/utility/aspect-ratio",
+	"functions/utility/strip-units";
+	
 
 @import
 	"mixins/checks/at-least",

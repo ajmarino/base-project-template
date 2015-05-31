@@ -1,5 +1,3 @@
-@import "functions/utility/pesticide";
-
 /// 
 /// Hide visually and from screen readers:
 /// 
@@ -87,3 +85,9 @@
         clear: both;
     }
 }
+
+
+// Imports visual debugging here so it appears near the end of compiled css
+@import     
+    "functions/debug/pesticide",
+    "functions/debug/namespace-debug";
