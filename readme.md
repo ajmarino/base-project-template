@@ -1,7 +1,7 @@
 # Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![License](http://b.repl.ca/v1/license-MIT-009900.png)]()
-[![Version 1.7.0](http://b.repl.ca/v1/version-1.7.0-lightgray.png)]()
+[![Version 1.8.0](http://b.repl.ca/v1/version-1.8.0-lightgray.png)]()
 
 Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
 

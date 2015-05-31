@@ -19,6 +19,7 @@ module.exports = function (grunt) {
 				loadPath: [
 					"bower_components/bootstrap-sass-official/assets/stylesheets",
 					"bower_components/bourbon/app/assets/stylesheets",
+					"bower_components/compass-breakpoint/stylesheets",
 					"bower_components/susy/sass",
 				]
 			},
