@@ -1,5 +1,5 @@
 npm init
 bower init
 npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell
-bower install -D html5-boilerplate normalize.css normalize-opentype.css modernizr jquery bourbon fontawesome bootstrap-sass-official susy
+bower install -D html5-boilerplate normalize.css normalize-opentype.css modernizr jquery bourbon fontawesome bootstrap-sass-official susy compass-breakpoint singularity
 composer require --dev way/generators barryvdh/laravel-debugbar

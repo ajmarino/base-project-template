@@ -24,6 +24,8 @@
     "bourbon": "~4.2.3",
     "fontawesome": "~4.3.0",
     "bootstrap-sass-official": "~3.3.4",
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "compass-breakpoint": "~2.6.1",
+    "singularity": "~1.6.2"
   }
 }
