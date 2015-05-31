@@ -10,10 +10,10 @@ module.exports = function (grunt) {
 		 * Creates a banner at the top of compiled files
 		 * can use keywords from pkg
 		 */
-		banner : "/*\n" +
+		banner : "/* =======================================================================\n" +
 				 " * <%= pkg.name %>\n" +
 				 " * <%= pkg.version %> | <%= grunt.template.today('yyyy-mm-dd') %>\n" +
-				 " */\n"
+				 " * ======================================================================= */\n" 
 	});
 
 	// Load all our tasks from dir ./grunt
@@ -25,20 +25,11 @@ module.exports = function (grunt) {
 	 * Runs all grunt tasks when using `grunt`
 	 */
 	grunt.registerTask("default", "Compile all the things!",[
-		'bower-compile',
-		'clean:css',
-		'clean:js',
-		'clean:docs',
-		'concat:dev',
-		'sass',
-		'autoprefixer',
-		'csso',
-		'uglify:dev',
-		'jshint',
-		'shell',
-		'sassdoc',
-		'cache-bust:css',
-		'watch'
+		'bower',
+		'admin',
+		'css',
+		'js',
+		'docs'
 	]);
 	
 };
