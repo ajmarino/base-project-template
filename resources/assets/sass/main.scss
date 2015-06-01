@@ -4,7 +4,7 @@
 // 
 // Table of Contents:
 // 
-//  01. Utilities
+//  01. Bower Components
 //  02. Libraries
 //  03. Base
 //  04. Layout
@@ -18,14 +18,15 @@
 
 
 // ===========================================================================================
-// $Utilities
+// $Bower Components
 // 
 // These files should generate no output, if they do they belong somewhere else. Add new bower
 // component paths to grunt/options/sass.js in the dev object
 // ===========================================================================================
 @import
     "bourbon",                      // css mixins, helpful tools
-    "susy",                         // grid system
+    // "susy",                         // grid system
+    "singularitygs",                // grid system
     "breakpoint",                   // advanced media queries
     "helpers/helpers";              // custom mixins / functions
 
