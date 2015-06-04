@@ -7,7 +7,7 @@
     align-items: center;
     padding: 1em .75em;
 
-    @include breakpoint(tablet) {
+    @include mq(tablet) {
         width: $w-Sidebar;
     }
 

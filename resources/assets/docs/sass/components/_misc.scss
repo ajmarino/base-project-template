@@ -19,7 +19,7 @@
         padding: .25em 1em;
         color: c("btn__nav");
 
-        @include breakpoint(tablet) {
+        @include mq(tablet) {
             display: none;
         }
 

@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     margin-top: 0;
 
-    @include breakpoint(tablet) {
+    @include mq(tablet) {
         flex-direction: row;
     }
 }
@@ -56,7 +56,7 @@ body {
     z-index: z("sidebar");
     padding: s("navbar", $heights) 0 1em;
 
-    @include breakpoint(tablet) {
+    @include mq(tablet) {
         @include transform( translateX(0) );
     }
 
@@ -75,7 +75,7 @@ body {
     padding: .5em 1.5em 3em;
     margin-top: 0;
 
-    @include breakpoint(tablet) {
+    @include mq(tablet) {
         margin-left: $w-Sidebar;
         padding-bottom: 1em;
     }

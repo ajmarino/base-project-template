@@ -13,7 +13,7 @@
         align-items: center;
         border-bottom: 1px solid c("navbar-bd");
 
-        @include breakpoint(tablet) {
+        @include mq(tablet) {
             height: s("navbar__tablet", $heights);
         }
     }
@@ -39,7 +39,7 @@
         color: c("logo__main");
         font-weight: bold;
 
-        @include breakpoint(tablet) {
+        @include mq(tablet) {
             @include fs(20px);
         }
     }
@@ -55,7 +55,7 @@
     opacity: 0;
     pointer-events: none;
 
-    @include breakpoint(tablet) {
+    @include mq(tablet) {
         opacity: 1;
         pointer-events: initial;
         z-index: z("ribbon");
