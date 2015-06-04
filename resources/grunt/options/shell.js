@@ -17,7 +17,11 @@ module.exports = function (grunt) {
 			command: 'mkdir docs'
 		},
 		create_docs: {
-			command: 'bash scripts/compile_docs.sh'
+			// command: 'bash scripts/compile_docs.sh'
+			command: [
+				'cd resources/assets/docs',
+				'php index.php generate'
+			].join('&&')
 		}
 	}
 

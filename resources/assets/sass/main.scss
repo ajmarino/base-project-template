@@ -1,31 +1,121 @@
-// Bower components / Custom mixins & functions
-// add new bower component paths to grunt/options/sass.js in the dev object
+@charset "utf-8";
+// ===========================================================================================
+// Main Sass file
+// 
+// Table of Contents:
+// 
+//  01. Bower Components
+//  02. Libraries
+//  03. Base
+//  04. Layout
+//  05. Objects
+//  06. Components
+//  07. Pages
+//  08. Print
+//  09. Utility
+//  10. Shame
+// ===========================================================================================
+
+
+// ===========================================================================================
+// $Bower Components
+// 
+// These files should generate no output, if they do they belong somewhere else. Add new bower
+// component paths to grunt/options/sass.js in the dev object
+// ===========================================================================================
 @import
     "bourbon",                      // css mixins, helpful tools
-    "susy",                         // grid system
+    // "susy",                         // grid system
+    "singularitygs",                // grid system
+    "breakpoint",                   // advanced media queries
     "helpers/helpers";              // custom mixins / functions
 
 
-// created when `grunt` is run from the cmd line - DO NOT MODIFY
+
+
+
+// ===========================================================================================
+// $Libraries
+// 
+// external libraries added via bower 
+// ===========================================================================================
 @import
+    "vendor/font-awesome",          // icon font
     "vendor/normalize",             // normalize.css
-    "vendor/normalize-opentype",    // allows fancy characters if supported
-    "vendor/font-awesome";          // icon font
+    "vendor/normalize-opentype";    // allows fancy characters if supported
 
 
+
+
+
+// ===========================================================================================
+// $Base
+// ===========================================================================================
 @import
     "base/base",                    // html5 boilerplate base css
     "base/typecsset",               // font sizing and vertical grid system
     "base/debug";                   // debug link with active media query text
 
 
-// Start of site css
+
+
+
+// ===========================================================================================
+//  $Layout
+// ===========================================================================================
 @import
     "layout/base";
 
 
 
 
-@import
-    "helpers/utility",              // screenreader classes
-    "base/print";                   // basic resets for printing
+
+// ===========================================================================================
+// $Objects
+// ===========================================================================================
+
+
+
+
+
+// ===========================================================================================
+// $Components
+// ===========================================================================================
+
+
+
+
+
+// ===========================================================================================
+// $Pages
+// ===========================================================================================
+
+
+
+
+
+// ===========================================================================================
+// $Utility
+// ===========================================================================================
+@import "helpers/utility";
+
+
+
+
+
+// ===========================================================================================
+// $Print 
+// ===========================================================================================
+@import "base/print";                   // basic resets for printing
+
+
+
+
+
+// ===========================================================================================
+// $Shame
+// ===========================================================================================
+@import "shame";                    // shame file for hacks
+
+
+

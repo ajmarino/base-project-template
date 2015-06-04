@@ -1,34 +1,55 @@
 # Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![License](http://b.repl.ca/v1/license-MIT-red.png)]()
-[![Version 1.7.0](http://b.repl.ca/v1/version-1.7.0-lightgray.png)]()
+[![License](http://b.repl.ca/v1/license-MIT-22aacc.png)]()
+[![Version 1.8.0](http://b.repl.ca/v1/version-1.8.0-lightgray.png)]()
 
 Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
 
 Docs compiled using [SassDocs](https://github.com/SassDoc/sassdoc) and [Daux.io](https://github.com/justinwalsh/daux.io)
 
 
+
+
+
 ##  Install
-After downloading files, run `bash scripts/setup-project.sh`. This will run the following commands provided they are installed:
+There are a few setup commands that need to be run to fully be able to use the assets provided.
+
+
+
+#### Basic project info
+Provided both `npm`, `bower` and `grunt-cli` are installed globally, create a `package.json` and `bower.json` for dependency management.
 
 	npm init
 	bower init
-	npm install --save-dev ...
-	bower install --save-dev ...
-	composer install --dev ...
-
-After filling out the information for the bower.json and package.json files, it will install the following base components:
 
 
-###  Bower
+
+
+
+#### Bower Components
+
+	bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity
+
+
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 * [jQuery](https://github.com/jquery/jquery)
 * [Bourbon](https://github.com/thoughtbot/bourbon)
+* [Modernizr](https://github.com/Modernizr/Modernizr)
 * [Normalize.css](https://github.com/necolas/normalize.css)
-* [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
+* [Normalize Opentype](https://github.com/kennethormandy/normalize-opentype.css)
 * [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
+* [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
+* [Breakpoint](https://github.com/at-import/breakpoint)
+* [Singularity.gs](https://github.com/at-import/Singularity)
+
+
+
+
 
 ###  NPM
+
+	npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell
+
 * [grunt](https://github.com/gruntjs/grunt)
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
 * [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
@@ -43,32 +64,56 @@ After filling out the information for the bower.json and package.json files, it 
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell)
 
 
-### Composer
-* [Way Generators](https://github.com/jeffreyway/laravel-4-generators)
-* [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
 
+
+
+### Composer
+
+There are 2 sets of `composer require` commands, one to install production dependencies and the other for dev-only dependencies
+
+	composer require anlutro/l4-settings
+
+[Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel
+
+
+	composer require --dev way/generators barryvdh/laravel-debugbar fzaninotto/faker
+
+
+[Way Generators](https://github.com/jeffreyway/laravel-4-generators) - Artisan commands for generating various assets <br>
+[Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) - fixed bar of useful info about the current state of you application <br>
+[Faker](https://github.com/fzaninotto/Faker) - Dummy data generator
+	
+	
+	
 
 ###  Misc
+
 [Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `resources/assets/sass/base`<br>
-[Normalize Opentype 0.2.3](https://github.com/kennethormandy/normalize-opentype.css) - copied into `resources/assets/sass/vendor`<br>
 
 
 
 ##  Grunt Commands
 
-There are 3 main grunt commands included in `resources/grunt/tasks`:
+Grunt commands located in `resources/grunt/tasks`:
 
-* css  - Compiles main.scss in `assetDir/sass` to `outputDir/css/main.css`
-* js   - Compiles `assetDir/js` into 1 file in `outputDir/js/app.min.js`
-* docs - Compiles `assetDir/docs/docs` into `/docs` as static html files rdy to be hosted on a server
+* grunt - Compiles all the things!!!
 
-`assetDir` and `outputDir` are defined in `Gruntfile.js`
+* bower - Copies Bower components out of `bower_components`
+* css  - Compiles main.scss in `$assetDir/sass` to `$outputDir/css/main.css`
+* js   - Compiles `$assetDir/js` into 1 file in `$outputDir/js/app.min.js`
+* docs - Compiles `$assetDir/docs/docs` into `/docs` as static html files rdy to be hosted on a server
+
+`$assetDir` and `$outputDir` are defined in `Gruntfile.js`
 
 There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
 
 
+
+
 ## Adding New Components
 When adding new components through bower, there are a few places in the grunt options that need to be updated so that these plugins will be compiled and minified correctly.  
+
+
 
 
 
@@ -77,8 +122,12 @@ Un-comment the plugin option in `resources/grunt/options/concat.js`.  Add all ex
 
 
 
+
+
 ### Sass or CSS
 Follow the current examples under `bower_css` in `resources/grunt/options/concat.js`, which will copy any css files into `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
+
+
 
 
 
@@ -86,5 +135,18 @@ Follow the current examples under `bower_css` in `resources/grunt/options/concat
 Sassdoc generated documentation is located at `docs/sass`.  These files use settings from `package.json` to apply project specific naming and other data to the compiled docs.
 
 
+
+
+
 ##  Docs
 All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+
+
+
+
+
+## Future Updates
+
+* Add admin components
+* Convert Grunt to Gulp for use with Laravel 5 Elixir
+* 
