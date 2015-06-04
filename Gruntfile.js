@@ -25,11 +25,42 @@ module.exports = function (grunt) {
 	 * Runs all grunt tasks when using `grunt`
 	 */
 	grunt.registerTask("default", "Compile all the things!",[
-		'bower',
-		'admin',
-		'css',
-		'js',
-		'docs'
+		// bower components
+		'clean:bower',
+        'concat:bower_css',
+        'copy:font_awesome_fonts',
+        'uglify:plugins',
+
+        // admin css
+        'clean:admin_sass',
+		'sass:admin',
+		'autoprefixer:admin',
+		'csso:admin',
+
+		// admin js
+		'clean:admin_js',
+		'concat:admin',
+		'uglify:admin',
+
+		// main css
+		'clean:css',
+		'sass:dev',
+		'autoprefixer:dev',
+		'csso:dev',
+
+		// main js
+		'clean:js',
+		'concat:dev',
+		'uglify:dev',
+		'jshint',
+		'cache-bust:js',
+
+		// docs
+		'sass:docs',
+		'autoprefixer:docs',
+		'csso:docs',
+		'shell',
+		'sassdoc'
 	]);
 	
 };
