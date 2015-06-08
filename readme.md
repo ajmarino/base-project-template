@@ -1,10 +1,9 @@
 # Base Project Template
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![License](http://b.repl.ca/v1/license-MIT-22aacc.png)]()
-[![Version 1.8.0](http://b.repl.ca/v1/version-1.8.0-lightgray.png)]()
+[![License](http://b.repl.ca/v1/license-MIT-44aa44.png)]()
+[![Version 1.8.0](http://b.repl.ca/v1/version-1.8.0-3399dd.png)]()
 
-Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
-
+Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate) <br>
 Docs compiled using [SassDocs](https://github.com/SassDoc/sassdoc) and [Daux.io](https://github.com/justinwalsh/daux.io)
 
 
@@ -17,18 +16,21 @@ There are a few setup commands that need to be run to fully be able to use the a
 
 
 #### Basic project info
-Provided both `npm`, `bower` and `grunt-cli` are installed globally, create a `package.json` and `bower.json` for dependency management.
+Provided `npm`, `bower` and `grunt-cli` are installed globally, create a `package.json` and `bower.json` for dependency management.
 
-	npm init
-	bower init
+```
+npm init
+bower init
+```
 
 
 
 
 
 #### Bower Components
-
-	bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity
+```
+bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity
+```
 
 
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
@@ -47,8 +49,9 @@ Provided both `npm`, `bower` and `grunt-cli` are installed globally, create a `p
 
 
 ###  NPM
-
-	npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell
+```
+npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell
+```
 
 * [grunt](https://github.com/gruntjs/grunt)
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
@@ -71,20 +74,67 @@ Provided both `npm`, `bower` and `grunt-cli` are installed globally, create a `p
 
 There are 2 sets of `composer require` commands, one to install production dependencies and the other for dev-only dependencies
 
-	composer require anlutro/l4-settings
+```
+composer require anlutro/l4-settings laracasts/flash laracasts/utilities
+```
 
-[Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel
+[Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel <br>
+[Laravel Flash](https://github.com/laracasts/flash) - easy flash notifications <br>
+[PHP Vars to JS](https://github.com/laracasts/PHP-Vars-To-Js-Transformer) - Simplies passing php vars to js <br>
+
+```
+composer require --dev laracasts/generators barryvdh/laravel-debugbar fzaninotto/faker
+```
 
 
-	composer require --dev way/generators barryvdh/laravel-debugbar fzaninotto/faker
-
-
-[Way Generators](https://github.com/jeffreyway/laravel-4-generators) - Artisan commands for generating various assets <br>
-[Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) - fixed bar of useful info about the current state of you application <br>
-[Faker](https://github.com/fzaninotto/Faker) - Dummy data generator
+[Laracasts Generators](https://github.com/laracasts/Laravel-5-Generators-Extended) - additional generators for Laravel 5 <br>
+[Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) - Integrates PHP Debug Bar with Laravel 5 <br>
+[Faker](https://github.com/fzaninotto/Faker) - Dummy data generator <br>
+[Way Generators](https://github.com/jeffreyway/laravel-4-generators) - Artisan commands for generating various assets - Laravel 4 <br>
 	
-	
-	
+
+Most of the Laravel packages need to have a ServiceProvider and sometimes an Alias added to the main config, and some also require publishing of assets.
+
+#### ServiceProviders
+For any packages used on production, add the following to `config/app.php`
+
+```
+'anlutro\LaravelSettings\ServiceProvider',
+'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
+'Laracasts\Flash\FlashServiceProvider',
+```
+
+For the dev only packages, they are added in a unique way in `app/Providers/AppServiceProvider.php` in the `register()` method
+
+```
+if ($this->app->environment() == 'local') {
+	$this->app->register([
+		'Laracasts\Generators\GeneratorsServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
+	]);
+}
+```
+
+
+#### Facades / Aliases
+
+Add the following aliases to the array in `config/app.php`
+
+```
+'Setting'  => 'anlutro\LaravelSettings\Facade',
+'Debugbar' => 'Barryvdh\Debugbar\Facade',
+'Flash'    => 'Laracasts\Flash\Flash'
+```
+
+
+#### Publish Assets
+
+Publish any assets using `php artisan vendor:publish`
+
+
+
+
+
 
 ###  Misc
 

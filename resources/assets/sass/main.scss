@@ -25,7 +25,6 @@
 // ===========================================================================================
 @import
     "bourbon",                      // css mixins, helpful tools
-    // "susy",                         // grid system
     "singularitygs",                // grid system
     "breakpoint",                   // advanced media queries
     "helpers/helpers";              // custom mixins / functions
@@ -115,7 +114,7 @@
 // ===========================================================================================
 // $Shame
 // ===========================================================================================
-@import "shame";                    // shame file for hacks
+@import "shame";                        // shame file for hacks
 
 
 

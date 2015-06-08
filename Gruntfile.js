@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 		 * can use keywords from pkg
 		 */
 		banner : "/* =======================================================================\n" +
-				 " * <%= pkg.name %>\n" +
+				 " * <%= pkg.title %>\n" +
 				 " * <%= pkg.version %> | <%= grunt.template.today('yyyy-mm-dd') %>\n" +
 				 " * ======================================================================= */\n" 
 	});
