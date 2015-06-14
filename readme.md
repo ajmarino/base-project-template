@@ -103,6 +103,7 @@ For any packages used on production, add the following to `config/app.php`
 'anlutro\LaravelSettings\ServiceProvider',
 'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
 'Laracasts\Flash\FlashServiceProvider',
+'Jenssegers\Agent\AgentServiceProvider',
 ```
 
 For the dev only packages, they are added in a unique way in `app/Providers/AppServiceProvider.php` in the `register()` method
@@ -125,12 +126,13 @@ Add the following aliases to the array in `config/app.php`
 'Setting'  => 'anlutro\LaravelSettings\Facade',
 'Debugbar' => 'Barryvdh\Debugbar\Facade',
 'Flash'    => 'Laracasts\Flash\Flash'
+'Agent'    => 'Jenssegers\Agent\Facades\Agent',
 ```
 
 
 #### Publish Assets
 
-Publish any assets using `php artisan vendor:publish`
+Publish any assets or config files using `php artisan vendor:publish`
 
 
 
@@ -140,6 +142,28 @@ Publish any assets using `php artisan vendor:publish`
 ###  Misc
 
 [Typecsset v0.3.0](https://github.com/csswizardry/typecsset) - located in `resources/assets/sass/base`<br>
+
+
+
+
+
+## Sassdoc
+Sassdoc generated documentation is located at `docs/sass`.  These files use settings from `package.json` to apply project specific naming and other data to the compiled docs.
+
+
+
+
+
+##  Docs
+All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+
+
+
+
+
+##  Gulp Commands
+
+
 
 
 
@@ -159,38 +183,16 @@ Grunt commands located in `resources/grunt/tasks`:
 There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
 
 
-
-
-## Adding New Components
+### Adding New Components
 When adding new components through bower, there are a few places in the grunt options that need to be updated so that these plugins will be compiled and minified correctly.  
 
 
-
-
-
-### Javascript
+#### Javascript
 Un-comment the plugin option in `resources/grunt/options/concat.js`.  Add all external plugins as needed to the array.  Then un-comment the last line of the plugin options in `resources/grunt/options/uglify.js`
 
 
-
-
-
-### Sass or CSS
+#### Sass or CSS
 Follow the current examples under `bower_css` in `resources/grunt/options/concat.js`, which will copy any css files into `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
-
-
-
-
-
-## Sassdoc
-Sassdoc generated documentation is located at `docs/sass`.  These files use settings from `package.json` to apply project specific naming and other data to the compiled docs.
-
-
-
-
-
-##  Docs
-All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
 
 
 
