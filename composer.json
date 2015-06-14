@@ -1,0 +1,23 @@
+{
+    "name": "ajmarino/base-project-template",
+    "description": "Starter files for Laravel 5 web apps",
+    "type": "project",
+    "require": {
+        "anlutro/l4-settings": "^0.4.0",
+        "laracasts/flash": "^1.3",
+        "laracasts/utilities": "^2.0",
+        "jenssegers/agent": "^2.1"
+    },
+    "require-dev": {
+        "laracasts/generators": "^1.1",
+        "barryvdh/laravel-debugbar": "^2.0",
+        "fzaninotto/faker": "^1.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AJ Marino",
+            "email": "aj@ajmarino.com"
+        }
+    ]
+}

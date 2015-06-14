@@ -75,12 +75,13 @@ npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy
 There are 2 sets of `composer require` commands, one to install production dependencies and the other for dev-only dependencies
 
 ```
-composer require anlutro/l4-settings laracasts/flash laracasts/utilities
+composer require anlutro/l4-settings laracasts/flash laracasts/utilities jenssegers/agent
 ```
 
 [Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel <br>
 [Laravel Flash](https://github.com/laracasts/flash) - easy flash notifications <br>
 [PHP Vars to JS](https://github.com/laracasts/PHP-Vars-To-Js-Transformer) - Simplies passing php vars to js <br>
+[Laravel Agent](https://github.com/jenssegers/Laravel-Agent) - A user agent class for Laravel, based on [Mobile Detect](https://github.com/serbanghita/Mobile-Detect) with extended functionality. <br>
 
 ```
 composer require --dev laracasts/generators barryvdh/laravel-debugbar fzaninotto/faker
