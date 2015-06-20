@@ -121,6 +121,17 @@ $c-info            : #5bc0de !default;
 $c-warning         : #f0ad4e !default;
 $c-danger          : #d9534f !default;
 
+
+// Brand Colors - brandcolors.net
+$c-facebook  : #3b5998;
+$c-twitter   : #55acee;
+$c-g-plus    : #dd4b39;
+$c-youtube   : #cd201f;
+$c-pinterest : #cc2127;
+$c-laravel   : #f55247;
+$c-rss       : #f26522;
+
+
 /// 
 /// Colors used thoughout the site using meaningful names, colors set using `$c-name` are defined above sass this map in `_variables.scss`.
 /// <br>See `c` mixin under `Styling`
