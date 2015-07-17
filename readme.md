@@ -15,6 +15,8 @@ There are a few setup commands that need to be run to fully be able to use the a
 
 
 
+
+
 #### Basic project info
 Provided `npm`, `bower` and `grunt-cli` are installed globally, create a `package.json` and `bower.json` for dependency management.
 
@@ -50,7 +52,7 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 
 ###  NPM
 ```
-npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell
+npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell 
 ```
 
 * [grunt](https://github.com/gruntjs/grunt)
@@ -67,6 +69,9 @@ npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell)
 
 
+```
+npm install gulp laravel-elixir sassdoc
+```
 
 
 
