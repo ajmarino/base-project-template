@@ -23,6 +23,8 @@ $namespace-debug: false;
 
 
 
+
+
 /// 
 /// Sets the active theme name
 /// 
@@ -31,6 +33,8 @@ $namespace-debug: false;
 /// @link https://smacss.com/book/type-theme
 /// 
 $theme: "default" !default;
+
+
 
 
 
@@ -45,6 +49,7 @@ $breakpoints: (
 	"laptop"  : (min-width: 62em), // 992px
 	"desktop" : (min-width: 75em)  // 1200px
 );
+
 
 
 
@@ -94,23 +99,13 @@ $font-stacks : (
 
 
 
-// Color Scheme
-// examples based on the official Sass styleguide
-// ============
-// Descriptive colors:
-$c-hopbush         : #c69;
-$c-bouquet         : #b37399;
-$c-venus           : #998099;
-$c-patina          : #699;
-$c-nebula          : #d2e1dd;
-$c-white           : #fff;
-$c-dawn-pink       : #f2ece4;
-$c-wafer           : #e1d7d2;
-$c-iron            : #dadbdf;
-$c-regent-grey     : #808c99;
-$c-pale-sky        : #6b717f;
-$c-midnight-blue   : #036;
-$c-black           : #000;
+
+
+// Colors
+// 
+// Crayola crayon colors
+@import "helpers/crayola";
+
 
 // Messages
 $c-message         : #f4ecbb !default;
@@ -123,13 +118,13 @@ $c-danger          : #d9534f !default;
 
 
 // Brand Colors - brandcolors.net
-$c-facebook  : #3b5998;
-$c-twitter   : #55acee;
-$c-g-plus    : #dd4b39;
-$c-youtube   : #cd201f;
-$c-pinterest : #cc2127;
-$c-laravel   : #f55247;
-$c-rss       : #f26522;
+$c-facebook        : #3b5998;
+$c-twitter         : #55acee;
+$c-g-plus          : #dd4b39;
+$c-youtube         : #cd201f;
+$c-pinterest       : #cc2127;
+$c-laravel         : #f55247;
+$c-rss             : #f26522;
 
 
 /// 
@@ -141,6 +136,7 @@ $c-rss       : #f26522;
 $site-colors : (
 	"main-bg" : $c-white,
 );
+
 
 
 
