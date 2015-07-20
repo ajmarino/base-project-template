@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 				]
 			},
 			files : {
-				"<%= outputDir %>/css/main.css" : "<%= assetDir %>/sass/main.scss",
+				"<%= outputDir %>/css/app.css" : "<%= assetDir %>/sass/main.scss",
 			}
 		},
 		docs : {

@@ -102,9 +102,8 @@ $font-stacks : (
 
 
 // Colors
-// 
-// Crayola crayon colors
-@import "helpers/crayola";
+@import "helpers/crayola";     // Crayola crayons
+@import "helpers/pantone";     // Pantone Coated
 
 
 // Messages
