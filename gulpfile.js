@@ -31,12 +31,15 @@ var sassdocOptions = { dest: './public/sassdoc' };
 // -----------------------------------------------------------------------------
 // Sass Documentation
 // -----------------------------------------------------------------------------
-gulp.task('sassdoc', function () {
-  return gulp
-    .src(sassdocInput)
-    .pipe(sassdoc(sassdocOptions))
-    .pipe(new Notification().message('Sass Documentation Generated!'))
-    .resume();
+elixir.extend('sassdocs', function() {
+	gulp.task('sassdocs', function () {
+		return gulp.src(sassdocInput)
+					.pipe(sassdoc(sassdocOptions))
+					.pipe(new Notification().message('Sass Documentation Generated!'))
+					.resume();
+	});
+
+	return this.queueTask('sassdocs').registerWatcher('sassdocs', sassdocInput);
 });
 
 
@@ -44,17 +47,22 @@ gulp.task('sassdoc', function () {
 
 
 // -----------------------------------------------------------------------------
-// Main task
+// Main task - `gulp`
+// 
+// 1. generates main sass file
+// 2. generates sassdocs
+// 3. versions files
 // -----------------------------------------------------------------------------
 elixir(function(mix) {
-    mix.sass('main.scss', 'public/css/app.css', {
-    	includePaths: [
-    		sassPaths.bootstrap,
-    		sassPaths.bourbon,
-    		sassPaths.breakpoint,
-    		sassPaths.singularity
-    	]
-       })
-       .task('sassdoc')
-       .version('public/css/app.css');
+	mix.sass('main.scss', 'public/css/app.css', {       // [1]
+		includePaths: [
+			sassPaths.bootstrap,
+			sassPaths.bourbon,
+			sassPaths.breakpoint,
+			sassPaths.singularity
+		]
+	   })
+	   .sassdocs()                                      // [2]
+	   .version('public/css/app.css');                  // [3]
 });
+
