@@ -47,22 +47,36 @@ elixir.extend('sassdocs', function() {
 
 
 // -----------------------------------------------------------------------------
-// Main task - `gulp`
+// Main task - `gulp` or `gulp watch`
 // 
-// 1. generates main sass file
-// 2. generates sassdocs
-// 3. versions files
+// 1. copy files
+// 2. generate main sass file
+// 3. generate sassdocs
+// 4. compile js
+// 5. version files
 // -----------------------------------------------------------------------------
 elixir(function(mix) {
-	mix.sass('main.scss', 'public/css/app.css', {       // [1]
-		includePaths: [
-			sassPaths.bootstrap,
-			sassPaths.bourbon,
-			sassPaths.breakpoint,
-			sassPaths.singularity
-		]
-	   })
-	   .sassdocs()                                      // [2]
-	   .version('public/css/app.css');                  // [3]
+	mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')      
+		.copy('bower_components/normalize.css/normalize.css', 'resources/assets/sass/vendor/_normalize.scss')
+		.copy('bower_components/normalize-opentype.css/normalize-opentype.css', 'resources/assets/sass/vendor/_normalize-opentype.scss')
+		.copy('bower_components/fontawesome/css/font-awesome.css', 'resources/assets/sass/vendor/_font-awesome.scss');
+
+	mix.sass('main.scss', 'public/css/app.css', {                        
+			includePaths: [
+				sassPaths.bootstrap,
+				sassPaths.bourbon,
+				sassPaths.breakpoint,
+				sassPaths.singularity
+			]
+		})
+		.sassdocs()                                                      
+
+	mix.babel(['resources/assets/js/*.js'], 'public/js/app.js');         
+
+
+	mix.version([                                                        
+		'public/css/app.css',
+		'public/js/app.js'
+	]);
 });
 
