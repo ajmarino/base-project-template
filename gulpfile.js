@@ -16,13 +16,15 @@ var Notification = require('laravel-elixir/ingredients/commands/Notification');
 // Configuration
 // -----------------------------------------------------------------------------------------------
 var sassPaths = {
-	'bootstrap'   : "./bower_components/bootstrap-sass-official/assets/stylesheets",
-	'bourbon'     : "./bower_components/bourbon/app/assets/stylesheets",
-	'breakpoint'  : "./bower_components/compass-breakpoint/stylesheets",
-	'singularity' : "./bower_components/singularity/stylesheets",
+	'bootstrap'   : "bower_components/bootstrap-sass-official/assets/stylesheets",
+	'bourbon'     : "bower_components/bourbon/app/assets/stylesheets",
+	'breakpoint'  : "bower_components/compass-breakpoint/stylesheets",
+	'singularity' : "bower_components/singularity/stylesheets",
 };
 var sassdocInput   = './resources/assets/sass/**/*.scss';
 var sassdocOptions = { dest: './public/sassdoc' };
+
+// relative to `resources/assets/js`
 var jsPlugins = [
 	"../../../bower_components/jquery/dist/jquery.js",
 	"../../../bower_components/modernizr/modernizr.js",
@@ -30,6 +32,20 @@ var jsPlugins = [
 ];
 var sassVendor = "resources/assets/sass/vendor";
 
+
+
+
+
+// -----------------------------------------------------------------------------------------------
+// Custom messaging
+// -----------------------------------------------------------------------------------------------
+elixir.extend('message', function (message) {
+	gulp.task('message', function () {
+		return gulp.src('').pipe(new Notification().message(message))
+	});
+
+	return this.queueTask('message');
+});
 
 
 
@@ -55,15 +71,16 @@ elixir.extend('sassdocs', function() {
 // -----------------------------------------------------------------------------------------------
 // Main task - `gulp` or `gulp watch`
 // 
-// `gulp` - runs all commands
-// `gulp watch` - runs all commands and re-runs filetype specifig task when they change
+// `gulp`       - runs all commands
+// `gulp watch` - runs all commands and re-runs filetype specific task when they change
 // 
-// 1. copy files
+// 1. copy bower components
 // 2. generate main sass file
 // 3. generate sassdocs
 // 4. compile custom js
+// 5. compile admin js
 // 6. compile js plugins
-// 5. version files
+// 7. version files
 // -----------------------------------------------------------------------------------------------
 elixir(function(mix) {
 
@@ -84,13 +101,16 @@ elixir(function(mix) {
 /*[3]*/ mix.sassdocs();
 
 
-/*[4]*/ mix.babel(['resources/assets/js/*.js'], 'public/js/app.js')
-/*[5]*/ 	.scripts(jsPlugins, 'public/js/plugins.js');
+/*[4]*/ mix.babel(['resources/assets/js/*.js'],        'public/js/app.js')
+			.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js')
+/*[6]*/ 	.scripts(jsPlugins,                        'public/js/plugins.js');
 
 
-/*[6]*/ mix.version([
+/*[7]*/ mix.version([
 			'public/css/app.css',
 			'public/js/app.js'
 		]);
+
+		mix.message('All things compiled!');
 });
 
