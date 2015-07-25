@@ -52,6 +52,12 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 
 ###  NPM
 ```
+npm install -D gulp gulp-jshint laravel-elixir sassdoc
+```
+
+
+
+```
 npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell 
 ```
 
@@ -69,9 +75,6 @@ npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy
 * [grunt-shell](https://github.com/sindresorhus/grunt-shell)
 
 
-```
-npm install gulp laravel-elixir sassdoc
-```
 
 
 

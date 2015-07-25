@@ -59,6 +59,8 @@ function Selector_Cache() {
  * Main App
  * *******************************************************************************************/
 var App = function () {
+	var cache = new Selector_Cache();
+
 	var config = {
 		page_target : $('body').data('target') ? $('body').data('target') : "#",
 		page_width  : $(window).outerWidth()
@@ -70,8 +72,7 @@ var App = function () {
 	 */
 	var init = function () {
 		console.log("Init");
-
-		var cache = new Selector_Cache();
+		
 
 		// Animates body to anchor tag on page
 		$('.js-slide-page').click(function () {
@@ -116,6 +117,7 @@ var App = function () {
 	 * AVAILABLE TO GLOBAL SCOPE
 	 * *******************************************************************************************/
 	return {
+		cache     : cache,
 		config    : config,
 		init      : init,
 		slidePage : slidePage

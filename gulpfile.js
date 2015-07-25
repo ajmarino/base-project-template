@@ -98,7 +98,8 @@ elixir.extend('lint', function () {
 // 4. compile custom js
 // 5. compile admin js
 // 6. compile js plugins
-// 7. version files
+// 7. lint js files
+// 8. update cache bust
 // -----------------------------------------------------------------------------------------------
 elixir(function(mix) {
 
@@ -122,9 +123,9 @@ elixir(function(mix) {
 /*[4]*/ mix.babel(['resources/assets/js/*.js'],        'public/js/app.js')
 			.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js')
 /*[6]*/ 	.scripts(jsPlugins,                        'public/js/plugins.js');
-		mix.lint();
+/*[7]*/ mix.lint();
 
-/*[7]*/ mix.version([
+/*[8]*/ mix.version([
 			'public/css/app.css',
 			'public/js/app.js'
 		]);
