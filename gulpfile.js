@@ -23,6 +23,11 @@ var sassPaths = {
 };
 var sassdocInput   = './resources/assets/sass/**/*.scss';
 var sassdocOptions = { dest: './public/sassdoc' };
+var jsPlugins = [
+	"../../../bower_components/jquery/dist/jquery.js",
+	"../../../bower_components/modernizr/modernizr.js",
+	"../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+];
 
 
 
@@ -56,12 +61,12 @@ elixir.extend('sassdocs', function() {
 // 5. version files
 // -----------------------------------------------------------------------------
 elixir(function(mix) {
-	mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')      
+	mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')
 		.copy('bower_components/normalize.css/normalize.css', 'resources/assets/sass/vendor/_normalize.scss')
 		.copy('bower_components/normalize-opentype.css/normalize-opentype.css', 'resources/assets/sass/vendor/_normalize-opentype.scss')
 		.copy('bower_components/fontawesome/css/font-awesome.css', 'resources/assets/sass/vendor/_font-awesome.scss');
 
-	mix.sass('main.scss', 'public/css/app.css', {                        
+	mix.sass('main.scss', 'public/css/app.css', {
 			includePaths: [
 				sassPaths.bootstrap,
 				sassPaths.bourbon,
@@ -69,12 +74,13 @@ elixir(function(mix) {
 				sassPaths.singularity
 			]
 		})
-		.sassdocs()                                                      
+		.sassdocs();
 
-	mix.babel(['resources/assets/js/*.js'], 'public/js/app.js');         
+	mix.babel(['resources/assets/js/*.js'], 'public/js/app.js')
+		.scripts(jsPlugins, 'public/js/plugins.js');
 
 
-	mix.version([                                                        
+	mix.version([
 		'public/css/app.css',
 		'public/js/app.js'
 	]);
