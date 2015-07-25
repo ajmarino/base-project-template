@@ -120,7 +120,7 @@ elixir(function(mix) {
 /*[3]*/ mix.sassdocs();
 
 
-/*[4]*/ mix.babel(['resources/assets/js/*.js'],        'public/js/app.js')
+/*[4]*/ mix.browserify('app.js', 'public/js/app.js')
 			.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js')
 /*[6]*/ 	.scripts(jsPlugins,                        'public/js/plugins.js');
 /*[7]*/ mix.lint();

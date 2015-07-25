@@ -3,7 +3,7 @@
 /// 
 /// @group BEM
 /// 
-/// @link http://codepen.io/andersschmidt/thoughts/expressive-bem-with-sass-a-different-approach
+/// @link http://codepen.io/andersschmidt/thoughts/expressive-bem-with-sass-part-ii-a-first-draft-of-mixins/
 /// 
 /// @param {string | list} $name        - block to create
 /// @param {string}        $type [null] - adds a dash to the selector
@@ -12,10 +12,12 @@
 /// // SCSS
 ///  @include new('menu');
 ///  @include new('menu', 'component')
-/// 
+///  @include new('page', 'object')
+///  
 /// // CSS
 /// .menu {}
-/// .menu-component {}
+/// .c-menu {}
+/// .o-page {}
 /// 
 @mixin new($name, $type: null) {
 	@at-root {
