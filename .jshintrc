@@ -1,0 +1,12 @@
+{
+	"curly"   : true,
+	"undef"   : true,
+	"browser" : true,
+	"devel"   : true,
+	"globals" : {
+		"jQuery"   : true,
+		"$"        : true,
+		"App"      : true,
+		"IconicJS" : true
+	}
+}

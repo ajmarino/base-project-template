@@ -5,6 +5,7 @@
 // -----------------------------------------------------------------------------------------------
 var gulp         = require('gulp');
 var elixir       = require('laravel-elixir');
+var jshint       = require('gulp-jshint');
 var sassdoc      = require('sassdoc');
 var Notification = require('laravel-elixir/ingredients/commands/Notification');
 
@@ -25,6 +26,7 @@ var sassdocInput   = './resources/assets/sass/**/*.scss';
 var sassdocOptions = { dest: './public/sassdoc' };
 
 // relative to `resources/assets/js`
+var jsSource  = './resources/assets/js/**/*.js';
 var jsPlugins = [
 	"../../../bower_components/jquery/dist/jquery.js",
 	"../../../bower_components/modernizr/modernizr.js",
@@ -69,6 +71,22 @@ elixir.extend('sassdocs', function() {
 
 
 // -----------------------------------------------------------------------------------------------
+// Sass Documentation
+// -----------------------------------------------------------------------------------------------
+elixir.extend('lint', function () {
+	gulp.task('lint', function () {
+		return gulp.src('resources/assets/js/**/*.js')
+					.pipe( jshint() );
+	});
+
+	return this.queueTask('lint').registerWatcher('lint', jsSource);
+});
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------
 // Main task - `gulp` or `gulp watch`
 // 
 // `gulp`       - runs all commands
@@ -104,7 +122,7 @@ elixir(function(mix) {
 /*[4]*/ mix.babel(['resources/assets/js/*.js'],        'public/js/app.js')
 			.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js')
 /*[6]*/ 	.scripts(jsPlugins,                        'public/js/plugins.js');
-
+		mix.lint();
 
 /*[7]*/ mix.version([
 			'public/css/app.css',
