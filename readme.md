@@ -104,25 +104,19 @@ composer require --dev laracasts/generators barryvdh/laravel-debugbar fzaninotto
 
 Most of the Laravel packages need to have a ServiceProvider and sometimes an Alias added to the main config, and some also require publishing of assets.
 
+
+
 #### ServiceProviders
-For any packages used on production, add the following to `config/app.php`
+
+Add the following to `config/app.php`
 
 ```
-'anlutro\LaravelSettings\ServiceProvider',
-'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
-'Laracasts\Flash\FlashServiceProvider',
-'Jenssegers\Agent\AgentServiceProvider',
-```
-
-For the dev only packages, they are added in a unique way in `app/Providers/AppServiceProvider.php` in the `register()` method
-
-```
-if ($this->app->environment() == 'local') {
-	$this->app->register([
-		'Laracasts\Generators\GeneratorsServiceProvider',
-		'Barryvdh\Debugbar\ServiceProvider',
-	]);
-}
+anlutro\LaravelSettings\ServiceProvider::class,
+Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
+Laracasts\Flash\FlashServiceProvider::class,
+Jenssegers\Agent\AgentServiceProvider::class,
+Barryvdh\Debugbar\ServiceProvider::class,
+Laracasts\Generators\GeneratorsServiceProvider::class
 ```
 
 
@@ -131,10 +125,10 @@ if ($this->app->environment() == 'local') {
 Add the following aliases to the array in `config/app.php`
 
 ```
-'Setting'  => 'anlutro\LaravelSettings\Facade',
-'Debugbar' => 'Barryvdh\Debugbar\Facade',
-'Flash'    => 'Laracasts\Flash\Flash'
-'Agent'    => 'Jenssegers\Agent\Facades\Agent',
+'Setting'   => anlutro\LaravelSettings\Facade::class,
+'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+'Flash'     => Laracasts\Flash\Flash::class,
+'Agent'     => Jenssegers\Agent\Facades\Agent::class,
 ```
 
 

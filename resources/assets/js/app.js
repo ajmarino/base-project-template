@@ -1,64 +1,10 @@
-$(function () {
-	/**
-	 * Tries to prevent 'console' errors in browsers that lack a console
-	 */
-	var method;
-	var noop = function () {};
-	var methods = [
-		'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'
-		];
-	var length = methods.length;
-	var console = (window.console = window.console || {});
+var Selector_Cache = require('./utilities/selector_cache');
+var slidePage      = require('./utilities/slide_page.js');
 
-	while (length--) {
-		method = methods[length];
-
-		// Only stub undefined methods.
-		if (!console[method]) {
-			console[method] = noop;
-		}
-	}
-
-	// Prevents links starting with # from moving page
-	$('a[href^=#]').click(function (e) {
-		e.preventDefault();
-	});
-
-	App.init();
-});
-
-
-/**
- * Creates a cache of jQuery selectors for faster processing
- *
- * http://ttmm.io/tech/selector-caching-jquery/
- * https://gist.github.com/jtsternberg/14978579a9edf42ed069
- */
-function Selector_Cache() {
-	var elementCache = {};
- 
-	var get_from_cache = function( selector, $ctxt, reset ) {
- 
-		if ( 'boolean' === typeof $ctxt ) { reset = $ctxt; }
-		var cacheKey = $ctxt ? $ctxt.selector + ' ' + selector : selector;
- 
-		if ( undefined === elementCache[ cacheKey ] || reset ) {
-			elementCache[ cacheKey ] = $ctxt ? $ctxt.find( selector ) : jQuery( selector );
-		}
- 
-		return elementCache[ cacheKey ];
-	};
- 
-	get_from_cache.elementCache = elementCache;
-	return get_from_cache;
-}
-
-
-
-/**********************************************************************************************
- * Main App
- * *******************************************************************************************/
-var App = function () {
+// ===========================================================================================
+// Main App
+// ===========================================================================================
+module.exports = function () {
 	var cache = new Selector_Cache();
 
 	var config = {
@@ -94,33 +40,9 @@ var App = function () {
 		}
 	};
 
-
-
-	/**
-	 * Slides the page to a specific location
-	 * 
-	 * @param  {string} anchor - id of div to slide too
-	 */
-	var slidePage = function (anchor) {
-		$("html, body").animate(
-			{
-				scrollTop: $(anchor).offset().top - 24 + "px"
-			},{
-				duration: 500,
-				easing: "swing"
-			}); 
-		return false;
-	};
-
-
-	/**********************************************************************************************
-	 * AVAILABLE TO GLOBAL SCOPE
-	 * *******************************************************************************************/
 	return {
 		cache     : cache,
 		config    : config,
 		init      : init,
-		slidePage : slidePage
-	};
-
-}();
+	};	
+};

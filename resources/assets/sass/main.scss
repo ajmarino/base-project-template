@@ -24,9 +24,9 @@
 // component paths to grunt/options/sass.js in the dev object
 // ===========================================================================================
 @import
-    "bourbon",                      // css mixins, helpful tools
-    "singularitygs",                // grid system
-    "breakpoint",                   // advanced media queries
+    "../../../bower_components/bourbon/app/assets/stylesheets/bourbon",      // css mixins, helpful tools
+    "../../../bower_components/singularity/stylesheets/singularitygs",       // grid system
+    "../../../bower_components/compass-breakpoint/stylesheets/breakpoint",   // advanced media queries
     "helpers/helpers";              // custom mixins / functions / variables
 
 

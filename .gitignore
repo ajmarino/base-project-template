@@ -11,3 +11,5 @@ resources/assets/docs/css/site.css
 resources/assets/docs/css/main-docs.css
 resources/assets/docs/css/daux-black.min.css
 resources/assets/docs/css/*.map
+
+.env

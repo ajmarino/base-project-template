@@ -7,7 +7,7 @@ var gulp         = require('gulp');
 var elixir       = require('laravel-elixir');
 var jshint       = require('gulp-jshint');
 var sassdoc      = require('sassdoc');
-var Notification = require('laravel-elixir/ingredients/commands/Notification');
+var Notification = require('laravel-elixir/Notification');
 
 
 
@@ -17,10 +17,10 @@ var Notification = require('laravel-elixir/ingredients/commands/Notification');
 // Configuration
 // -----------------------------------------------------------------------------------------------
 var sassPaths = {
-	'bootstrap'   : "bower_components/bootstrap-sass-official/assets/stylesheets",
-	'bourbon'     : "bower_components/bourbon/app/assets/stylesheets",
-	'breakpoint'  : "bower_components/compass-breakpoint/stylesheets",
-	'singularity' : "bower_components/singularity/stylesheets",
+	'bootstrap'   : "./bower_components/bootstrap-sass-official/assets/stylesheets/",
+	'bourbon'     : "./bower_components/bourbon/app/assets/stylesheets/",
+	'breakpoint'  : "./bower_components/compass-breakpoint/stylesheets/",
+	'singularity' : "./bower_components/singularity/stylesheets/",
 };
 var sassdocInput   = './resources/assets/sass/**/*.scss';
 var sassdocOptions = { dest: './public/sassdoc' };
@@ -39,48 +39,26 @@ var sassVendor = "resources/assets/sass/vendor";
 
 
 // -----------------------------------------------------------------------------------------------
-// Custom messaging
-// -----------------------------------------------------------------------------------------------
-elixir.extend('message', function (message) {
-	gulp.task('message', function () {
-		return gulp.src('').pipe(new Notification().message(message))
-	});
-
-	return this.queueTask('message');
-});
-
-
-
-
-// -----------------------------------------------------------------------------------------------
 // Sass Documentation
 // -----------------------------------------------------------------------------------------------
-elixir.extend('sassdocs', function() {
-	gulp.task('sassdocs', function () {
-		return gulp.src(sassdocInput)
-					.pipe(sassdoc(sassdocOptions))
-					.pipe(new Notification().message('Sass Documentation Generated!'))
-					.resume();
-	});
-
-	return this.queueTask('sassdocs').registerWatcher('sassdocs', sassdocInput);
+gulp.task('sassdocs', function () {
+	gulp.src(sassdocInput)
+		.pipe(sassdoc(sassdocOptions))
+		.pipe(new Notification().message('Sass Documentation Generated!'));
 });
-
+	
 
 
 
 
 // -----------------------------------------------------------------------------------------------
-// Sass Documentation
+// JS Lintint
 // -----------------------------------------------------------------------------------------------
-elixir.extend('lint', function () {
-	gulp.task('lint', function () {
-		return gulp.src('resources/assets/js/**/*.js')
-					.pipe( jshint() );
-	});
-
-	return this.queueTask('lint').registerWatcher('lint', jsSource);
+gulp.task('lint', function () {
+	return gulp.src('resources/assets/js/**/*.js')
+				.pipe( jshint() );
 });
+
 
 
 
@@ -103,33 +81,35 @@ elixir.extend('lint', function () {
 // -----------------------------------------------------------------------------------------------
 elixir(function(mix) {
 
-/*[1]*/  mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')
-			.copy('bower_components/normalize.css/normalize.css',                   sassVendor + '/_normalize.scss')
-			.copy('bower_components/normalize-opentype.css/normalize-opentype.css', sassVendor + '/_normalize-opentype.scss')
-			.copy('bower_components/fontawesome/css/font-awesome.css',              sassVendor + '/_font-awesome.scss');
+/*[1]*/
+	mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')
+		.copy('bower_components/normalize.css/normalize.css',                   sassVendor + '/_normalize.scss')
+		.copy('bower_components/normalize-opentype.css/normalize-opentype.css', sassVendor + '/_normalize-opentype.scss')
+		.copy('bower_components/fontawesome/css/font-awesome.css',              sassVendor + '/_font-awesome.scss');
 
 
-/*[2]*/ mix.sass('main.scss', 'public/css/app.css', {
-			includePaths: [
-				sassPaths.bootstrap,
-				sassPaths.bourbon,
-				sassPaths.breakpoint,
-				sassPaths.singularity
-			]
-		});
-/*[3]*/ mix.sassdocs();
+/*[2]*/
+	mix.sass('main.scss', 'public/css/app.css');
 
+/*[3]*/
+	mix.task('sassdocs', 'resources/assets/sass/**/*.scss');
 
-/*[4]*/ mix.browserify('app.js', 'public/js/app.js')
-			.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js')
-/*[6]*/ 	.scripts(jsPlugins,                        'public/js/plugins.js');
-/*[7]*/ mix.lint();
+/*[4]*/
+	mix.browserify('main.js', 'public/js/app.js');
 
-/*[8]*/ mix.version([
-			'public/css/app.css',
-			'public/js/app.js'
-		]);
+/*[5]*/
+	mix.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js');
 
-		mix.message('All things compiled!');
+/*[6]*/
+	mix.scripts(jsPlugins, 'public/js/plugins.js');
+
+/*[7]*/
+	mix.task('lint', 'resources/assets/js/**/*.js');
+
+/*[8]*/
+	mix.version([
+		'public/css/app.css',
+		'public/js/app.js'
+	]);
 });
 
