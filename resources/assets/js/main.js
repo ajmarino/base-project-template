@@ -27,5 +27,5 @@ $(function () {
 	});
 
 	// Start the app
-	App.init();
+	App;
 });
