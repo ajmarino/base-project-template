@@ -69,5 +69,6 @@
 
 // Imports visual debugging here so it appears near the end of compiled css
 @import     
+    "functions/debug/legacy-xhtml",
     "functions/debug/pesticide",
     "functions/debug/namespace-debug";

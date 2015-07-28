@@ -5,8 +5,8 @@
 /// 
 /// @link http://pesticide.io/
 /// 
-$pesticide-debug-outline: false;
-$pesticide-debug-depth: false;
+$layout-debug-outline: false;
+$layout-debug-depth: false;
 
 
 
@@ -20,6 +20,30 @@ $pesticide-debug-depth: false;
 /// @link http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 /// 
 $namespace-debug: false;
+
+
+
+
+
+/// 
+/// Highlight potentially broken, malformed or legacy (X)HTML
+/// 
+/// @group Debug
+/// 
+/// @link https://github.com/yahoo/debugCSS
+/// 
+$legacy-debug: false;
+
+
+
+
+
+/// 
+/// Shows the active media query in a label at the top right of page
+/// 
+/// @group Debug
+/// 
+$show-mq: true;
 
 
 
