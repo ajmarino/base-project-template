@@ -54,7 +54,7 @@ gulp.task('sassdocs', function () {
 // -----------------------------------------------------------------------------------------------
 // JS Lintint
 // -----------------------------------------------------------------------------------------------
-gulp.task('lint', function () {
+gulp.task('js-lint', function () {
 	return gulp.src('resources/assets/js/**/*.js')
 				.pipe( jshint() );
 });
@@ -104,7 +104,7 @@ elixir(function(mix) {
 	mix.scripts(jsPlugins, 'public/js/plugins.js');
 
 /*[7]*/
-	mix.task('lint', 'resources/assets/js/**/*.js');
+	mix.task('js-lint', 'resources/assets/js/**/*.js');
 
 /*[8]*/
 	mix.version([
