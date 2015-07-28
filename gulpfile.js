@@ -96,6 +96,7 @@ elixir(function(mix) {
 	mix.scripts(jsPlugins, 'public/js/plugins.js');
 
 /*[7]*/
+
 	mix.task('js-lint', 'resources/assets/js/**/*.js');
 
 /*[8]*/
