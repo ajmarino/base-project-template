@@ -16,7 +16,12 @@ var sassdoc      = require('sassdoc');
 // Configuration
 // -----------------------------------------------------------------------------------------------
 var sassdocInput   = './resources/assets/sass/**/*.scss';
-var sassdocOptions = { dest: './public/sassdocs' };
+var sassdocOptions = {
+	dest: './public/sassdocs',
+	display: {
+		access: ['public'],
+	}
+};
 
 // relative to `resources/assets/js`
 var jsSource  = './resources/assets/js/**/*.js';

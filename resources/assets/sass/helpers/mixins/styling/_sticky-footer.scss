@@ -3,10 +3,10 @@
 /// 
 /// @group Styling
 /// 
-/// @param {String} $footer_height                   - height of footer including padding or borders
-/// @param {String} $root_selector [.main]         - main wrapper element
-/// @param {String} $root_footer_selector ['.push] - hidden element that "pushes" down the footer
-/// @param {String} $footer_selector [.footer]     - footer element
+/// @param {String} $footer_height                  - height of footer including padding or borders
+/// @param {String} $root_selector        [.main]   - main wrapper element
+/// @param {String} $root_footer_selector [.push]   - hidden element that "pushes" down the footer
+/// @param {String} $footer_selector      [.footer] - footer element
 /// 
 /// @example scss
 ///   @include sticky-footer(4em) { ... }
