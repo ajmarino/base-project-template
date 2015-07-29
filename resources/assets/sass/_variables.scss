@@ -118,7 +118,9 @@ $font-stacks : (
                                 "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
                                 Monaco, "Courier New", Courier, monospace),
 
-	"Helvetica"     : (Helvetica, Arial, sans-serif),
+	"Helvetica"     : (Helvetica Neue, Helvetica, Roboto, Arial, sans-serif),
+	"Georgia"       : (Georgia, Cambria, Times New Roman, Times, serif),
+	"Lucida"        : (Lucida Grande, Tahoma, Verdana, Arial, sans-serif),
 );
 
 
@@ -132,8 +134,8 @@ $font-stacks : (
 
 // Messages
 $c-message         : #f4ecbb !default;
-$c-important       : #d00 !default;
-$c-notice          : #66b !default;
+$c-important       : #dd0000 !default;
+$c-notice          : #6666bb !default;
 $c-success         : #5cb85c !default;
 $c-info            : #5bc0de !default;
 $c-warning         : #f0ad4e !default;
