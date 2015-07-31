@@ -1,0 +1,49 @@
+.form-control {
+
+    &.form-textarea {
+        max-width: 100%;
+        min-height: 34px;
+    }
+}
+
+
+.form-checkbox {
+    margin-bottom: 0;
+
+    + .form-checkbox { margin-top: 1em; }
+
+    label {
+        padding-top: 2px !important;
+        
+        .modal & {
+            @include relative(top -7px);
+        }
+    }
+
+    input[type="checkbox"] {
+        margin: 10px 0 0;
+    }
+}
+
+
+.form-group {
+    .list-group-item {
+        padding: 5px 15px;
+
+        .fa-times {
+            @include relative(top -2px);
+            font-size: .8em;
+        }
+    }
+}
+
+
+.form-datepicker {
+    .input-group {
+        float: left;
+        width: 135px;
+        margin-right: 1em;
+
+        + .input-group { width: 125px; }
+    }
+}

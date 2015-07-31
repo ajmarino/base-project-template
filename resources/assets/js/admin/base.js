@@ -1,4 +1,4 @@
-var App = require('./app');
+var Admin = require('./admin');
 
 $(function () {
 	//
@@ -27,5 +27,5 @@ $(function () {
 	});
 
 	// Start the app
-	App();
+	Admin();
 });
