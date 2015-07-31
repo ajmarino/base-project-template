@@ -32,6 +32,25 @@ var jsPlugins = [
 ];
 var sassVendor = "resources/assets/sass/vendor";
 
+// relative to `/resources/assets/sass`
+var pxlAdminCss = [
+	"../pixeladmin/css/bootstrap.min.css",
+	"../pixeladmin/css/pixel-admin.min.css",
+	"../pixeladmin/css/widgets.min.css",
+	"../pixeladmin/css/pages.min.css",
+	"../pixeladmin/css/rtl.min.css",
+	"../pixeladmin/css/themes.min.css",
+];
+
+var copyFiles = {
+	"bower_components/fontawesome/fonts/"                            : 'public/fonts',
+	"bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
+	"bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
+	"bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
+
+	"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/admin/pixel-admin.js',
+};
+
 
 
 
@@ -49,13 +68,12 @@ gulp.task('sassdocs', function () {
 
 
 // -----------------------------------------------------------------------------------------------
-// JS Lintint
+// JS Lint
 // -----------------------------------------------------------------------------------------------
 gulp.task('js-lint', function () {
 	return gulp.src('resources/assets/js/**/*.js')
 				.pipe( jshint() );
 });
-
 
 
 
@@ -67,44 +85,51 @@ gulp.task('js-lint', function () {
 // `gulp`       - runs all commands
 // `gulp watch` - runs all commands and re-runs filetype specific task when they change
 // 
-// 1. copy bower components
-// 2. generate main sass file
-// 3. generate sassdocs
-// 4. compile custom js
-// 5. compile admin js
-// 6. compile js plugins
-// 7. lint js files
-// 8. update cache bust
+// 1.  copy assets
+// 	   - bower components
+// 	   - pixel admin js
+// 2.  generate main sass file
+// 3.  compile pixel admin theme css
+// 4.  compile custom admin scss
+// 5.  generate sassdocs
+// 6.  compile custom js
+// 7.  compile admin js
+// 8.  compile js plugins
+// 9.  lint js files
+// 10. update cache bust
 // -----------------------------------------------------------------------------------------------
 elixir(function(mix) {
 
 /*[1]*/
-	mix.copy('bower_components/fontawesome/fonts/', 'public/fonts')
-		.copy('bower_components/normalize.css/normalize.css',                   sassVendor + '/_normalize.scss')
-		.copy('bower_components/normalize-opentype.css/normalize-opentype.css', sassVendor + '/_normalize-opentype.scss')
-		.copy('bower_components/fontawesome/css/font-awesome.css',              sassVendor + '/_font-awesome.scss');
-
+	for ( var file in copyFiles ) {
+		mix.copy( file, copyFiles[file] );
+	}
 
 /*[2]*/
 	mix.sass('main.scss', 'public/css/app.css');
 
 /*[3]*/
-	mix.task('sassdocs', 'resources/assets/sass/**/*.scss');
+	mix.styles(pxlAdminCss, 'public/css/admin/pixel-admin.css');
 
 /*[4]*/
-	mix.browserify('main.js', 'public/js/app.js');
+	mix.sass('admin.scss', 'public/css/admin/admin.css');
 
 /*[5]*/
-	mix.babel(['resources/assets/js/admin/*.js'], 'public/js/admin.js');
+	mix.task('sassdocs', 'resources/assets/sass/**/*.scss');
 
 /*[6]*/
-	mix.scripts(jsPlugins, 'public/js/plugins.js');
+	mix.browserify('main.js', 'public/js/app.js');
 
 /*[7]*/
-
-	mix.task('js-lint', 'resources/assets/js/**/*.js');
+	mix.browserify('resources/assets/js/admin/base.js', 'public/js/admin/admin.js');
 
 /*[8]*/
+	mix.scripts(jsPlugins, 'public/js/plugins.js');
+
+/*[9]*/
+	mix.task('js-lint', 'resources/assets/js/**/*.js');
+
+/*[10]*/
 	mix.version([
 		'public/css/app.css',
 		'public/js/app.js'

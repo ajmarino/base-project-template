@@ -57,25 +57,6 @@ npm install -D gulp gulp-jshint laravel-elixir sassdoc
 
 
 
-```
-npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-autoprefixer grunt-csso grunt-sassdoc grunt-shell 
-```
-
-* [grunt](https://github.com/gruntjs/grunt)
-* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
-* [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
-* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
-* [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
-* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
-* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
-* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
-* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
-* [grunt-csso](https://github.com/t32k/grunt-csso)
-* [grunt-sassdoc](https://github.com/SassDoc/grunt-sassdoc)
-* [grunt-shell](https://github.com/sindresorhus/grunt-shell)
-
-
-
 
 
 ### Composer
@@ -83,7 +64,7 @@ npm install -D grunt grunt-contrib-clean grunt-contrib-concat grunt-contrib-copy
 There are 2 sets of `composer require` commands, one to install production dependencies and the other for dev-only dependencies
 
 ```
-composer require anlutro/l4-settings laracasts/flash laracasts/utilities jenssegers/agent
+composer require anlutro/l4-settings laracasts/flash laracasts/utilities jenssegers/agent illuminate/html
 ```
 
 [Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel <br>
@@ -100,7 +81,7 @@ composer require --dev laracasts/generators barryvdh/laravel-debugbar fzaninotto
 [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) - Integrates PHP Debug Bar with Laravel 5 <br>
 [Faker](https://github.com/fzaninotto/Faker) - Dummy data generator <br>
 [Way Generators](https://github.com/jeffreyway/laravel-4-generators) - Artisan commands for generating various assets - Laravel 4 <br>
-	
+    
 
 Most of the Laravel packages need to have a ServiceProvider and sometimes an Alias added to the main config, and some also require publishing of assets.
 
@@ -116,7 +97,8 @@ Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
 Laracasts\Flash\FlashServiceProvider::class,
 Jenssegers\Agent\AgentServiceProvider::class,
 Barryvdh\Debugbar\ServiceProvider::class,
-Laracasts\Generators\GeneratorsServiceProvider::class
+Laracasts\Generators\GeneratorsServiceProvider::class,
+Illuminate\Html\HtmlServiceProvider::class,
 ```
 
 
@@ -129,6 +111,8 @@ Add the following aliases to the array in `config/app.php`
 'Debugbar'  => Barryvdh\Debugbar\Facade::class,
 'Flash'     => Laracasts\Flash\Flash::class,
 'Agent'     => Jenssegers\Agent\Facades\Agent::class,
+'Form'      => Illuminate\Html\FormFacade::class, 
+'HTML'      => Illuminate\Html\HtmlFacade::class,
 ```
 
 
@@ -169,39 +153,6 @@ All docs files are located in `resources/assets/docs/docs`.  There can be any nu
 
 
 
-##  Grunt Commands
-
-Grunt commands located in `resources/grunt/tasks`:
-
-* grunt - Compiles all the things!!!
-
-* bower - Copies Bower components out of `bower_components`
-* css  - Compiles main.scss in `$assetDir/sass` to `$outputDir/css/main.css`
-* js   - Compiles `$assetDir/js` into 1 file in `$outputDir/js/app.min.js`
-* docs - Compiles `$assetDir/docs/docs` into `/docs` as static html files rdy to be hosted on a server
-
-`$assetDir` and `$outputDir` are defined in `Gruntfile.js`
-
-There is also a `grunt watch` command that will watch the `/resources/assets` directory for changes and run the appropriate grunt task.
-
-
-### Adding New Components
-When adding new components through bower, there are a few places in the grunt options that need to be updated so that these plugins will be compiled and minified correctly.  
-
-
-#### Javascript
-Un-comment the plugin option in `resources/grunt/options/concat.js`.  Add all external plugins as needed to the array.  Then un-comment the last line of the plugin options in `resources/grunt/options/uglify.js`
-
-
-#### Sass or CSS
-Follow the current examples under `bower_css` in `resources/grunt/options/concat.js`, which will copy any css files into `resources/assets/sass/vendor`.  Since these are external, they are not to be modifed in `/vendor` but included at the top of `main.scss` and if necessary, overwritten by custom files.
-
-
-
-
-
 ## Future Updates
 
 * Add admin components
-* Convert Grunt to Gulp for use with Laravel 5 Elixir
-* 
