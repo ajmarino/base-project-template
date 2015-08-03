@@ -29,6 +29,7 @@ var jsPlugins = [
 	"../../../bower_components/jquery/dist/jquery.js",
 	"../../../bower_components/modernizr/modernizr.js",
 	"../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+	"../../../bower_components/sweetalert/dist/sweetalert-dev.js",
 ];
 var sassVendor = "resources/assets/sass/vendor";
 
@@ -47,10 +48,12 @@ var copyFiles = {
 	"bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
 	"bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
 	"bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
+	"bower_components/sweetalert/dist/sweetalert.css"                : sassVendor + '/_sweetalert.scss',
 
 	"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/admin/pixel-admin.js',
 };
 
+elixir.config.css.sass.pluginOptions.outputStyle = 'compact';
 
 
 
