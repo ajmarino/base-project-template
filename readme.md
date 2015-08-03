@@ -1,24 +1,20 @@
 # Base Project Template
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![License](http://b.repl.ca/v1/license-MIT-44aa44.png)]()
-[![Version 1.8.0](http://b.repl.ca/v1/version-1.8.0-3399dd.png)]()
-
-Grunt organization based on [Chris Coyier's Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate) <br>
-Docs compiled using [SassDocs](https://github.com/SassDoc/sassdoc) and [Daux.io](https://github.com/justinwalsh/daux.io)
+[![Version 2.0.0](http://b.repl.ca/v1/version-2.0.0-3399dd.png)]()
 
 
 
 
 
 ##  Install
-There are a few setup commands that need to be run to fully be able to use the assets provided.
+There are a few setup commands that need to be run to fully be able to use the assets provided.  These files are meant to be used with a Laravel 5.1+ install, but can be adapted for use outside that framework.
 
 
 
 
 
 #### Basic project info
-Provided `npm`, `bower` and `grunt-cli` are installed globally, create a `package.json` and `bower.json` for dependency management.
+Provided `npm`, `bower` and are installed globally, create a `package.json` and `bower.json` for dependency management.
 
 ```
 npm init
@@ -28,12 +24,10 @@ bower init
 
 
 
-
 #### Bower Components
 ```
 bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity
 ```
-
 
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 * [jQuery](https://github.com/jquery/jquery)
@@ -54,6 +48,10 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 ```
 npm install -D gulp gulp-jshint laravel-elixir sassdoc
 ```
+* [Gulp](https://github.com/gulpjs/gulp)
+* [Gulp JSHint](https://github.com/spalger/gulp-jshint)
+* [Laravel Elixir](https://github.com/laravel/elixir)
+* [Sassdoc](https://github.com/SassDoc/sassdoc)
 
 
 
@@ -141,7 +139,7 @@ Sassdoc generated documentation is located at `docs/sass`.  These files use sett
 
 
 ##  Docs
-All docs files are located in `resources/assets/docs/docs`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
+All docs files are located in `resources/assets/docs/`.  There can be any number of files and sub-folders, and can set in a custom order by pre-pending numbers to the filename, `00_Index.md`.  Docs are written using markdown and are converted into static html files.
 
 
 

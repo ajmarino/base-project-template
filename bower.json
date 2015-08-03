@@ -26,6 +26,7 @@
     "bootstrap-sass-official": "~3.3.4",
     "susy": "~2.2.5",
     "compass-breakpoint": "~2.6.1",
-    "singularity": "~1.6.2"
+    "singularity": "~1.6.2",
+    "sweetalert": "~1.1.0"
   }
 }
