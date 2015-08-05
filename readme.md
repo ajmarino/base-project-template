@@ -26,7 +26,7 @@ bower init
 
 #### Bower Components
 ```
-bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity
+bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity sweetalert
 ```
 
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
@@ -39,7 +39,7 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 * [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
 * [Breakpoint](https://github.com/at-import/breakpoint)
 * [Singularity.gs](https://github.com/at-import/Singularity)
-
+* [SweetAlert](https://github.com/t4t5/sweetalert)
 
 
 
@@ -62,13 +62,13 @@ npm install -D gulp gulp-jshint laravel-elixir sassdoc
 There are 2 sets of `composer require` commands, one to install production dependencies and the other for dev-only dependencies
 
 ```
-composer require anlutro/l4-settings laracasts/flash laracasts/utilities jenssegers/agent illuminate/html
+composer require anlutro/l4-settings laracasts/utilities jenssegers/agent illuminate/html
 ```
 
 [Laravel Settings](https://github.com/anlutro/laravel-settings) - persistent settings in Laravel <br>
-[Laravel Flash](https://github.com/laracasts/flash) - easy flash notifications <br>
 [PHP Vars to JS](https://github.com/laracasts/PHP-Vars-To-Js-Transformer) - Simplies passing php vars to js <br>
 [Laravel Agent](https://github.com/jenssegers/Laravel-Agent) - A user agent class for Laravel, based on [Mobile Detect](https://github.com/serbanghita/Mobile-Detect) with extended functionality. <br>
+[Laravel Flash](https://github.com/laracasts/flash) - easy flash notifications (not needed anymore)
 
 ```
 composer require --dev laracasts/generators barryvdh/laravel-debugbar fzaninotto/faker

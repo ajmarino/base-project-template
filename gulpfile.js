@@ -109,7 +109,7 @@ elixir(function(mix) {
 	}
 
 /*[2]*/
-	mix.sass('main.scss', 'public/css/app.css');
+	mix.sass('app.scss', 'public/css/app.css');
 
 /*[3]*/
 	mix.styles(pxlAdminCss, 'public/css/admin/pixel-admin.css');

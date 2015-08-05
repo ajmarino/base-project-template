@@ -21,5 +21,10 @@
             "name": "AJ Marino",
             "email": "aj@ajmarino.com"
         }
-    ]
+    ],
+    "autoload": {
+        "files": [
+            "app/helpers.php"
+        ]
+    }
 }

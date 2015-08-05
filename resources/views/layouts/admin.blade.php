@@ -29,7 +29,7 @@
 					make sure to run `php artisan vendor:publish`
 					make sure the settings are added correctly, see readme
 				--}}
-				@include('flash::message')
+				{{-- @include('flash::message') --}}
 
 				@yield('main-content')
 			</div>
@@ -55,5 +55,8 @@
 	<script>window.jQuery || document.write(unescape("%3Cscript src='/js/vendor/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"))</script>
 	<script src="/js/admin/pixel-admin.js"></script>
 	<script src="/js/admin/admin.js"></script>
+
+	@include('admin.components.flash')
+	
 </body>
 </html>

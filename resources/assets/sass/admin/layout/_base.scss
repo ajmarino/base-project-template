@@ -21,6 +21,10 @@
 }
 .row {
 	margin-bottom: 15px;
+
+	.page-header & {
+		margin-bottom: 0;
+	}
 }
 
 .header-1,
