@@ -1,11 +1,12 @@
-var Selector_Cache = require('./utilities/selector_cache');
+var selector_cache = require('./utilities/selector_cache');
 var slidePage      = require('./utilities/slide_page.js');
+// var debouncer      = require('./utilities/debouncer.js');
 
 // ===========================================================================================
 // Main App
 // ===========================================================================================
 module.exports = function () {
-	var cache = new Selector_Cache();
+	var cache = new selector_cache();
 
 	var config = {
 		page_target : $('body').data('target') ? $('body').data('target') : "#",
@@ -13,10 +14,16 @@ module.exports = function () {
 	};
 
 
-	/**
-	 * Init the app
-	 */
+	// 
+	// Init the app
+	// 
 	console.log("Init");
+	
+
+	// Prevents links starting with # from moving page
+	$('a[href^=#]').click(function (e) {
+		e.preventDefault();
+	});
 	
 
 	// Animates body to anchor tag on page

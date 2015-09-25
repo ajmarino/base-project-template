@@ -1,9 +1,8 @@
 var App = require('./app');
 
 $(function () {
-	//
+
 	// Tries to prevent 'console' errors in browsers that lack a console
-	//
 	var method;
 	var noop = function () {};
 	var methods = [
@@ -21,10 +20,6 @@ $(function () {
 		}
 	}
 
-	// Prevents links starting with # from moving page
-	$('a[href^=#]').click(function (e) {
-		e.preventDefault();
-	});
 
 	// Start the app
 	App();
