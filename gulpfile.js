@@ -44,13 +44,13 @@ var pxlAdminCss = [
 ];
 
 var copyFiles = {
-	"bower_components/fontawesome/fonts/"                            : 'public/fonts',
+	"bower_components/fontawesome/fonts"                             : 'public/fonts',
 	"bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
 	"bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
 	"bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
 	"bower_components/sweetalert/dist/sweetalert.css"                : sassVendor + '/_sweetalert.scss',
 
-	"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/admin/pixel-admin.js',
+	"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/pixel-admin.js',
 };
 
 elixir.config.css.sass.pluginOptions.outputStyle = 'compact';
@@ -108,6 +108,29 @@ elixir(function(mix) {
 		mix.copy( file, copyFiles[file] );
 	}
 
+
+// Front end
+// 	mix.sass('app.scss', 'public/css/app.css')
+// 		.task('sassdocs', 'resources/assets/sass/**/*.scss')
+// 		.browserify('main.js', 'public/js/app.js')
+// 		.scripts(jsPlugins, 'public/js/plugins.js')
+// 		.task('js-lint', 'resources/assets/js/**/*.js');
+
+
+// // Admin
+// 	mix.styles(pxlAdminCss, 'public/css/pixel-admin.css')
+// 		.sass('admin.scss', 'public/css/admin.css')
+// 		.browserify('resources/assets/js/admin/base.js', 'public/js/admin.js');
+		
+
+// 	mix.version([
+// 		'public/css/app.css',
+// 		'public/js/app.js',
+// 		'public/css/admin.css',
+// 		'public/js/admin.js'
+// 	]);
+
+
 /*[2]*/
 	mix.sass('app.scss', 'public/css/app.css');
 
@@ -115,7 +138,7 @@ elixir(function(mix) {
 	mix.styles(pxlAdminCss, 'public/css/admin/pixel-admin.css');
 
 /*[4]*/
-	mix.sass('admin.scss', 'public/css/admin/admin.css');
+	mix.sass('admin.scss', 'public/css/admin.css');
 
 /*[5]*/
 	mix.task('sassdocs', 'resources/assets/sass/**/*.scss');
@@ -124,7 +147,7 @@ elixir(function(mix) {
 	mix.browserify('main.js', 'public/js/app.js');
 
 /*[7]*/
-	mix.browserify('resources/assets/js/admin/base.js', 'public/js/admin/admin.js');
+	mix.browserify('resources/assets/js/admin/base.js', 'public/js/admin.js');
 
 /*[8]*/
 	mix.scripts(jsPlugins, 'public/js/plugins.js');
@@ -135,7 +158,9 @@ elixir(function(mix) {
 /*[10]*/
 	mix.version([
 		'public/css/app.css',
-		'public/js/app.js'
+		'public/js/app.js',
+		'public/css/admin.css',
+		'public/js/admin.js'
 	]);
 });
 

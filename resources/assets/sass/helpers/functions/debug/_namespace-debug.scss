@@ -6,6 +6,18 @@
 $namespace-debug: true !default;
 
 @if $namespace-debug == true {
+    // BEM Elements.
+    [class*="__"] {
+        outline: 5px solid grey;
+    }
+
+
+    // BEM Modifiers.
+    [class*="--"] {
+        outline: 5px solid darkgrey;
+    }
+    
+
     // objects
     [class^="o-"],
     [class*=" o-"] {
