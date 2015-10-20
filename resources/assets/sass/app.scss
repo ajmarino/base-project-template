@@ -26,9 +26,8 @@
 @import
     "../../../bower_components/bourbon/app/assets/stylesheets/bourbon",      // css mixins, helpful tools
     "../../../bower_components/singularity/stylesheets/singularitygs",       // grid system
-    "../../../bower_components/compass-breakpoint/stylesheets/breakpoint",   // advanced media queries
-    "helpers/helpers";              // custom mixins / functions / variables
-
+    "../../../bower_components/compass-breakpoint/stylesheets/breakpoint";   // advanced media queries
+    
 
 
 
@@ -36,12 +35,15 @@
 // ===========================================================================================
 // $Libraries
 // 
-// external libraries added via bower, .css copied to .scss so they can be included
+// external libraries added via bower, .css copied to .scss so they can be included directly 
+// in the compiled css, or overwritten by a custom component file
 // ===========================================================================================
 @import
+    "helpers/helpers",              // custom mixins / functions / variables
     "vendor/font-awesome",          // icon font
     "vendor/normalize",             // normalize.css
-    "vendor/normalize-opentype";    // allows fancy characters if supported
+    "vendor/normalize-opentype",    // allows fancy characters if supported
+    "vendor/sweetalert";            // facy alert popups
 
 
 
@@ -49,6 +51,9 @@
 
 // ===========================================================================================
 // $Base
+// 
+// generic base classes and styles, used to apply mq debug label and set up typoegraphy for a 
+// vertical grid system
 // ===========================================================================================
 @import
     "base/base",                    // html5 boilerplate base css

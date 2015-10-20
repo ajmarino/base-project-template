@@ -1,5 +1,6 @@
 var selector_cache = require('./utilities/selector_cache');
-var slidePage      = require('./utilities/slide_page.js');
+var slidePage      = require('./utilities/slide_page');
+var sAlert         = require('./utilities/sweetalert');
 // var debouncer      = require('./utilities/debouncer.js');
 
 // ===========================================================================================
@@ -44,6 +45,9 @@ module.exports = function () {
 	if ( config.page_target !== "#" ) {
 		setTimeout(	slidePage( config.page_target ), 1500);
 	}
+
+
+	
 
 	return {
 		cache     : cache,
