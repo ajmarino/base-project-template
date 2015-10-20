@@ -3,6 +3,8 @@
  *
  * http://ttmm.io/tech/selector-caching-jquery/
  * https://gist.github.com/jtsternberg/14978579a9edf42ed069
+ *
+ * @returns {function} allows storing of selectors in cache
  */
 module.exports = function () {
 	var elementCache = {};

@@ -46,13 +46,15 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 
 ###  NPM
 ```
-npm install -D gulp gulp-jshint laravel-elixir sassdoc
+npm install -D gulp gulp-eslint laravel-elixir sassdoc
 ```
 * [Gulp](https://github.com/gulpjs/gulp)
-* [Gulp JSHint](https://github.com/spalger/gulp-jshint)
+* [Gulp ESLint](https://github.com/adametry/gulp-eslint)
 * [Laravel Elixir](https://github.com/laravel/elixir)
 * [Sassdoc](https://github.com/SassDoc/sassdoc)
 
+// Older JS Linter
+* [Gulp JSHint](https://github.com/spalger/gulp-jshint)
 
 
 

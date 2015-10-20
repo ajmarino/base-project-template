@@ -1,0 +1,32 @@
+{
+    "rules": {
+        "indent": [
+            2,
+            "tab"
+        ],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "no-console": 1,
+        "no-unused-vars": 1,
+        "semi": [
+            2,
+            "always"
+        ],
+        "valid-jsdoc" : 1
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "swal": true
+    }
+}

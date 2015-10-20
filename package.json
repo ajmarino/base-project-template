@@ -16,6 +16,7 @@
   "homepage": "https://github.com/ajmarino/base-project-template",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
     "gulp-jshint": "^1.11.2",
     "laravel-elixir": "^3.0.5",
     "sassdoc": "^2.1.15"

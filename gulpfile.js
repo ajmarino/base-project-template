@@ -3,10 +3,11 @@
 // -----------------------------------------------------------------------------------------------
 // Dependencies
 // -----------------------------------------------------------------------------------------------
-var gulp         = require('gulp');
-var elixir       = require('laravel-elixir');
-var jshint       = require('gulp-jshint');
-var sassdoc      = require('sassdoc');
+var gulp    = require('gulp');
+var elixir  = require('laravel-elixir');
+var jshint  = require('gulp-jshint');
+var eslint  = require('gulp-eslint');
+var sassdoc = require('sassdoc');
 
 
 
@@ -83,6 +84,21 @@ gulp.task('js-lint', function () {
 
 
 // -----------------------------------------------------------------------------------------------
+// ES Lint
+// -----------------------------------------------------------------------------------------------
+gulp.task('es-lint', function () {
+	return gulp.src('resources/assets/js/**/*.js')
+				.pipe( eslint() )
+				.pipe( eslint.format() )
+				.pipe( eslint.failOnError() );
+});
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------
 // Main task - `gulp` or `gulp watch`
 // 
 // `gulp`       - runs all commands
@@ -153,7 +169,8 @@ elixir(function(mix) {
 	mix.scripts(jsPlugins, 'public/js/plugins.js');
 
 /*[9]*/
-	mix.task('js-lint', 'resources/assets/js/**/*.js');
+	// mix.task('js-lint', 'resources/assets/js/**/*.js');
+	mix.task('es-lint', 'resources/assets/js/**/*.js');
 
 /*[10]*/
 	mix.version([

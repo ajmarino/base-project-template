@@ -8,7 +8,7 @@ module.exports = function () {
 	var cache = new Selector_Cache();
 
 	var config = {
-		page_target : $('body').data('target') ? $('body').data('target') : "#",
+		page_target : $('body').data('target') ? $('body').data('target') : '#',
 		page_width  : $(window).outerWidth()
 	};
 
@@ -16,7 +16,7 @@ module.exports = function () {
 	/**
 	 * Init the app
 	 */
-	console.log("Admin Init");
+	console.log('Admin Init');
 	
 
 	// Toggle the sidebar
@@ -45,7 +45,7 @@ module.exports = function () {
 
 		slidePage(target);
 
-		if ($(this).data('focus') !== "" ) {
+		if ($(this).data('focus') !== '' ) {
 			var focus = $(this).data('focus');
 
 			$(focus).focus();
@@ -54,7 +54,7 @@ module.exports = function () {
 
 
 	// Slides the page to a target is passed in the url on page load
-	if ( config.page_target !== "#" ) {
+	if ( config.page_target !== '#' ) {
 		setTimeout(	slidePage( config.page_target ), 1500);
 	}
 
