@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------------------------------
 // Dependencies
 // -----------------------------------------------------------------------------------------------
-var gulp    = require('gulp');
-var elixir  = require('laravel-elixir');
-var jshint  = require('gulp-jshint');
-var eslint  = require('gulp-eslint');
-var sassdoc = require('sassdoc');
+var gulp    = require('gulp'),
+	config  = require('./resources/assets/gulp/config'),
+	elixir  = require('laravel-elixir'),
+	jshint  = require('gulp-jshint'),
+	eslint  = require('gulp-eslint'),
+	sassdoc = require('sassdoc');
 
 
 
@@ -16,44 +17,6 @@ var sassdoc = require('sassdoc');
 // -----------------------------------------------------------------------------------------------
 // Configuration
 // -----------------------------------------------------------------------------------------------
-var sassdocInput   = './resources/assets/sass/**/*.scss';
-var sassdocOptions = {
-	dest: './public/sassdocs',
-	display: {
-		access: ['public'],
-	}
-};
-
-// relative to `resources/assets/js`
-var jsSource  = './resources/assets/js/**/*.js';
-var jsPlugins = [
-	"../../../bower_components/jquery/dist/jquery.js",
-	"../../../bower_components/modernizr/modernizr.js",
-	"../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
-	"../../../bower_components/sweetalert/dist/sweetalert-dev.js",
-];
-var sassVendor = "resources/assets/sass/vendor";
-
-// relative to `/resources/assets/sass`
-var pxlAdminCss = [
-	"../pixeladmin/css/bootstrap.min.css",
-	"../pixeladmin/css/pixel-admin.min.css",
-	"../pixeladmin/css/widgets.min.css",
-	"../pixeladmin/css/pages.min.css",
-	"../pixeladmin/css/rtl.min.css",
-	"../pixeladmin/css/themes.min.css",
-];
-
-var copyFiles = {
-	"bower_components/fontawesome/fonts"                             : 'public/fonts',
-	"bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
-	"bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
-	"bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
-	"bower_components/sweetalert/dist/sweetalert.css"                : sassVendor + '/_sweetalert.scss',
-
-	"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/pixel-admin.js',
-};
-
 elixir.config.css.sass.pluginOptions.outputStyle = 'compact';
 
 
@@ -63,8 +26,8 @@ elixir.config.css.sass.pluginOptions.outputStyle = 'compact';
 // Sass Documentation
 // -----------------------------------------------------------------------------------------------
 gulp.task('sassdocs', function () {
-	gulp.src(sassdocInput)
-		.pipe(sassdoc(sassdocOptions));
+	gulp.src(config.sass.source)
+		.pipe(sassdoc(config.sass.options));
 });
 	
 
@@ -87,7 +50,7 @@ gulp.task('js-lint', function () {
 // ES Lint
 // -----------------------------------------------------------------------------------------------
 gulp.task('es-lint', function () {
-	return gulp.src('resources/assets/js/**/*.js')
+	return gulp.src(config.js.source)
 				.pipe( eslint() )
 				.pipe( eslint.format() )
 				.pipe( eslint.failOnError() );
@@ -120,23 +83,23 @@ gulp.task('es-lint', function () {
 elixir(function(mix) {
 
 /*[1]*/
-	for ( var file in copyFiles ) {
-		mix.copy( file, copyFiles[file] );
+	for ( var file in config.copyFiles ) {
+		mix.copy( file, config.copyFiles[file] );
 	}
 
 
 // Front end
 // 	mix.sass('app.scss', 'public/css/app.css')
-// 		.task('sassdocs', 'resources/assets/sass/**/*.scss')
+// 		.task('sassdocs', config.sass.source)
 // 		.browserify('main.js', 'public/js/app.js')
 // 		.scripts(jsPlugins, 'public/js/plugins.js')
-// 		.task('js-lint', 'resources/assets/js/**/*.js');
+// 		.task('js-lint', config.js.source);
 
 
 // // Admin
-// 	mix.styles(pxlAdminCss, 'public/css/pixel-admin.css')
+// 	mix.styles(config.pixel_admin.css, 'public/css/admin/pixel-admin.css')
 // 		.sass('admin.scss', 'public/css/admin.css')
-// 		.browserify('resources/assets/js/admin/base.js', 'public/js/admin.js');
+// 		.browserify('public/js/admin.js');
 		
 
 // 	mix.version([
@@ -151,26 +114,26 @@ elixir(function(mix) {
 	mix.sass('app.scss', 'public/css/app.css');
 
 /*[3]*/
-	mix.styles(pxlAdminCss, 'public/css/admin/pixel-admin.css');
+	mix.styles(config.pixel_admin.css, 'public/css/admin/pixel-admin.css');
 
 /*[4]*/
 	mix.sass('admin.scss', 'public/css/admin.css');
 
 /*[5]*/
-	mix.task('sassdocs', 'resources/assets/sass/**/*.scss');
+	mix.task('sassdocs', config.sass.source);
 
 /*[6]*/
 	mix.browserify('main.js', 'public/js/app.js');
 
 /*[7]*/
-	mix.browserify('resources/assets/js/admin/base.js', 'public/js/admin.js');
+	mix.browserify('resources/assets/js/admin/admin.js', 'public/js/admin.js');
 
 /*[8]*/
-	mix.scripts(jsPlugins, 'public/js/plugins.js');
+	mix.scripts(config.js.plugins, 'public/js/plugins.js');
 
 /*[9]*/
 	// mix.task('js-lint', 'resources/assets/js/**/*.js');
-	mix.task('es-lint', 'resources/assets/js/**/*.js');
+	mix.task('es-lint', config.js.source);
 
 /*[10]*/
 	mix.version([
