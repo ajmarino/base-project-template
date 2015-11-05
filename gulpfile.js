@@ -4,7 +4,7 @@
 // Dependencies
 // -----------------------------------------------------------------------------------------------
 var gulp    = require('gulp'),
-	config  = require('./resources/assets/gulp/config'),
+	config  = require('./resources/gulp/config'),
 	elixir  = require('laravel-elixir'),
 	jshint  = require('gulp-jshint'),
 	eslint  = require('gulp-eslint'),

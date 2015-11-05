@@ -4,7 +4,7 @@
  * @return {Object}
  */
 
-var sassVendor = "resources/assets/sass/vendor";
+var sassVendor = "./resources/assets/sass/vendor";
 
 module.exports = {
 	sass : {
@@ -28,14 +28,15 @@ module.exports = {
 		],
 	},
 
+	// Copies assets over from bower
 	copyFiles : {
-		"bower_components/fontawesome/fonts"                             : 'public/fonts',
-		"bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
-		"bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
-		"bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
-		"bower_components/sweetalert/dist/sweetalert.css"                : sassVendor + '/_sweetalert.scss',
+		"./bower_components/fontawesome/fonts"                             : './public/fonts',
+		"./bower_components/normalize.css/normalize.css"                   : sassVendor + '/_normalize.scss',
+		"./bower_components/normalize-opentype.css/normalize-opentype.css" : sassVendor + '/_normalize-opentype.scss',
+		"./bower_components/fontawesome/css/font-awesome.css"              : sassVendor + '/_font-awesome.scss',
+		"./bower_components/sweetalert/dist/sweetalert.css"                : sassVendor + '/_sweetalert.scss',
 
-		"resources/assets/pixeladmin/js/pixel-admin.min.js"              : 'public/js/pixel-admin.js',
+		"./resources/assets/pixeladmin/js/pixel-admin.min.js"              : './public/js/pixel-admin.js',
 	},
 
 
