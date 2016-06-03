@@ -26,7 +26,7 @@ bower init
 
 #### Bower Components
 ```
-bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normalize-opentype.css fontawesome bootstrap-sass-official compass-breakpoint singularity sweetalert
+bower install -D html5-boilerplate jquery bourbon normalize.css normalize-opentype.css fontawesome bootstrap-sass include-media sweetalert2
 ```
 
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
@@ -37,21 +37,21 @@ bower install -D html5-boilerplate jquery bourbon modernizr normalize.css normal
 * [Normalize Opentype](https://github.com/kennethormandy/normalize-opentype.css)
 * [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 * [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
-* [Breakpoint](https://github.com/at-import/breakpoint)
-* [Singularity.gs](https://github.com/at-import/Singularity)
-* [SweetAlert](https://github.com/t4t5/sweetalert)
+* [Include Media](https://github.com/eduardoboucas/include-media)
+* [SweetAlert2](https://github.com/limonte/sweetalert2)
 
 
 
 
 ###  NPM
 ```
-npm install -D gulp gulp-eslint laravel-elixir sassdoc
+npm install -D gulp gulp-eslint gulp-postcss laravel-elixir postcss-reporter postcss-scss sassdoc stylelint
 ```
 * [Gulp](https://github.com/gulpjs/gulp)
 * [Gulp ESLint](https://github.com/adametry/gulp-eslint)
 * [Laravel Elixir](https://github.com/laravel/elixir)
 * [Sassdoc](https://github.com/SassDoc/sassdoc)
+* [Styleling](https://github.com/stylelint/stylelint)
 
 // Older JS Linter
 * [Gulp JSHint](https://github.com/spalger/gulp-jshint)
