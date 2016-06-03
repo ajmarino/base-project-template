@@ -1,13 +1,14 @@
+//// 
+//// @group Color Palette
+//// @requires {function} create-named-palette
+//// 
+
+
+
 /// 
 /// Retrieves the lighest color from a map generated with `create-named-palette`.
 /// 
 /// @param {Map} $palette - Map of colors with associated names
-/// 
-/// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
 /// 
 /// 
 /// @example scss
@@ -40,12 +41,6 @@
 /// Retrieves the lighter color from a map generated with `create-named-palette`.
 /// 
 /// @param {Map} $palette - Map of colors with associated names
-/// 
-/// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
 /// 
 /// 
 /// @example scss
@@ -81,12 +76,6 @@
 /// @param {Map} $palette - Map of colors with associated names
 /// 
 /// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
-/// 
-/// 
 /// @example scss
 /// // Usage
 /// .el {
@@ -120,12 +109,6 @@
 /// @param {Map} $palette - Map of colors with associated names
 /// 
 /// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
-/// 
-/// 
 /// @example scss
 /// // Usage
 /// .el {
@@ -156,12 +139,6 @@
 /// Retrieves the dark color from a map generated with `create-named-palette`.
 /// 
 /// @param {Map} $palette - Map of colors with associated names
-/// 
-/// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
 /// 
 /// 
 /// @example scss
@@ -197,12 +174,6 @@
 /// @param {Map} $palette - Map of colors with associated names
 /// 
 /// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
-/// 
-/// 
 /// @example scss
 /// // Usage
 /// .el {
@@ -233,12 +204,6 @@
 /// Retrieves the darkest color from a map generated with `create-named-palette`.
 /// 
 /// @param {Map} $palette - Map of colors with associated names
-/// 
-/// 
-/// @requires {function} create-named-palette
-/// 
-/// 
-/// @group Color Palette
 /// 
 /// 
 /// @example scss

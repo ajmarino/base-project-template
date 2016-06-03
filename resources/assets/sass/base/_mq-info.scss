@@ -5,24 +5,24 @@ $show-mq: true !default;
 @if $show-mq {
 	.mq-info {
 		@include fixed(top 0 right 0);
-		background-color: #FCF8E3;
-		border-bottom: 1px solid #FBEED5;
-		border-left: 1px solid #FBEED5;
-		color: #C09853;
+		background-color: #fcf8e3;
+		border-bottom: 1px solid #fbeed5;
+		border-left: 1px solid #fbeed5;
+		color: #c09853;
 		padding: 3px 6px;
-		z-index: z("debug");
+		z-index: z('debug');
 		font: small-caption;
 
 
 		&:after {
-			content: "mobile: (max-width: 48em)";
+			content: 'mobile: (max-width: 48em)';
 
 			// Loop through the breakpoints that should be shown
-			$show-breakpoints: ("tablet", "laptop", "desktop");
+			$show-breakpoints: ('tablet', 'laptop', 'desktop');
 			@each $bp in $show-breakpoints {
 				$width: inspect(map-get($breakpoints, $bp));
 				@include mq($bp) {
-					content: "#{$bp}: #{$width}";
+					content: '#{$bp}: #{$width}';
 				}
 	        }
 		}

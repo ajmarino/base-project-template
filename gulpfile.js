@@ -23,7 +23,7 @@ elixir.config.css.sass.pluginOptions.includePaths = [
 	'./bower_components/bootstrap-sass/assets/stylesheets/bootstrap/',
 	'./bower_components/normalize-css/',
 	'./bower_components/normalize-opentype.css/',
-	'./bower_components/font-awesome/css/',
+	'./bower_components/fontawesome/css/',
 	'./bower_components/include-media/dist/',
 	'./bower_components/sweetalert2/src/',
 ];
@@ -58,16 +58,14 @@ elixir(function(mix) {
 	   .browserify(config.js.appJs, config.js.appOutput);           // Front end js
 
 	// Back end
-	mix.sass(config.sass.adminSass)                                   // Back end css
-	   .browserify(config.js.adminJs, config.js.adminOutput);           // Back end js
+	// mix.sass(config.sass.adminSass)                                   // Back end css
+	   // .browserify(config.js.adminJs, config.js.adminOutput);           // Back end js
 
 
 	// Cache busting and Documentation
 	mix.version([
 		'public/css/app.css',
-		'public/css/admin.css',
 		'public/js/app.js',
-		'public/js/admin/admin.js'
 	])
 	   .sassdocs()                    // Documents our sass
 	   .sassLint()                    // Lints our sass

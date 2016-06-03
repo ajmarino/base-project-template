@@ -12,11 +12,11 @@
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
 
     /*
@@ -24,9 +24,9 @@
      */
 
     .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
+    a[href^='javascript:']:after,
+    a[href^='#']:after {
+        content: '';
     }
 
     pre,
@@ -49,7 +49,7 @@
     }
 
     @page {
-        margin: 0.5cm;
+        margin: .5cm;
     }
 
     p,

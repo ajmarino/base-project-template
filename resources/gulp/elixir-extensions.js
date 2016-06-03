@@ -51,9 +51,9 @@ Elixir.extend('sassLint', function () {
 			"declaration-block-trailing-semicolon": "always",
 			"declaration-colon-space-after": "always",
 			"declaration-colon-space-before": "never",
-			"font-family-name-quotes": "single-unless-keyword",
+			"font-family-name-quotes": "always-where-recommended",
 			"function-comma-space-after": "always",
-			"function-url-quotes": "single",
+			"function-url-quotes": "always",
 			"max-empty-lines": 5,
 			"media-feature-colon-space-after": "always",
 			"media-feature-colon-space-before": "never",
@@ -74,6 +74,7 @@ Elixir.extend('sassLint', function () {
 		"ignoreFiles" : [
 			"resources/assets/sass/_variables.scss",
 			"resources/assets/sass/base/_typecsset.scss",
+			"resources/assets/sass/helpers/**/*.scss",
 		]
 	};
 
