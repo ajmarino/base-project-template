@@ -127,9 +127,12 @@ $font-stacks : (
 
 
 
-// Colors
-@import "helpers/crayola";     // Crayola crayons
-@import "helpers/pantone";     // Pantone Coated
+// Color Palettes
+@import
+	'helpers/color-palettes/crayola',            // Crayola crayons
+	'helpers/color-palettes/open-colors',        // Open Color palette
+	'helpers/color-palettes/pantone';            // Pantone Coated
+
 
 
 // Messages

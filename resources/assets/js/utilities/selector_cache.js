@@ -6,10 +6,10 @@
  *
  * @returns {function} allows storing of selectors in cache
  */
-module.exports = function () {
+module.exports = () => {
 	var elementCache = {};
  
-	var get_from_cache = function( selector, $ctxt, reset ) {
+	var get_from_cache = ( selector, $ctxt, reset ) => {
  
 		if ( 'boolean' === typeof $ctxt ) { reset = $ctxt; }
 		var cacheKey = $ctxt ? $ctxt.selector + ' ' + selector : selector;

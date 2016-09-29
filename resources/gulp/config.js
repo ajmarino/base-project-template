@@ -8,6 +8,10 @@ var sassVendor = "./resources/assets/sass/vendor";
 
 module.exports = {
 
+	// Attach compiled js to window
+	exposeApp: true,
+
+
 	// Custom Sass
 	sass : {
 		// Source folder
@@ -15,7 +19,6 @@ module.exports = {
 
 		// Main files, default path relative to `./resources/assets/sass/`
 		appSass: 'app.scss',
-		adminSass: 'admin/admin.scss',
 	},
 
 
@@ -36,10 +39,8 @@ module.exports = {
 		source  : './resources/assets/js/**/*.js',
 
 		// Main files, default path relative to `./resources/assets/js/`
-		appJs: 'main.js',
+		appJs: 'app.js',
 		appOutput: './public/js/app.js',
-		adminJs: 'admin/admin.js',
-		adminOutput: './public/js/admin/admin.js',
 		
 		
 		// Plugins added via Bower
@@ -54,6 +55,6 @@ module.exports = {
 
 	// Copies assets from Bower components
 	copyFiles : {
-		"./bower_components/font-awesome/fonts" : './public/fonts',
+		"bower_components/font-awesome/fonts/*" : 'public/fonts',
 	}
 };

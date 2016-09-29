@@ -1,56 +1,33 @@
-var selector_cache = require('./utilities/selector_cache');
-var slidePage      = require('./utilities/slide_page');
-var sAlert         = require('./utilities/sweetalert');
-// var debouncer      = require('./utilities/debouncer.js');
+const config = require('../../gulp/config');
 
-// ===========================================================================================
-// Main App
-// ===========================================================================================
-module.exports = function () {
-	var cache = new selector_cache();
-
-	var config = {
-		page_target : $('body').data('target') ? $('body').data('target') : '#',
-		page_width  : $(window).outerWidth()
-	};
+require('./utilities/Util');
 
 
-	// 
-	// Init the app
-	// 
-	console.log('Init');
-	
+const app = new Vue({
+    el: 'body',
 
-	// Prevents links starting with # from moving page
-	$('a[href^=#]').click(function (e) {
-		e.preventDefault();
-	});
-	
+    data: {
 
-	// Animates body to anchor tag on page
-	$('.js-slide-page').click(function () {
-		var target = $(this).attr('href');
-
-		slidePage(target);
-
-		if ($(this).data('focus') !== '' ) {
-			var focus = $(this).data('focus');
-
-			$(focus).focus();
-		}
-	});
+    },
 
 
-	// Slides the page to a target is passed in the url on page load
-	if ( config.page_target !== '#' ) {
-		setTimeout(	slidePage( config.page_target ), 1500);
-	}
+    ready() {
+    	// Prevents links starting with # from moving page
+		$('a[href^=#]').click(function (e) {
+			e.preventDefault();
+		});
 
 
-	
+    },
 
-	return {
-		cache     : cache,
-		config    : config
-	};	
-};
+
+    methods: {
+
+    }
+});
+
+
+// Attach instance to window for debugging 
+if (config.exposeApp) {
+	window.app = app;
+}

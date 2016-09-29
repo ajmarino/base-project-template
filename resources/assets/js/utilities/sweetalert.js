@@ -8,7 +8,7 @@
  * 
  * @return {false} shows the alert
  */
-module.exports = function(title, msg, type, button) {
+module.exports = (title, msg, type, button) => {
 	var btn = button || 'Ok';
 
 	swal({

@@ -5,7 +5,7 @@
  *
  * @return {false} scrolls pages to anchor
  */
-module.exports = function (anchor) {
+module.exports = anchor => {
 	$('html, body').animate(
 		{
 			scrollTop: $(anchor).offset().top - 24 + 'px'
