@@ -1,6 +1,6 @@
 # Base Project Template
 [![License](http://b.repl.ca/v1/license-MIT-44aa44.png)]()
-[![Version 1.11.0](http://b.repl.ca/v1/version-1.11.0-3399dd.png)]()
+[![Version 1.12.0](http://b.repl.ca/v1/version-1.12.0-3399dd.png)]()
 
 
 

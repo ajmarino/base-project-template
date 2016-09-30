@@ -62,10 +62,10 @@ elixir(mix => {
 			'css/app.css',
 			'js/app.js',
 		])
-	   .sassdocs()                               // Documents our sass
-	   .sassLint()                               // Lints our sass
-	   .jsLint()                                 // Lints our js
-	   .phpUnit();                               // Runs test suite
+	   .sassdocs();                               // Documents our sass
+	   // .sassLint()                               // Lints our sass
+	   // .jsLint()                                 // Lints our js
+	   // .phpUnit();                               // Runs test suite
 
 
 	// Auto page refresh, set to docker container ip
