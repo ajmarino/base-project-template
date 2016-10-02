@@ -1,29 +1,27 @@
-//// 
-//// @group Styling
-//// @link https://github.com/MatejKustec/SpinThatShit
-//// 
-
-
 /// 
 /// A set of mixins for single element loaders and spinners
 /// 
-/// @param {string} $name               - name of loader style
-/// @param {string} $color [#0052ec]    - color of loader
+/// @group Styling
+/// 
+/// @link https://github.com/MatejKustec/SpinThatShit
+/// 
+/// @param {string}  $name              - name of loader style
+/// @param {string}  $color [#0052ec]   - color of loader
 /// @param {integer} $size [56px]       - size of the loader
 /// @param {integer} $height [20px]     - height of loader elements
 /// @param {integer} $border-size [8px] - size for circle versionse
 /// @param {integer} $gap [12px]        - space between elements
 /// @param {integer} $duration [1s]     - timing for animation
-/// @param {string} $align [middle]     - alignment for items
+/// @param {string}  $align [middle]    - alignment for items
 /// 
 /// @example html
 /// <div class="loader01"></div>
+/// 
 /// 
 /// @example scss
 /// .loader01 {
 ///     @include loader('circle-cutout')
 /// }
-/// 
 /// 
 /// // CSS
 /// .loader01 { height: 56px; width: 56px; -webkit-animation: loader-rotate 1s linear infinite; animation: loader-rotate 1s linear infinite; border-radius: 50%; border-right-color: transparent; border: 8px solid #0052ec; position: relative; top: 50%; margin: -28px auto 0; }

@@ -24,6 +24,8 @@ module.exports = {
 
 	// Sass documentation options
 	sassDoc: {
+		source: './resources/assets/sass/helpers/**/*.scss',
+
 		options : {
 			dest: './public/docs/sass',
 			display: {

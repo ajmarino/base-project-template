@@ -20,7 +20,7 @@ var Task = Elixir.Task;
 */
 Elixir.extend('sassdocs', function () {
 	new Task('sassdocs', function () {
-		gulp.src(config.sass.source)
+		gulp.src(config.sassDoc.source)
 			.pipe(sassdoc(config.sassDoc.options));
 	})
 	.watch(config.sass.source);
