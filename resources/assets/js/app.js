@@ -1,23 +1,24 @@
 const config = require('../../gulp/config');
 
-require('./utilities/Util');
-
-
 const app = new Vue({
-    el: 'body',
+    el: 'main',
 
     data: {
 
     },
 
 
-    ready() {
-    	// Prevents links starting with # from moving page
+    mounted() {
+    	console.log('App started');
+
+
+        // Prevents links starting with # from moving page
 		$('a[href^=#]').click(function (e) {
 			e.preventDefault();
 		});
 
 
+        
     },
 
 

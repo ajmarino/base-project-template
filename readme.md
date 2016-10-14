@@ -1,6 +1,8 @@
 # Base Project Template
-[![License](http://b.repl.ca/v1/license-MIT-44aa44.png)]()
-[![Version 1.12.0](http://b.repl.ca/v1/version-1.12.0-3399dd.png)]()
+
+[![Built with gulp](http://b.repl.ca/v1/built_with-gulp_js-CF4646.png)](http://gulpjs.com/)
+[![License](http://b.repl.ca/v1/license-MIT-22aacc.png)](http://opensource.org/licenses/MIT)
+[![Version 1.13.0](http://b.repl.ca/v1/version-1.13.0-3399dd.png)]()
 
 
 
@@ -26,7 +28,7 @@ bower init
 
 #### Bower Components
 ```
-bower install --save-dev html5-boilerplate bourbon normalize-css normalize-opentype.css fontawesome include-media sweetalert2
+bower install --save-dev html5-boilerplate bourbon normalize-css normalize-opentype.css font-awesome include-media sweetalert2
 ```
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 * [Bourbon](https://github.com/thoughtbot/bourbon)
@@ -42,8 +44,8 @@ bower install --save-dev html5-boilerplate bourbon normalize-css normalize-opent
 
 ###  NPM
 ```
-npm install --save-dev bootstrap-sass jquery lodash gulp gulp-eslint gulp-postcss laravel-elixir laravel-elixir-browserify-official postcss-reporter postcss-scss sassdoc stylelint
-npm install --save-dev laravel-elixir-webpack-official
+npm install --save-dev bootstrap-sass jquery lodash gulp laravel-elixir laravel-elixir-browserify-official laravel-elixir-vue-2 laravel-elixir-webpack-official sassdoc
+npm install --save-dev gulp-eslint gulp-postcss postcss-reporter postcss-scss stylelint
 ```
 * [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
 * [jQuery](https://github.com/jquery/jquery)

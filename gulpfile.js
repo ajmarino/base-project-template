@@ -49,12 +49,12 @@ elixir(mix => {
 	}
 
 	// Combine Plugins
-	mix.browserify('bootstrap.js', 'public/js/plugins.js');
+	mix.webpack('bootstrap.js', 'public/js/plugins.js');
 
 
 	// Front end Assets
 	mix.sass(config.sass.appSass)                // Front end css
-	   .browserify(config.js.appJs);             // Front end js
+	   .webpack(config.js.appJs);             // Front end js
 
 
 	// Cache Busting, Docs, Linting, Tests

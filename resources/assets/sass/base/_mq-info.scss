@@ -1,7 +1,6 @@
 //
 // Creates label at top right of page with active media query text
 // 
-$show-mq: true !default;
 @if $show-mq {
 	.mq-info {
 		@include fixed(top 0 right 0);

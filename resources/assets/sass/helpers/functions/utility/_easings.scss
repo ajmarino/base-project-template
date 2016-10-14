@@ -8,17 +8,22 @@
 /// 
 /// Returns a cubic besier curve for various easings
 /// 
-/// @param  {string} $name      - easing name
-/// @param  {int}    $delay [0] - animation delay
+/// @param  {string} $name         - easing name
+/// @param  {int}    $delay [null] - animation delay
 /// 
 /// @return {map} cubic bezier easing syntax
 /// 
-@function easing($name, $delay: 0) {
+@function easing($name, $delay: null) {
 	@if not map-has-key($easings, $name) {
 		@warn "No easing found for `#{$name}`. Property omitted.";
 	}
-
-	@return cubic-bezier(map-get($easings, $name)), $delay;
+	
+	@if ($delay) {
+		@return cubic-bezier(map-get($easings, $name)), $delay;
+	}
+	@else {
+		@return cubic-bezier(map-get($easings, $name));	
+	}
 }
 
 
