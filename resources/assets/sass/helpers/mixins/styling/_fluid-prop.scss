@@ -57,7 +57,7 @@
 				#{$property}: calc(#{$min-value} + #{strip-units($max-value - $min-value)} * (100vw - #{map-get($breakpoints, #{$min-width})}) / #{strip-units( map-get($breakpoints, $max-width) - map-get($breakpoints, $min-width))});
 				#{$property}: calc( ((#{$min-value} / #{$typecsset-base-font-size}) * 1rem) + #{strip-units($max-value - $min-value)} * (100vw - #{map-get($breakpoints, #{$min-width})}) / #{strip-units( map-get($breakpoints, $max-width) - map-get($breakpoints, $min-width))});
 			} @else {
-    			#{$property}: calc(#{$min-value} + #{strip-units($max-value - $min-value)} * (100vw - map-get($breakpoints, #{$min-width})) / #{strip-units( map-get($breakpoints, $max-width) - map-get($breakpoints, $min-width))});
+    			#{$property}: calc(#{$min-value} + #{strip-units($max-value - $min-value)} * (100vw - #{map-get($breakpoints, #{$min-width})}) / #{strip-units( map-get($breakpoints, $max-width) - map-get($breakpoints, $min-width))});
     		}
     	}
     }
