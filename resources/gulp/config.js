@@ -57,6 +57,6 @@ module.exports = {
 
 	// Copies assets from Bower components
 	copyFiles : {
-		"bower_components/font-awesome/fonts/*" : 'public/fonts',
+		"node_modules/font-awesome/fonts" : 'public/fonts',
 	}
 };

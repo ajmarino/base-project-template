@@ -15,49 +15,45 @@ There are a few setup commands that need to be run to fully be able to use the a
 
 
 
-#### Basic project info
-Provided `npm`, `bower` and are installed globally, create a `package.json` and `bower.json` for dependency management.
+### Project Setup
+Provided `npm`, `yarn`, and `gulp` and are installed globally, create a `package.json` for dependency management.
 
 ```
 npm init
-bower init
 ```
 
 
 
 
-#### Bower Components
+### Front End Assets and Build system
 ```
-bower install --save-dev html5-boilerplate bourbon normalize-css normalize-opentype.css font-awesome include-media sweetalert2
-```
-* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
-* [Bourbon](https://github.com/thoughtbot/bourbon)
-* [Modernizr](https://github.com/Modernizr/Modernizr)
-* [Normalize.css](https://github.com/necolas/normalize.css)
-* [Normalize Opentype](https://github.com/kennethormandy/normalize-opentype.css)
-* [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
-* [Include Media](https://github.com/eduardoboucas/include-media)
-* [SweetAlert2](https://github.com/limonte/sweetalert2)
-
-
-
-
-###  NPM
-```
-npm install --save-dev bootstrap-sass jquery lodash gulp laravel-elixir laravel-elixir-browserify-official laravel-elixir-vue-2 laravel-elixir-webpack-official sassdoc
-npm install --save-dev gulp-eslint gulp-postcss postcss-reporter postcss-scss stylelint
+yarn add --dev bootstrap-sass bourbon font-awesome gulp html5-boilerplate include-media jquery laravel-elixir laravel-elixir-browserify-official laravel-elixir-vue-2 laravel-elixir-webpack-official lodash normalize.css normalize-opentype.css sassdoc vue
 ```
 * [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
-* [jQuery](https://github.com/jquery/jquery)
-* [Lodash](https://github.com/lodash/lodash)
+* [Bourbon](https://github.com/thoughtbot/bourbon)
+* [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 * [Gulp](https://github.com/gulpjs/gulp)
-* [Gulp ESLint](https://github.com/adametry/gulp-eslint)
+* [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+* [Include Media](https://github.com/eduardoboucas/include-media)
+* [jQuery](https://github.com/jquery/jquery)
 * [Laravel Elixir](https://github.com/laravel/elixir)
 * [Elixir Vue](https://github.com/JeffreyWay/laravel-elixir-vue)
-* [Elixir Browserify](https://github.com/JeffreyWay/laravel-elixir-browserify)
 * [Elixir BrowserSync](https://github.com/JeffreyWay/laravel-elixir-browsersync-official)
 * [Elixir Webpack](https://github.com/JeffreyWay/laravel-elixir-webpack-official)
+* [Lodash](https://github.com/lodash/lodash)
+* [Normalize.css](https://github.com/necolas/normalize.css)
+* [Normalize Opentype](https://github.com/kennethormandy/normalize-opentype.css)
 * [Sassdoc](https://github.com/SassDoc/sassdoc)
+
+
+
+###  Optional Plugins
+```
+yarn add --dev gulp-eslint gulp-postcss postcss-reporter postcss-scss stylelint sweetalert2
+```
+* [Modernizr](https://github.com/Modernizr/Modernizr)
+* [SweetAlert2](https://github.com/limonte/sweetalert2)
+* [Gulp ESLint](https://github.com/adametry/gulp-eslint)
 * [Stylelint](https://github.com/stylelint/stylelint)
 
 

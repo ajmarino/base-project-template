@@ -18,13 +18,13 @@ require('./resources/gulp/elixir-extensions');
 // -----------------------------------------------------------------------------------------------
 // asset paths for sass imports
 elixir.config.css.sass.pluginOptions.includePaths = [
-	'./bower_components/bourbon/app/assets/stylesheets/',
-	'./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/',
-	'./bower_components/normalize-css/',
-	'./bower_components/normalize-opentype.css/',
-	'./bower_components/font-awesome/css/',
-	'./bower_components/include-media/dist/',
-	'./bower_components/sweetalert2/src/',
+	'./node_modules/bourbon/app/assets/stylesheets/',
+	'./node_modules/normalize-css/',
+	'./node_modules/normalize-opentype.css/',
+	'./node_modules/include-media/dist/',
+	// './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/',
+	// './node_modules/font-awesome/css/',
+	// './node_modules/sweetalert2/src/',
 ];
 
 // alters style of default compiled css
@@ -48,7 +48,7 @@ elixir(mix => {
 		mix.copy( file, config.copyFiles[file] );
 	}
 
-	// Combine Plugins
+	// Components / Plugins
 	mix.webpack('bootstrap.js', 'public/js/plugins.js');
 
 
