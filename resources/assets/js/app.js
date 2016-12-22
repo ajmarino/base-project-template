@@ -13,7 +13,7 @@ const app = new Vue({
 
 
         // Prevents links starting with # from moving page
-		$('a[href^=#]').click(function (e) {
+		$('a[href^="#"]').click(function (e) {
 			e.preventDefault();
 		});
 

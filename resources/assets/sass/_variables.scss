@@ -69,9 +69,9 @@ $theme: "default" !default;
 /// @group Site Styles
 /// 
 $breakpoints: (
-	"tablet"  : (min-width: 48em), // 768px
-	"laptop"  : (min-width: 62em), // 992px
-	"desktop" : (min-width: 75em)  // 1200px
+	"tablet"  : 48em,  // 768px
+	"laptop"  : 62em,  // 992px
+	"desktop" : 75em,  // 1200px
 );
 
 
@@ -138,9 +138,9 @@ $font-stacks : (
 // Messages
 $c-message         : #f4ecbb !default;
 $c-important       : #dd0000 !default;
-$c-notice          : #6666bb !default;
+$c-notice          : #3097D1 !default;
+$c-info            : #8eb4cb !default;
 $c-success         : #5cb85c !default;
-$c-info            : #5bc0de !default;
 $c-warning         : #f0ad4e !default;
 $c-danger          : #d9534f !default;
 

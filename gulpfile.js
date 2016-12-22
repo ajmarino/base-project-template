@@ -19,7 +19,7 @@ require('./resources/gulp/elixir-extensions');
 // asset paths for sass imports
 elixir.config.css.sass.pluginOptions.includePaths = [
 	'./node_modules/bourbon/app/assets/stylesheets/',
-	'./node_modules/normalize-css/',
+	'./node_modules/normalize.css/',
 	'./node_modules/normalize-opentype.css/',
 	'./node_modules/include-media/dist/',
 	// './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/',

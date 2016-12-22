@@ -4,46 +4,32 @@
 // 
 // Table of Contents:
 // 
-//  01. Bower Components
-//  02. Libraries
-//  03. Base
-//  04. Layout
-//  05. Molecules
-//  06. Objects
-//  07. Components
-//  08. Pages
-//  09. Print
-//  10. Utility
-//  11. Shame
+//  01. Libraries / Plugins
+//  02. Base
+//  03. Layout
+//  04. Molecules
+//  05. Components
+//  06. Pages
+//  07. Misc
 // ===========================================================================================
 
 
+
+
 // ===========================================================================================
-// $Bower Components
+// $Libraries / Plugins
 // 
-// These files should generate no output, if they do they belong somewhere else. Add new bower
-// component paths to grunt/options/sass.js in the dev object
-// ===========================================================================================
-@import
-    'bourbon',                      // css mixins, helpful tools
-    'include-media';                // advanced media queries
-    
-
-
-
-
-// ===========================================================================================
-// $Libraries
-// 
-// external libraries added via bower, .css copied to .scss so they can be included directly 
+// External plugins added via yarn, .css copied to .scss so they can be included directly 
 // in the compiled css, or overwritten by a custom component file
 // ===========================================================================================
 @import
-    'normalize',                    // normalize.css
-    'normalize-opentype.scss',      // allows fancy characters if supported
-    'font-awesome',                 // icon font
-    // 'sweetalert2',                  // facy alert popups
-    'helpers/helpers';              // custom mixins / functions / variables
+    'bourbon',                                   // css mixins, helpful tools
+    'include-media',                             // advanced media queries
+    'normalize',                                 // normalize.css
+    'normalize-opentype.scss',                   // allows fancy characters if supported
+    // 'font-awesome',                              // icon font
+    // 'sweetalert2',                               // facy alert popups
+    'helpers/helpers';                           // custom mixins / functions / variables
 
 
 
@@ -52,8 +38,8 @@
 // ===========================================================================================
 // $Base
 // 
-// generic base classes and styles, used to apply mq debug label and set up typoegraphy for a 
-// vertical grid system
+// Generic base classes and styles, used to apply mq debug label and set up typography for a 
+// base vertical grid system
 // ===========================================================================================
 @import
     'base/base',                    // html5 boilerplate base css
@@ -82,17 +68,11 @@
 
 
 
-// ===========================================================================================
-// $Objects
-// ===========================================================================================
-
-
-
-
 
 // ===========================================================================================
 // $Components
 // ===========================================================================================
+
 
 
 
@@ -106,28 +86,14 @@
 
 
 
-// ===========================================================================================
-// $Utility
-// ===========================================================================================
-@import 'helpers/utility';              // clearfix, screenreader, debugging
-
-
-
-
 
 // ===========================================================================================
-// $Print 
+// $Misc
 // ===========================================================================================
-@import 'base/print';                   // basic resets for printing
-
-
-
-
-
-// ===========================================================================================
-// $Shame
-// ===========================================================================================
-@import 'shame';                        // shame file for hacks
+@import
+    'helpers/utility',                           // clearfix, screen-reading, debugging
+    'base/print',                                // basic resets for printing
+    'shame';                                     // shame file for hacks
 
 
 

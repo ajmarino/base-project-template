@@ -21,16 +21,17 @@
     }
 }());
 
-window.Util = require('./utilities/Util');
+window.Util     = require('./utilities/Util');
+window.Tracking = require('./utilities/Tracking');
+
 
 window._ = require('lodash');
-
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
+
 window.Vue = require('vue');
 // require('vue-resource');
-
 
 
 /**
