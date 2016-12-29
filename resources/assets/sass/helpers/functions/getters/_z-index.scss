@@ -1,13 +1,13 @@
 /// Function for getting a z-index value.
 /// <br>See `$z-layers` var under `Global Styling`
 /// 
-/// @param  {sting} $layer           - Named item to get z index of
-/// @param  {map}   $map [$z-layers] - Name of z-layers map
+/// @param  {Sting} $layer           - Named item to get z index of
+/// @param  {Map}   $map [$z-layers] - Name of z-layers map
 /// 
 /// @group Getters
 /// 
 /// 
-/// @return {int}  - Z-index
+/// @return {Int}  - Z-index
 /// 
 /// 
 /// @example scss

@@ -7,7 +7,7 @@
 /// 
 /// Select all children from the first to `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin first($num) {
 	@if $num == 1 {
@@ -29,7 +29,7 @@
 /// 
 /// Select all children from the last to `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin last($num) {
 	 &:nth-last-child(-n + #{$num}) {
@@ -44,7 +44,7 @@
 /// 
 /// Select all children after the first to `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin after-first($num) {
 	&:nth-child(n + #{$num + 1}) {
@@ -59,7 +59,7 @@
 /// 
 /// Select all children before `$num` from the last.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin from-end($num) {
 	&:nth-last-child(#{$num}) {
@@ -75,8 +75,8 @@
 /// 
 /// Select all children between `$first` and `$last`.
 /// 
-/// @param {number} $first - starting id 
-/// @param {number} $last  - ending id 
+/// @param {Number} $first - starting id 
+/// @param {Number} $last  - ending id 
 /// 
 @mixin between($first, $last) {
 	&:nth-child(n + #{$first}):nth-child(-n + #{$last}) {
@@ -92,8 +92,8 @@
 /// 
 /// Select all even children between `$first` and `$last`.
 /// 
-/// @param {number} $first - starting id 
-/// @param {number} $last  - ending id 
+/// @param {Number} $first - starting id 
+/// @param {Number} $last  - ending id 
 /// 
 @mixin even-between($first, $last) {
 	&:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
@@ -109,8 +109,8 @@
 /// 
 /// Select all odd children between `$first` and `$last`.
 /// 
-/// @param {number} $first - starting id 
-/// @param {number} $last  - ending id 
+/// @param {Number} $first - starting id 
+/// @param {Number} $last  - ending id 
 /// 
 @mixin odd-between($first, $last) {
 	&:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
@@ -125,9 +125,9 @@
 /// 
 /// Select all `$num` children between `$first` and `$last`.
 /// 
-/// @param {number} $num   - number of children
-/// @param {number} $first - starting id 
-/// @param {number} $last  - ending id 
+/// @param {Number} $num   - number of children
+/// @param {Number} $first - starting id 
+/// @param {Number} $last  - ending id 
 /// 
 @mixin n-between($num, $first, $last) {
 	&:nth-child(#{$num}n):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
@@ -142,7 +142,7 @@
 /// 
 /// Select all children but `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin all-but($num) {
 	&:not(:nth-child(#{$num})) {
@@ -157,7 +157,7 @@
 /// 
 /// Select children each `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 /// @alias every
 /// 
@@ -174,7 +174,7 @@
 /// 
 /// Select children each `$num`.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin every($num) {
 	&:nth-child(#{$num}n) {
@@ -189,7 +189,7 @@
 /// 
 /// Select the `$num` child from the start and the `$num` child from the last.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin from-first-last($num) {
 	&:nth-child(#{$num}),
@@ -206,7 +206,7 @@
 /// Select the item in the middle of `$num` child. Only works with odd number
 /// chain.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin middle($num) {
 	&:nth-child(#{round($num / 2)}){
@@ -221,7 +221,7 @@
 /// 
 /// Select all children between the `$num` first and the `$num` last.
 /// 
-/// @param {number} $num - id of the child
+/// @param {Number} $num - id of the child
 /// 
 @mixin all-but-first-last($num) {
 	&:nth-child(n + #{$num}):nth-last-child(n + #{$num}) {
@@ -237,7 +237,7 @@
 /// This quantity-query mixin will only select the first of `$limit` items. It will not
 /// work if there is not as much as item as you set in `$limit`.
 /// 
-/// @param {number} $limit
+/// @param {Number} $limit
 /// 
 @mixin first-of($limit) {
 	&:nth-last-child(#{$limit}):first-child {
@@ -253,7 +253,7 @@
 /// This quantity-query mixin will only select the last of `$limit` items. It will not
 /// if there is not as much as item as you set in `$limit`.
 /// 
-/// @param {number} $limit
+/// @param {Number} $limit
 /// 
 @mixin last-of($limit) {
 	&:nth-of-type(#{$limit}):nth-last-of-type(1) {
@@ -269,7 +269,7 @@
 /// This quantity-query mixin will select every items if there is at least `$num` items. It will not
 /// if there is not as much as item as you set in `$num`.
 /// 
-/// @param {number} $limit
+/// @param {Number} $limit
 /// 
 @mixin at-least($num) {
 		$selector: &;
@@ -288,7 +288,7 @@
 /// This quantity-query mixin will select every items if there is at most `$num` items. It will not
 /// if there is not as much as item as you set in `$num`.
 /// 
-/// @param {number} $limit
+/// @param {Number} $limit
 /// 
 @mixin at-most($num) {
 		$selector: &;
@@ -306,7 +306,7 @@
 /// 
 /// This quantity-query mixin will select every items only if there is between `$min` and `$max` items.
 /// 
-/// @param {number} $limit
+/// @param {Number} $limit
 /// 
 @mixin in-between($min, $max) {
 		$selector: &;
@@ -407,9 +407,9 @@
 /// This mixin is used to automatically sort z-index in numerical order. But it
 /// can also sort them in anti-numerical order, depending the parameters you use.
 /// 
-/// @param {number} $num - Number of children
-/// @param {string} $direction [forward] - Direction of the sort
-/// @param {number} $index [0] - Index of the sorting
+/// @param {Number} $num - Number of children
+/// @param {String} $direction [forward] - Direction of the sort
+/// @param {Number} $index [0] - Index of the sorting
 /// 
 @mixin child-index($num, $direction: 'forward', $index: 0) {
 	@for $i from 1 through $num {
@@ -437,8 +437,8 @@
 /// 
 /// @access private
 /// 
-/// @param {number} $num - Number of children
-/// @param {number} $index - Index of the sorting
+/// @param {Number} $num - Number of children
+/// @param {Number} $index - Index of the sorting
 /// 
 @function order-index($i, $index) {
 	@return ($index + $i);

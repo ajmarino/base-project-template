@@ -5,12 +5,12 @@
 /// 
 /// @link http://themes-pixeden.com/playground/text/tenue/
 /// 
-/// @param {int}    $steps [70]      - number of shadows, max 128
-/// @param {int}    $ratio [.005]    - space between shadow steps
-/// @param {int}    $op    [.85]     - opacity of each step
-/// @param {degree} $angle [-133deg] - angle of shadow
-/// @param {string} $col   [#000]    - starter color, usually same as text color
-/// @param {string} $bg    [null]    - ending color, usually same as bg color
+/// @param {Int}    $steps [70]      - number of shadows, max 128
+/// @param {Int}    $ratio [.005]    - space between shadow steps
+/// @param {Int}    $op    [.85]     - opacity of each step
+/// @param {Degree} $angle [-133deg] - angle of shadow
+/// @param {String} $col   [#000]    - starter color, usually same as text color
+/// @param {String} $bg    [null]    - ending color, usually same as bg color
 /// 
 /// @example scss
 /// // SCSS
@@ -32,7 +32,7 @@
 ///     text-shadow: -0.03em 0.02598em 0.4px rgba(229, 0, 229, 0.75), -0.045em 0.05196em 0.8px rgba(204, 0, 204, 0.75), -0.075em 0.07794em 1.2px rgba(178, 0, 178, 0.75), -0.09em 0.10392em 1.6px rgba(153, 0, 153, 0.75), -0.12em 0.1299em 2px rgba(127, 0, 127, 0.75), -0.135em 0.15588em 2.4px rgba(102, 0, 102, 0.75), -0.165em 0.18187em 3.4px rgba(76, 0, 76, 0.75), -0.18em 0.20785em 4.4px rgba(51, 0, 51, 0.75), -0.21em 0.23383em 5.4px rgba(25, 0, 25, 0.75), -0.225em 0.25981em 6.4px rgba(0, 0, 0, 0.75);
 /// }
 /// 
-/// @return {list} list of text shadows
+/// @return {List} list of text shadows
 /// 
 @function tenue-shadow(
     $steps: 70,

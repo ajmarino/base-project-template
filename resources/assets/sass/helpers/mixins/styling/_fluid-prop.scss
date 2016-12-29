@@ -4,9 +4,9 @@
 /// 
 /// @group Styling
 /// 
-/// @link https://madebymike.com.au/writing/precise-control-responsive-typography/
 /// @link http://www.sassmeister.com/gist/7f22e44ace49b5124eec
-/// 
+/// @link https://madebymike.com.au/writing/precise-control-responsive-typography/
+/// @link https://css-tricks.com/snippets/sass/viewport-sized-typography-minimum-maximum-sizes/
 /// 
 /// @param  {Array} $properties             - properties to make fluid
 /// @param  {Value} $min-value              - minimium size
@@ -14,14 +14,12 @@
 /// @param  {String} $min-width ['tablet']  - minimium breakpoint
 /// @param  {String} $max-width ['desktop'] - max breakpoint
 /// 
-/// 
 /// @example scss
-///   // Scss
 ///   .el {
 ///       @include fluid-prop(font-size, 16px, 20px);
 ///   }
 ///   
-///   // CSS
+/// @example css
 ///   .el {
 ///       font-size: 16px;
 ///       font-size: 1rem;
@@ -40,6 +38,7 @@
 ///           font-size: 1.25rem;
 ///       }
 ///   }
+///   
 ///
 @mixin fluid-prop($properties, $min-value, $max-value, $min-width: 'tablet', $max-width: 'desktop') {
 	@each $property in $properties {

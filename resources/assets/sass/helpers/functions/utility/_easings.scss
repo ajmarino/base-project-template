@@ -8,10 +8,10 @@
 /// 
 /// Returns a cubic besier curve for various easings
 /// 
-/// @param  {string} $name         - easing name
-/// @param  {int}    $delay [null] - animation delay
+/// @param  {String} $name         - easing name
+/// @param  {Int}    $delay [null] - animation delay
 /// 
-/// @return {map} cubic bezier easing syntax
+/// @return {Map} cubic bezier easing syntax
 /// 
 @function easing($name, $delay: null) {
 	@if not map-has-key($easings, $name) {

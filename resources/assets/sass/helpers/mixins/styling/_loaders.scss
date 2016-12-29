@@ -5,14 +5,14 @@
 /// 
 /// @link https://github.com/MatejKustec/SpinThatShit
 /// 
-/// @param {string}  $name              - name of loader style
-/// @param {string}  $color [#0052ec]   - color of loader
-/// @param {integer} $size [56px]       - size of the loader
-/// @param {integer} $height [20px]     - height of loader elements
-/// @param {integer} $border-size [8px] - size for circle versionse
-/// @param {integer} $gap [12px]        - space between elements
-/// @param {integer} $duration [1s]     - timing for animation
-/// @param {string}  $align [middle]    - alignment for items
+/// @param {String}  $name              - name of loader style
+/// @param {String}  $color [#0052ec]   - color of loader
+/// @param {Integer} $size [56px]       - size of the loader
+/// @param {Integer} $height [20px]     - height of loader elements
+/// @param {Integer} $border-size [8px] - size for circle versionse
+/// @param {Integer} $gap [12px]        - space between elements
+/// @param {Integer} $duration [1s]     - timing for animation
+/// @param {String}  $align [middle]    - alignment for items
 /// 
 /// @example html
 /// <div class="loader01"></div>

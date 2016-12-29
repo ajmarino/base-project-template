@@ -7,9 +7,9 @@
 /// 
 /// @param {Color} $base-color - base color for the palette
 /// 
-/// @requires {function} palette-diff
-/// @requires {function} apply-diff
-/// @requires {variable} $base-palette
+/// @requires {Function} palette-diff
+/// @requires {Function} apply-diff
+/// @requires {Variable} $base-palette
 /// 
 /// 
 /// @return {List} List of colors

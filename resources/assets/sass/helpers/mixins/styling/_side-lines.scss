@@ -6,12 +6,12 @@ $border-styles: ("dashed", "dotted", "double", "groove", "hidden", "inset", "non
 /// 
 /// @link http://davidtheclark.github.io/scut/
 /// 
-/// @param {int}    $height   [1px]     - size of lines
-/// @param {int}    $space    [.5em]    - how far away from element lines start
-/// @param {string} $color    [inherit] - color of the lines
-/// @param {string} $style    [solid]   - style of lines, accepts border-style values
-/// @param {bool}   $v-adjust [false]   - adds space to bottom of lines
-/// @param {bool}   $double   [false]   - double the lines by adding a value for the distance between the two lines
+/// @param {Int}    $height   [1px]     - size of lines
+/// @param {Int}    $space    [.5em]    - how far away from element lines start
+/// @param {String} $color    [inherit] - color of the lines
+/// @param {String} $style    [solid]   - style of lines, accepts border-style values
+/// @param {Bool}   $v-adjust [false]   - adds space to bottom of lines
+/// @param {Bool}   $double   [false]   - double the lines by adding a value for the distance between the two lines
 /// 
 /// @example scss
 /// // SCSS

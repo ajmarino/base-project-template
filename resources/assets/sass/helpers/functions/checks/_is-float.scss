@@ -7,9 +7,9 @@
 /// @requires is-number
 /// @requires is-integer
 /// 
-/// @param {literal} $var  - check for float type
+/// @param {Literal} $var  - check for float type
 /// 
-/// @return {bool}
+/// @return {Bool}
 /// 
 /// @example
 ///  is-float(-1.5) //returns true

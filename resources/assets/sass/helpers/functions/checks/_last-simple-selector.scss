@@ -8,9 +8,9 @@
 /// @link http://alistapart.com/article/quantity-queries-for-css
 /// @link https://github.com/danielguillan/quantity-queries
 /// 
-/// @param {list | string} $selector - A single selector
+/// @param {List | String} $selector - A single selector
 ///
-/// @return {string} - The last simple selector in $selector
+/// @return {String} - The last simple selector in $selector
 /// 
 /// @example scss
 ///   $result: _last-simple-selector(ul > li); // li
