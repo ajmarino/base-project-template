@@ -30,5 +30,5 @@ const app = new Vue({
 
 // Attach instance to window for debugging 
 if (config.exposeApp) {
-	window.app = app;
+	window.App = app;
 }

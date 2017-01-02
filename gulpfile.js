@@ -30,7 +30,8 @@ elixir.config.css.sass.pluginOptions.includePaths = [
 // alters style of default compiled css
 elixir.config.css.sass.pluginOptions.outputStyle = 'compact';
 
-
+// determine if run with `--production` flag
+let inProduction = elixir.config.production;
 
 
 
@@ -63,14 +64,18 @@ elixir(mix => {
 			'js/app.js',
 		])
 	   .sassdocs();                               // Documents our sass
-	   // .sassLint()                               // Lints our sass
-	   // .jsLint()                                 // Lints our js
-	   // .phpUnit();                               // Runs test suite
 
 
-	// Auto page refresh, set to docker container ip
-	mix.browserSync({
-		proxy: '192.168.99.100'
-	});
+	if ( !inProduction ) {
+		// mix.sassLint()                               // Lints our sass
+		//    .jsLint()                                 // Lints our js
+		//    .phpUnit();                               // Runs test suite
+
+		// Auto page refresh, set to docker container ip
+		mix.browserSync({
+			proxy: '192.168.99.100'
+		});
+	}
+
 });
 
