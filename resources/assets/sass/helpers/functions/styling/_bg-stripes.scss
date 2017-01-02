@@ -26,7 +26,7 @@
 /// @requires _stripes-random-stops
 /// 
 /// @return {String} linear gradient to apply to item
-@function bg-stripes($colors, $direction: 90deg, $random: false) {
+@function stripes($colors, $direction: 90deg, $random: false) {
     // If lonely color
     @if length($colors) == 1 { @return $colors; }
 
